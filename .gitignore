@@ -1,11 +1,34 @@
-# Compiled
-*.elc
-
-# Packaging
-.cask
-
-# Backup files
 *~
-
-# Undo-tree save-files
-*.~undo-tree
+*.elc
+auto-save-list
+recentf
+savehist
+saveplace
+eshell
+elpa
+el-get
+semanticdb
+url
+ede-projects.el
+.DS_Store
+places
+.smex-items
+savefile/
+projectile-bookmarks.eld
+ac-comphist.dat
+.mc-lists.el
+RFC/
+tramp
+.org-id-locations
+org-caldav-a9a58e5.el
+org-caldav-backup.org
+.python-environments/
+roguel-ike-saves/
+bookmarks
+projectile.cache
+custom.el
+init-personal.el
+request/
+edts/
+.cache/
+abbrev_defs
