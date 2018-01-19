@@ -1,0 +1,667 @@
+;; -*- mode: emacs-lisp; coding: emacs-mule; -*-
+;; --------------------------------------------------------------------------
+;; Desktop File for Emacs
+;; --------------------------------------------------------------------------
+;; Created Wed Jan 10 15:43:34 2018
+;; Desktop file format version 208
+;; Emacs version 25.3.1
+
+;; Global section:
+(setq desktop-saved-frameset [frameset 1 (23125 50214 250215 900000) (desktop . "208") "wanbi@DESKTOP-2R2AEJQ" nil nil ((((font-backend uniscribe gdi) (font . "-outline-Consolas-normal-normal-normal-mono-27-*-*-*-c-*-iso8859-1") (border-width . 2) (internal-border-width . 0) (right-divider-width . 0) (bottom-divider-width . 0) (vertical-scroll-bars) (horizontal-scroll-bars) (foreground-color . "#F8F8F2") (background-color . "#272822") (mouse-color . "#F8F8F2") (border-color . "black") (screen-gamma) (line-spacing) (left-fringe . 8) (right-fringe . 8) (alpha) (menu-bar-lines . 1) (tool-bar-lines . 0) (height . 61) (title) (icon-type) (auto-raise) (auto-lower) (cursor-type . box) (scroll-bar-width . 0) (scroll-bar-height . 0) (fullscreen . fullboth) (display-type . color) (background-mode . dark) (cursor-color . "#F8F8F2") (environment) (fullscreen-restore . maximized) (frameset--id . "D806-11FD-B2CB-E085") (frameset--mini t . t) (modeline . t) (minibuffer . t) (unsplittable) (icon-name) (display . "w32") (explicit-name) (tool-bar-position . top) (visibility . t) (width . 198) (left . 0) (top . 0)) ((min-height . 4) (min-width . 10) (min-height-ignore . 3) (min-width-ignore . 7) (min-height-safe . 1) (min-width-safe . 2) (min-pixel-height . 128) (min-pixel-width . 150) (min-pixel-height-ignore . 96) (min-pixel-width-ignore . 105) (min-pixel-height-safe . 32) (min-pixel-width-safe . 30)) leaf (pixel-width . 3000) (pixel-height . 1929) (total-width . 200) (total-height . 60) (normal-height . 1.0) (normal-width . 1.0) (buffer "CustomerQueryServicer.cs" (selected . t) (hscroll . 0) (fringes 8 8 nil) (margins 3) (scroll-bars nil 0 t nil 0 t) (vscroll . 0) (dedicated) (point . 6495) (start . 5871))))])
+(setq desktop-missing-file-warning nil)
+(setq tags-file-name nil)
+(setq tags-table-list nil)
+(setq search-ring '("rabbit" "GetUser" "createnew" "FollowerDetailMessageResult" "mode" "smar" "po" "popwin"))
+(setq regexp-search-ring nil)
+(setq register-alist nil)
+(setq file-name-history '("e:/Doc/Project/dotnet/Followme/CRM/src/Followme.CRM.CommandHandler/RabbitMqHandlers/Broadcast/UserCreateRealAccountSuccessedHandler.cs" "e:/Doc/Project/dotnet/Followme/CRM/src/Followme.CRM.CommandHandler/RabbitMqHandlers/Trader/UserRealAccountApplyHandler.cs" "e:/Doc/Project/dotnet/Followme/devpublish/deploy/crm/application/appsetting.json" "e:/Doc/Project/c#/Followme/publish/other/cs-Pyramid-srv/application/launch.exe.config_production" "e:/Doc/Project/c#/Followme/publish/other/cs-Pyramid-srv/application/launch.exe.config_beta" "e:/Doc/Project/dotnet/proto/generalCrm_Member.bat" "e:/Doc/Project/dotnet/Followme/CRM/src/Followme.CRM.Grpc.Client/FM.Crm.proto" "e:/Doc/Project/dotnet/Followme/CRM/FM.Crm.proto" "e:/Doc/Project/dotnet/Followme/CRM/src/Followme.CRM.Host/bin/Debug/netcoreapp2.0/FM.Crm.proto" "e:/Doc/Project/c#/Followme/other/Pyramid/src/code/Pyramid.Message/RabbitMQ/BroadcastUser.cs" "e:/Doc/doc.org" "c:/Users/wanbi/Desktop/T_Users.sql" "c:/Users/wanbi/Desktop/T_Trades.sql" "e:/Doc/Project/dotnet/Followme/CRM/doc/sql/0004_customer_add_index_up.sql" "e:/Doc/Project/dotnet/Followme/CRM/doc/sql/0003_template_add_col_SubTemplateTypeId_up.sql" "e:/Doc/Project/dotnet/Followme/CRM/doc/sql/0002_customer_add_col_LastDynamicId_up.sql" "e:/Doc/Project/dotnet/Followme/CRM/doc/sql/0001_follower_user_info_add_col_EmailAddress_up.sql" "~/.emacs.d/lisp/init-packages.el" "~/.emacs.d/lisp/init-web.el" "~/.emacs.d/lisp/init-better-defaults.el" "e:/Doc/wiki.org" "~/.emacs.d/lisp/csharp/csde.el" "~/.emacs.d/init.el" "~/.emacs.d/lisp/csharp/auto-autoloads.el" "c:/Users/wanbi/Downloads/csde-csharp-0.1/csharp/auto-autoloads.el" "~/.emacs.d/lisp/init-omnisharp.el" "e:/Doc/Project/c#/temp/CrmClientTestConsolr/CrmClientTestConsolr/Program.cs" "e:/Doc/Project/dotnet/Followme/CRM/src/Followme.CRM.Query/QueryServicers/Implements/CustomerQueryServicer.cs" "e:/Doc/Project/dotnet/Followme/CRM/src/Followme.CRM.Host/appsetting.json" "e:/Doc/Project/dotnet/Followme/CRM/src/Followme.CRM.Query/QueryServicers/ICustomerQueryServicer.cs" "~/.emacs.d/lisp/init-keybindings.el" "e:/Doc/Project/dotnet/Followme/CRM/src/Followme.CRM.Host/Program.cs" "e:/Doc/Project/dotnet/Followme/CRM/src/Followme.CRM.CommandHandler/CommandServicers/Impl/NotifyCommandServicer.cs" "e:/Doc/Project/dotnet/Followme/CRM/src/Followme.CRM.Domain/Models/MessageNotifySchedule.cs" "e:/Doc/Project/dotnet/Followme/CRM/src/Followme.AspNet.Core.FastCommon/Utilities/Exetension.cs" "e:/Doc/Project/dotnet/Followme/CRM/src/Followme.CRM.Domain/Services/Impl/DomainService.cs" "e:/Doc/Project/dotnet/Followme/CRM/src/Followme.CRM.Domain/Services/IDomainService.cs" "e:/Doc/Project/dotnet/Followme/CRM/src/Followme.CRM.Repository/EntityFrameworkCore/MessageNotifyScheduleRepository.cs" "e:/Doc/Project/dotnet/Followme/CRM/src/Followme.CRM.Domain/Repositories/IMessageNotifyScheduleRepository.cs" "e:/Doc/Project/dotnet/Followme/CRM/src/Followme.CRM.CommandHandler/CommandServicers/INotifyCommandServicer.cs"))
+
+;; Buffer section -- buffers listed in same order as in buffer list:
+(desktop-create-buffer 208
+  "e:/Doc/Project/dotnet/Followme/CRM/src/Followme.CRM.Query/QueryServicers/Implements/CustomerQueryServicer.cs"
+  "CustomerQueryServicer.cs"
+  'csharp-mode
+  '(hungry-delete-mode smartparens-mode linum-mode flycheck-mode omnisharp-mode helm-mode company-mode auto-revert-mode global-auto-revert-mode)
+  6495
+  '(6451 nil)
+  nil
+  nil
+  '((tab-width . 4) (indent-tabs-mode) (buffer-file-coding-system . utf-8-unix) (truncate-lines . t))
+  '((mark-ring (6450 12991 7911 7912 10082 2197 1485 2197 2197 2197 2197 2197 2197 2197 2197 10436))))
+
+(desktop-create-buffer 208
+  "e:/Doc/Project/dotnet/Followme/CRM/src/Followme.CRM.CommandHandler/CommandServicers/Impl/CustomerCommandServicer.cs"
+  "CustomerCommandServicer.cs"
+  'csharp-mode
+  '(hungry-delete-mode smartparens-mode linum-mode flycheck-mode omnisharp-mode helm-mode company-mode auto-revert-mode global-auto-revert-mode)
+  7092
+  '(7661 nil)
+  nil
+  nil
+  '((tab-width . 4) (indent-tabs-mode) (buffer-file-coding-system . utf-8-unix) (truncate-lines . t))
+  '((mark-ring (7576 7079 7078 3907 7273 3498 3810 3632 6765 6807 7162 7090 7580 7662 7092))))
+
+(desktop-create-buffer 208
+  "e:/Doc/Project/dotnet/Followme/CRM/src/Followme.CRM.Query/TableNames.cs"
+  "TableNames.cs"
+  'csharp-mode
+  '(hungry-delete-mode smartparens-mode linum-mode flycheck-mode omnisharp-mode helm-mode company-mode global-auto-revert-mode)
+  683
+  '(865 nil)
+  nil
+  nil
+  '((tab-width . 4) (indent-tabs-mode) (buffer-file-coding-system . undecided-unix) (truncate-lines . t))
+  '((mark-ring (683))))
+
+(desktop-create-buffer 208
+  "e:/Doc/Project/dotnet/Followme/CRM/src/Followme.CRM.Infrastructure/Followme.CRM.Infrastructure.csproj"
+  "Followme.CRM.Infrastructure.csproj"
+  'fundamental-mode
+  '(hungry-delete-mode smartparens-mode linum-mode helm-mode company-mode global-auto-revert-mode)
+  485
+  '(485 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . undecided-dos))
+  '((mark-ring nil)))
+
+(desktop-create-buffer 208
+  "e:/Doc/Project/dotnet/Followme/CRM/src/Followme.CRM.Host/appsetting.json"
+  "appsetting.json"
+  'js-mode
+  '(hungry-delete-mode smartparens-mode linum-mode helm-mode company-mode auto-revert-mode global-auto-revert-mode)
+  2429
+  '(2230 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . utf-8-unix))
+  '((mark-ring (2177 1961 687 723 714 2396 2397 2398 2404 2404 2429))))
+
+(desktop-create-buffer 208
+  "e:/Doc/Project/dotnet/Followme/CRM/src/Followme.CRM.Domain/Repositories/IBrokerRepository.cs"
+  "IBrokerRepository.cs"
+  'csharp-mode
+  '(hungry-delete-mode smartparens-mode linum-mode flycheck-mode omnisharp-mode helm-mode company-mode global-auto-revert-mode)
+  175
+  '(nil nil)
+  nil
+  nil
+  '((tab-width . 4) (indent-tabs-mode) (buffer-file-coding-system . undecided-unix) (truncate-lines . t))
+  '((mark-ring nil)))
+
+(desktop-create-buffer 208
+  "e:/Doc/Project/dotnet/Followme/CRM/src/Followme.CRM.Query/QueryServicers/ICustomerQueryServicer.cs"
+  "ICustomerQueryServicer.cs"
+  'csharp-mode
+  '(hungry-delete-mode smartparens-mode linum-mode flycheck-mode omnisharp-mode helm-mode company-mode global-auto-revert-mode)
+  1
+  '(nil nil)
+  nil
+  nil
+  '((tab-width . 4) (indent-tabs-mode) (buffer-file-coding-system . utf-8-unix) (truncate-lines . t))
+  '((mark-ring nil)))
+
+(desktop-create-buffer 208
+  "e:/Doc/Project/dotnet/Followme/CRM/src/Followme.CRM.Infrastructure/ExternalInterfaces/InterfaceCall.cs"
+  "InterfaceCall.cs"
+  'csharp-mode
+  '(hungry-delete-mode smartparens-mode linum-mode flycheck-mode omnisharp-mode helm-mode company-mode auto-revert-mode global-auto-revert-mode)
+  9030
+  '(8869 nil)
+  nil
+  nil
+  '((tab-width . 4) (indent-tabs-mode) (buffer-file-coding-system . utf-8-unix) (truncate-lines . t))
+  '((mark-ring (8638 8637 1 10303 4681 1721 7673 1044))))
+
+(desktop-create-buffer 208
+  "e:/Doc/Project/dotnet/Followme/CRM/src/Followme.AspNet.Core.FastCommon/Utilities/Exetension.cs"
+  "Exetension.cs"
+  'csharp-mode
+  '(hungry-delete-mode smartparens-mode linum-mode flycheck-mode omnisharp-mode helm-mode company-mode global-auto-revert-mode)
+  4781
+  '(nil nil)
+  nil
+  nil
+  '((tab-width . 4) (indent-tabs-mode) (buffer-file-coding-system . utf-8-with-signature-dos) (truncate-lines . t))
+  '((mark-ring nil)))
+
+(desktop-create-buffer 208
+  "e:/Doc/Project/dotnet/Followme/CRM/src/Followme.CRM.Host/Followme.CRM.Host.csproj"
+  "Followme.CRM.Host.csproj"
+  'nxml-mode
+  '(hungry-delete-mode smartparens-mode linum-mode helm-mode company-mode global-auto-revert-mode)
+  1345
+  '(1345 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . utf-8-unix))
+  '((mark-ring (1345 1276))))
+
+(desktop-create-buffer 208
+  "e:/Doc/Project/dotnet/Followme/CRM/src/Followme.CRM.Message/RabbitMQ/Publishes/SystemMessage.cs"
+  "SystemMessage.cs"
+  'csharp-mode
+  '(hungry-delete-mode smartparens-mode linum-mode flycheck-mode omnisharp-mode helm-mode company-mode global-auto-revert-mode)
+  361
+  '(352 nil)
+  nil
+  nil
+  '((tab-width . 4) (indent-tabs-mode) (buffer-file-coding-system . utf-8-with-signature-unix) (truncate-lines . t))
+  '((mark-ring nil)))
+
+(desktop-create-buffer 208
+  "e:/Doc/doc.org"
+  "doc.org"
+  'org-mode
+  '(overwrite-mode hungry-delete-mode smartparens-mode linum-mode helm-mode company-mode auto-revert-mode global-auto-revert-mode)
+  1582
+  '(46 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . utf-8-unix) (overwrite-mode . overwrite-mode-textual) (truncate-lines . t))
+  '((mark-ring (46 2045))))
+
+(desktop-create-buffer 208
+  "e:/Doc/Project/dotnet/Followme/CRM/src/Followme.CRM.Query/QueryServicers/Implements/DynamicQueryServicer.cs"
+  "DynamicQueryServicer.cs"
+  'csharp-mode
+  '(hungry-delete-mode smartparens-mode linum-mode flycheck-mode omnisharp-mode helm-mode company-mode global-auto-revert-mode)
+  6711
+  '(6680 nil)
+  nil
+  nil
+  '((tab-width . 4) (indent-tabs-mode) (buffer-file-coding-system . undecided-unix) (truncate-lines . t))
+  '((mark-ring (4418 7240 7230 5755 5853 1362 1221 2429 5007 5570 5315 5117 5126 5136 5053 6711))))
+
+(desktop-create-buffer 208
+  "e:/Doc/Project/dotnet/Followme/CRM/src/Followme.CRM.Domain/Services/Impl/DomainService.cs"
+  "DomainService.cs"
+  'csharp-mode
+  '(hungry-delete-mode smartparens-mode linum-mode flycheck-mode omnisharp-mode helm-mode company-mode global-auto-revert-mode)
+  6640
+  '(6687 nil)
+  nil
+  nil
+  '((tab-width . 4) (indent-tabs-mode) (buffer-file-coding-system . utf-8-unix) (truncate-lines . t))
+  '((mark-ring (6645 5450 7774 3635 5460 5478))))
+
+(desktop-create-buffer 208
+  "e:/Doc/Project/dotnet/Followme/CRM/src/Followme.CRM.Domain/Services/IDomainService.cs"
+  "IDomainService.cs"
+  'csharp-mode
+  '(hungry-delete-mode smartparens-mode linum-mode flycheck-mode omnisharp-mode helm-mode company-mode global-auto-revert-mode)
+  1
+  '(nil nil)
+  nil
+  nil
+  '((tab-width . 4) (indent-tabs-mode) (buffer-file-coding-system . undecided-unix) (truncate-lines . t))
+  '((mark-ring nil)))
+
+(desktop-create-buffer 208
+  "e:/Doc/Project/dotnet/Followme/CRM/src/Followme.AspNet.Core.FastCommon/Scheduling/Worker.cs"
+  "Worker.cs"
+  'csharp-mode
+  '(hungry-delete-mode smartparens-mode linum-mode flycheck-mode omnisharp-mode helm-mode company-mode auto-revert-mode global-auto-revert-mode)
+  2550
+  '(2814 nil)
+  nil
+  nil
+  '((tab-width . 4) (indent-tabs-mode) (buffer-file-coding-system . undecided-unix) (truncate-lines . t))
+  '((mark-ring (2305 3161 3648 3612 2550))))
+
+(desktop-create-buffer 208
+  "e:/Doc/Project/dotnet/Followme/CRM/src/Followme.CRM.Host/SchedulingServices/CheckTradeSchedule.cs"
+  "CheckTradeSchedule.cs"
+  'csharp-mode
+  '(hungry-delete-mode smartparens-mode linum-mode flycheck-mode omnisharp-mode helm-mode company-mode auto-revert-mode global-auto-revert-mode)
+  2671
+  '(2868 nil)
+  nil
+  nil
+  '((tab-width . 4) (indent-tabs-mode) (buffer-file-coding-system . undecided-dos) (truncate-lines . t))
+  '((mark-ring (1 2506 2315 1740 1739 1199))))
+
+(desktop-create-buffer 208
+  "e:/Doc/Project/dotnet/Followme/CRM/src/Followme.AspNet.Core.FastCommon/Scheduling/ScheduleService.cs"
+  "ScheduleService.cs"
+  'csharp-mode
+  '(hungry-delete-mode smartparens-mode linum-mode flycheck-mode omnisharp-mode helm-mode company-mode auto-revert-mode global-auto-revert-mode)
+  2492
+  '(nil nil)
+  nil
+  nil
+  '((tab-width . 4) (indent-tabs-mode) (buffer-file-coding-system . utf-8-with-signature-dos) (truncate-lines . t))
+  '((mark-ring nil)))
+
+(desktop-create-buffer 208
+  "e:/Doc/Project/dotnet/Followme/CRM/src/Followme.CRM.CommandHandler/CommandServicers/Impl/DynamicCommandServicer.cs"
+  "DynamicCommandServicer.cs"
+  'csharp-mode
+  '(hungry-delete-mode smartparens-mode linum-mode flycheck-mode omnisharp-mode helm-mode company-mode auto-revert-mode global-auto-revert-mode)
+  4946
+  '(4200 nil)
+  nil
+  nil
+  '((tab-width . 4) (indent-tabs-mode) (buffer-file-coding-system . utf-8-unix) (truncate-lines . t))
+  '((mark-ring (4905 4961 4958 5086 4941 4834 4964 4956 4955 4165 4884 5715 5692 5657 4174 4946))))
+
+(desktop-create-buffer 208
+  "e:/Doc/Project/dotnet/Followme/CRM/src/Followme.CRM.Domain/Models/Customer.cs"
+  "Customer.cs"
+  'csharp-mode
+  '(hungry-delete-mode smartparens-mode linum-mode flycheck-mode omnisharp-mode helm-mode company-mode auto-revert-mode global-auto-revert-mode)
+  2855
+  '(3473 nil)
+  nil
+  nil
+  '((tab-width . 4) (indent-tabs-mode) (buffer-file-coding-system . utf-8-unix) (truncate-lines . t))
+  '((mark-ring (3418 3204 3341 2855))))
+
+(desktop-create-buffer 208
+  "e:/Doc/Project/dotnet/Followme/CRM/src/Followme.CRM.CommandHandler/CommandServicers/Impl/CustomerCacheInfoCommandServicer.cs"
+  "CustomerCacheInfoCommandServicer.cs"
+  'csharp-mode
+  '(hungry-delete-mode smartparens-mode linum-mode flycheck-mode omnisharp-mode helm-mode company-mode global-auto-revert-mode)
+  6110
+  '(6065 nil)
+  nil
+  nil
+  '((tab-width . 4) (indent-tabs-mode) (buffer-file-coding-system . utf-8-unix) (truncate-lines . t))
+  '((mark-ring (6156 6134 6098 5945 6225 6110 6138 6159 6110))))
+
+(desktop-create-buffer 208
+  "e:/Doc/Project/dotnet/Followme/CRM/src/Followme.CRM.CommandHandler/CommandServicers/Impl/NotifyCommandServicer.cs"
+  "NotifyCommandServicer.cs"
+  'csharp-mode
+  '(hungry-delete-mode smartparens-mode linum-mode flycheck-mode omnisharp-mode helm-mode company-mode global-auto-revert-mode)
+  5384
+  '(5498 nil)
+  nil
+  nil
+  '((tab-width . 4) (indent-tabs-mode) (buffer-file-coding-system . utf-8-unix) (truncate-lines . t))
+  '((mark-ring (5384))))
+
+(desktop-create-buffer 208
+  "e:/Doc/Project/dotnet/Followme/CRM/src/Followme.CRM.Query/QueryServicers/Implements/TemplateQueryServicer.cs"
+  "TemplateQueryServicer.cs"
+  'csharp-mode
+  '(hungry-delete-mode smartparens-mode linum-mode flycheck-mode omnisharp-mode helm-mode company-mode global-auto-revert-mode)
+  3818
+  '(3735 nil)
+  nil
+  nil
+  '((tab-width . 4) (indent-tabs-mode) (buffer-file-coding-system . utf-8-unix) (truncate-lines . t))
+  '((mark-ring (3730 3818))))
+
+(desktop-create-buffer 208
+  "e:/Doc/Project/dotnet/Followme/CRM/src/Followme.CRM.Host/Program.cs"
+  "Program.cs"
+  'csharp-mode
+  '(hungry-delete-mode smartparens-mode linum-mode flycheck-mode omnisharp-mode helm-mode company-mode auto-revert-mode global-auto-revert-mode)
+  2282
+  '(1348 nil)
+  nil
+  nil
+  '((tab-width . 4) (indent-tabs-mode) (buffer-file-coding-system . utf-8-with-signature-dos) (truncate-lines . t))
+  '((mark-ring (1427))))
+
+(desktop-create-buffer 208
+  "e:/Doc/Project/dotnet/Followme/CRM/src/Followme.CRM.Domain/Models/MessageNotifySchedule.cs"
+  "MessageNotifySchedule.cs"
+  'csharp-mode
+  '(hungry-delete-mode smartparens-mode linum-mode flycheck-mode omnisharp-mode helm-mode company-mode global-auto-revert-mode)
+  4175
+  '(4161 nil)
+  nil
+  nil
+  '((tab-width . 4) (indent-tabs-mode) (buffer-file-coding-system . utf-8-unix) (truncate-lines . t))
+  '((mark-ring (4104 4036 2564 3027 4113))))
+
+(desktop-create-buffer 208
+  "e:/Doc/Project/dotnet/Followme/CRM/src/Followme.CRM.CommandHandler/RabbitMqHandlers/Broadcast/UserCreateRealAccountSuccessedHandler.cs"
+  "UserCreateRealAccountSuccessedHandler.cs"
+  'csharp-mode
+  '(hungry-delete-mode smartparens-mode linum-mode flycheck-mode omnisharp-mode helm-mode company-mode global-auto-revert-mode)
+  1712
+  '(1447 nil)
+  nil
+  nil
+  '((tab-width . 4) (indent-tabs-mode) (buffer-file-coding-system . utf-8-unix) (truncate-lines . t))
+  '((mark-ring (1209 1840 1531 1471 1874 1738 1539 1513 1394 1497 1712))))
+
+(desktop-create-buffer 208
+  "e:/Doc/Project/dotnet/Followme/CRM/src/Followme.CRM.CommandHandler/RabbitMqHandlers/Trader/UserRealAccountApplyHandler.cs"
+  "UserRealAccountApplyHandler.cs"
+  'csharp-mode
+  '(hungry-delete-mode smartparens-mode linum-mode flycheck-mode omnisharp-mode helm-mode company-mode global-auto-revert-mode)
+  1911
+  '(nil nil)
+  nil
+  nil
+  '((tab-width . 4) (indent-tabs-mode) (buffer-file-coding-system . utf-8-unix) (truncate-lines . t))
+  '((mark-ring nil)))
+
+(desktop-create-buffer 208
+  "e:/Doc/Project/dotnet/Followme/CRM/src/Followme.CRM.Message/RabbitMQ/AccountApplyMessage.cs"
+  "AccountApplyMessage.cs"
+  'csharp-mode
+  '(hungry-delete-mode smartparens-mode linum-mode flycheck-mode omnisharp-mode helm-mode company-mode global-auto-revert-mode)
+  353
+  '(338 nil)
+  nil
+  nil
+  '((tab-width . 4) (indent-tabs-mode) (buffer-file-coding-system . undecided-unix) (truncate-lines . t))
+  '((mark-ring (353))))
+
+(desktop-create-buffer 208
+  "c:/emacs_x64/home/.emacs.d/lisp/init-helm.el"
+  "init-helm.el"
+  'emacs-lisp-mode
+  '(hungry-delete-mode smartparens-mode linum-mode helm-mode company-mode global-auto-revert-mode)
+  432
+  '(432 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . prefer-utf-8-unix))
+  '((mark-ring (432))))
+
+(desktop-create-buffer 208
+  "c:/emacs_x64/home/.emacs.d/lisp/init-packages.el"
+  "init-packages.el"
+  'emacs-lisp-mode
+  '(hungry-delete-mode smartparens-mode linum-mode helm-mode company-mode auto-revert-mode global-auto-revert-mode)
+  444
+  '(450 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . utf-8-unix))
+  '((mark-ring (450 492 1184 1160 425 1 725))))
+
+(desktop-create-buffer 208
+  "c:/emacs_x64/home/.emacs.d/init.el"
+  "init.el"
+  'emacs-lisp-mode
+  '(hungry-delete-mode smartparens-mode linum-mode helm-mode company-mode auto-revert-mode global-auto-revert-mode)
+  301
+  '(83 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . prefer-utf-8-unix))
+  '((mark-ring (48 497 497 496))))
+
+(desktop-create-buffer 208
+  "e:/Doc/Project/dotnet/Followme/CRM/src/Followme.CRM.Host/SchedulingServices/TestSchedule.cs"
+  "TestSchedule.cs"
+  'csharp-mode
+  '(hungry-delete-mode smartparens-mode linum-mode flycheck-mode omnisharp-mode helm-mode company-mode auto-revert-mode global-auto-revert-mode)
+  749
+  '(162 nil)
+  nil
+  nil
+  '((tab-width . 4) (indent-tabs-mode) (buffer-file-coding-system . undecided-unix) (truncate-lines . t))
+  '((mark-ring (716 504 401 289))))
+
+(desktop-create-buffer 208
+  "c:/emacs_x64/home/.emacs.d/lisp/init-better-defaults.el"
+  "init-better-defaults.el"
+  'emacs-lisp-mode
+  '(hungry-delete-mode smartparens-mode linum-mode helm-mode company-mode auto-revert-mode global-auto-revert-mode)
+  854
+  '(2375 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . prefer-utf-8-unix))
+  '((mark-ring (129))))
+
+(desktop-create-buffer 208
+  "c:/emacs_x64/home/.emacs.d/lisp/init-omnisharp.el"
+  "init-omnisharp.el"
+  'emacs-lisp-mode
+  '(hungry-delete-mode smartparens-mode linum-mode helm-mode company-mode auto-revert-mode global-auto-revert-mode)
+  685
+  '(nil nil)
+  nil
+  nil
+  '((buffer-file-coding-system . prefer-utf-8-unix))
+  '((mark-ring nil)))
+
+(desktop-create-buffer 208
+  "e:/Doc/Project/dotnet/Followme/devpublish/deploy/crm/application/appsetting.json"
+  "appsetting.json"
+  'js-mode
+  '(hungry-delete-mode smartparens-mode linum-mode helm-mode company-mode auto-revert-mode global-auto-revert-mode)
+  1174
+  '(5 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . utf-8-unix))
+  '((mark-ring (5))))
+
+(desktop-create-buffer 208
+  "e:/Doc/Project/dotnet/Followme/CRM/src/Followme.CRM.Query/QueryServicers/Implements/CustomerStateInfoQueryServicer.cs"
+  "CustomerStateInfoQueryServicer.cs"
+  'csharp-mode
+  '(hungry-delete-mode smartparens-mode linum-mode flycheck-mode omnisharp-mode helm-mode company-mode auto-revert-mode global-auto-revert-mode)
+  1107
+  '(nil nil)
+  nil
+  nil
+  '((tab-width . 4) (indent-tabs-mode) (buffer-file-coding-system . undecided-dos) (truncate-lines . t))
+  '((mark-ring nil)))
+
+(desktop-create-buffer 208
+  "e:/Doc/Project/c#/Followme/publish/other/cs-Pyramid-srv/application/launch.exe.config_production"
+  "launch.exe.config_production"
+  'nxml-mode
+  '(hungry-delete-mode smartparens-mode linum-mode helm-mode company-mode auto-revert-mode global-auto-revert-mode)
+  1084
+  '(1010 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . utf-8-with-signature-dos))
+  '((mark-ring nil)))
+
+(desktop-create-buffer 208
+  "e:/Doc/Project/c#/Followme/publish/other/cs-Pyramid-srv/application/launch.exe.config_beta"
+  "launch.exe.config_beta"
+  'nxml-mode
+  '(hungry-delete-mode smartparens-mode linum-mode helm-mode company-mode auto-revert-mode global-auto-revert-mode)
+  1053
+  '(979 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . utf-8-dos))
+  '((mark-ring (1679))))
+
+(desktop-create-buffer 208
+  "e:/Doc/Project/c#/Followme/other/Pyramid/src/code/Pyramid.Message/RabbitMQ/BroadcastUser.cs"
+  "BroadcastUser.cs"
+  'csharp-mode
+  '(hungry-delete-mode smartparens-mode linum-mode flycheck-mode omnisharp-mode helm-mode company-mode auto-revert-mode global-auto-revert-mode)
+  6
+  '(6084 nil)
+  nil
+  nil
+  '((tab-width . 4) (indent-tabs-mode) (buffer-file-coding-system . utf-8-with-signature-dos) (truncate-lines . t))
+  '((mark-ring (1 295 409 354 308 6084 5090 314 361 390))))
+
+(desktop-create-buffer 208
+  "e:/Doc/Project/dotnet/proto/generalCrm_Member.bat"
+  "generalCrm_Member.bat"
+  'bat-mode
+  '(hungry-delete-mode smartparens-mode linum-mode helm-mode company-mode auto-revert-mode global-auto-revert-mode)
+  426
+  '(69 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . undecided-unix))
+  '((mark-ring (69 69 69))))
+
+(desktop-create-buffer 208
+  "e:/Doc/Project/dotnet/Followme/CRM/src/Followme.CRM.Message/Querying/GetFollowerDetailMessage.cs"
+  "GetFollowerDetailMessage.cs"
+  'csharp-mode
+  '(hungry-delete-mode smartparens-mode linum-mode flycheck-mode omnisharp-mode helm-mode company-mode auto-revert-mode global-auto-revert-mode)
+  362
+  '(nil nil)
+  nil
+  nil
+  '((tab-width . 4) (indent-tabs-mode) (buffer-file-coding-system . undecided-unix) (truncate-lines . t))
+  '((mark-ring nil)))
+
+(desktop-create-buffer 208
+  "e:/Doc/Project/c#/temp/CrmClientTestConsolr/CrmClientTestConsolr/Program.cs"
+  "Program.cs"
+  'csharp-mode
+  '(hungry-delete-mode smartparens-mode linum-mode flycheck-mode omnisharp-mode helm-mode company-mode auto-revert-mode global-auto-revert-mode)
+  993
+  '(272 nil)
+  nil
+  nil
+  '((tab-width . 4) (indent-tabs-mode) (buffer-file-coding-system . utf-8-with-signature-dos) (truncate-lines . t))
+  '((mark-ring (272 1 272 272 272 272 272 272 272))))
+
+(desktop-create-buffer 208
+  "e:/Doc/task.org"
+  "task.org"
+  'org-mode
+  '(hungry-delete-mode smartparens-mode linum-mode helm-mode company-mode auto-revert-mode global-auto-revert-mode)
+  91
+  '(33 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . utf-8-unix) (truncate-lines . t))
+  '((mark-ring nil)))
+
+(desktop-create-buffer 208
+  "c:/Users/wanbi/Desktop/T_Users.sql"
+  "T_Users.sql"
+  'sql-mode
+  '(hungry-delete-mode smartparens-mode linum-mode helm-mode company-mode auto-revert-mode global-auto-revert-mode)
+  1192
+  '(1 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . undecided-dos))
+  '((mark-ring nil)))
+
+(desktop-create-buffer 208
+  "c:/Users/wanbi/Desktop/T_Trades.sql"
+  "T_Trades.sql"
+  'sql-mode
+  '(hungry-delete-mode smartparens-mode linum-mode helm-mode company-mode auto-revert-mode global-auto-revert-mode)
+  2073
+  '(1 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . undecided-dos))
+  '((mark-ring nil)))
+
+(desktop-create-buffer 208
+  "e:/Doc/Project/dotnet/Followme/CRM/doc/sql/0004_customer_add_index_up.sql"
+  "0004_customer_add_index_up.sql"
+  'sql-mode
+  '(hungry-delete-mode smartparens-mode linum-mode helm-mode company-mode auto-revert-mode global-auto-revert-mode)
+  69
+  '(1 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . undecided-unix))
+  '((mark-ring nil)))
+
+(desktop-create-buffer 208
+  "e:/Doc/Project/dotnet/Followme/CRM/doc/sql/0003_template_add_col_SubTemplateTypeId_up.sql"
+  "0003_template_add_col_SubTemplateTypeId_up.sql"
+  'sql-mode
+  '(hungry-delete-mode smartparens-mode linum-mode helm-mode company-mode auto-revert-mode global-auto-revert-mode)
+  104
+  '(1 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . undecided-unix))
+  '((mark-ring nil)))
+
+(desktop-create-buffer 208
+  "e:/Doc/Project/dotnet/Followme/CRM/doc/sql/0002_customer_add_col_LastDynamicId_up.sql"
+  "0002_customer_add_col_LastDynamicId_up.sql"
+  'sql-mode
+  '(hungry-delete-mode smartparens-mode linum-mode helm-mode company-mode auto-revert-mode global-auto-revert-mode)
+  112
+  '(1 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . undecided-unix))
+  '((mark-ring nil)))
+
+(desktop-create-buffer 208
+  "e:/Doc/Project/dotnet/Followme/CRM/doc/sql/0001_follower_user_info_add_col_EmailAddress_up.sql"
+  "0001_follower_user_info_add_col_EmailAddress_up.sql"
+  'sql-mode
+  '(hungry-delete-mode smartparens-mode linum-mode helm-mode company-mode auto-revert-mode global-auto-revert-mode)
+  117
+  '(1 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . undecided-unix))
+  '((mark-ring nil)))
+
+(desktop-create-buffer 208
+  "e:/Doc/Project/dotnet/Followme/CRM/src/Followme.CRM.Domain/Models/Template.cs"
+  "Template.cs"
+  'csharp-mode
+  '(hungry-delete-mode smartparens-mode linum-mode flycheck-mode omnisharp-mode helm-mode company-mode auto-revert-mode global-auto-revert-mode)
+  3410
+  '(nil nil)
+  nil
+  nil
+  '((tab-width . 4) (indent-tabs-mode) (buffer-file-coding-system . utf-8-unix) (truncate-lines . t))
+  '((mark-ring nil)))
+
+(desktop-create-buffer 208
+  "e:/Doc/wiki.org"
+  "wiki.org"
+  'org-mode
+  '(hungry-delete-mode smartparens-mode linum-mode helm-mode company-mode auto-revert-mode global-auto-revert-mode)
+  513
+  '(1463 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . utf-8-unix) (truncate-lines . t))
+  '((mark-ring (1458 1359))))
+
+(desktop-create-buffer 208
+  "c:/emacs_x64/home/.emacs.d/lisp/init-web.el"
+  "init-web.el"
+  'emacs-lisp-mode
+  '(hungry-delete-mode smartparens-mode linum-mode helm-mode company-mode auto-revert-mode global-auto-revert-mode)
+  1287
+  '(1 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . prefer-utf-8-unix))
+  '((mark-ring nil)))
+
+(desktop-create-buffer 208
+  nil
+  ".emacs.d"
+  'dired-mode
+  '(hungry-delete-mode linum-mode helm-mode company-mode auto-revert-mode global-auto-revert-mode)
+  316
+  '(nil nil)
+  t
+  '("c:/emacs_x64/home/.emacs.d/")
+  nil
+  '((mark-ring nil)))
+
+(desktop-create-buffer 208
+  nil
+  "lisp"
+  'dired-mode
+  '(hungry-delete-mode linum-mode helm-mode company-mode auto-revert-mode global-auto-revert-mode)
+  251
+  '(nil nil)
+  t
+  '("c:/emacs_x64/home/.emacs.d/lisp/")
+  nil
+  '((mark-ring nil)))
+

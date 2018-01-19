@@ -18,6 +18,10 @@
 			    popwin
 			    omnisharp
 			    helm
+			    web-mode
+			    expand-region
+			    popup
+			    cnfonts
 			    ) "Default packages")
 (setq package-selected-packages frankwan/packages)
 
@@ -39,22 +43,7 @@
 
 ;;(add-hook 'emacs-lisp-mode-hook 'smartparens-mode)
 (smartparens-global-mode t)
-
-;; use js2-mode
-;; config js2-mode for js files
-(setq auto-mode-alist
-      (append
-       '(("\\.js\\'" . js2-mode))
-       auto-mode-alist))
-
-;; use nodejs-repl
-(require 'nodejs-repl)
-
-;;use swiper
-;;(ivy-mode 1)
-;;(setq ivy-use-virtual-buffers t)
-;;(setq enable-recursive-minibuffers t)
-;;(global-set-key "\C-s" 'swiper)
+(sp-local-pair 'emacs-lisp-mode "'" nil :actions nil)
 
 ;; use monokai-theme
 (load-theme 'monokai t)
@@ -64,5 +53,8 @@
 (popwin-mode 1)
 
 (require 'helm-config)
+
+(require 'expand-region)
+(global-set-key (kbd "C-=") 'er/expand-region)
 
 (provide 'init-packages)

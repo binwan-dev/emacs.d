@@ -4,7 +4,7 @@
 
 ;; diabled auto backup file model
 (setq make-backup-files nil)
-					;(setq auto-save-default t)
+(setq auto-save-default nil)
 (setq auto-save-interval 50)
 (setq auto-save-timeout 120)
 (setq backup-directory-alist `((".*" . "~/.autosave/")))
@@ -37,10 +37,10 @@
 (global-linum-mode 1)
 
 ;; auto reload file
-(setq auto-revert-mode 1)
+(setq global-auto-revert-mode 1)
 
 ;; save open files for next run emacs
-(desktop-save-mode t)
+(desktop-save-mode -1)
 
 ;; replace yes-no to y-n
 (fset 'yes-or-no-p 'y-or-n-p)
@@ -113,6 +113,42 @@
 
 (require 'dired-x)
 (setq dired-dwim-target t)
+
+;; showparen
+(define-advice show-paren-function (:around (fn) fix-show-paren-function)
+  "HighLight enclosing parens. "
+  (cond ((looking-at-p "\\s(") (funcall fn))
+	(t (save-excursion
+	     (ignore-errors (backward-up-list))
+	     (funcall fn)))))
+
+;; hidden or remove dos '\r' char
+(defun hidden-dos-eol()
+  "Do not show ^M in files containing mixed UNIX and DOS line endings"
+  (interactive)
+  (setq buffer-display-table (make-display-table))
+  (aset buffer-display-table ?\^M []))
+(defun remove-dos-eol()
+  "Replace DOS eolns CR LF with Unix eolns CR"
+  (interactive)
+  (goto-char (point-min))
+  (while (search-forward "\r" nil t) (replace-match "")))
+
+;; dwin = do what i mean. this is occur super func
+(defun occur-dwin ()
+  "Call 'occur' with a sane default"
+  (interactive)
+  (push (if (region-active-p)
+	    (buffer-substring-no-properties
+	     (region-beginning)
+	     (region-end))
+	  (let ((sym (thing-at-point 'symbol)))
+	    (when (stringp sym)
+	      (regexp-quote sym))))
+	regexp-history)
+  (call-interactively 'occur))
+
+(global-set-key (kbd "M-s o") 'occur-dwin)
 
 (provide 'init-better-defaults)
 
