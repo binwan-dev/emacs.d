@@ -22,6 +22,9 @@
 			    expand-region
 			    popup
 			    cnfonts
+			    org-pomodoro
+			    yasnippet
+			    helm-ag
 			    ) "Default packages")
 (setq package-selected-packages frankwan/packages)
 
@@ -56,5 +59,7 @@
 
 (require 'expand-region)
 (global-set-key (kbd "C-=") 'er/expand-region)
+
+(require 'org-pomodoro)
 
 (provide 'init-packages)

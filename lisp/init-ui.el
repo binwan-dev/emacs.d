@@ -3,6 +3,8 @@
 (tool-bar-mode -1)
 ;; hide scrol bar
 (scroll-bar-mode -1)
+;;hide menu bar
+(menu-bar-mode -1)
 ;; ? 
 (setq inhibit-splash-screen 1)
 
