@@ -25,6 +25,8 @@
 			    org-pomodoro
 			    yasnippet
 			    helm-ag
+			    elpy
+			    py-autopep8
 			    ) "Default packages")
 (setq package-selected-packages frankwan/packages)
 

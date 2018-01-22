@@ -16,6 +16,7 @@
 (require 'init-web)
 (require 'init-cnfonts)
 (require 'init-yasnippet)
+(require 'init-python)
 (require 'init-keybindings)
 (setq custom-file (expand-file-name "lisp/custom.el" user-emacs-directory))
 (load-file custom-file)

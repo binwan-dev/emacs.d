@@ -13,7 +13,11 @@
 (setq org-capture-templates
       '(("t" "Todo" entry (file+headline "~/org/gtd.org" "Work Plan")
 	 "* TODO {#B} %?\n %i\n"
+	 :empty-lines 1)
+	("d" "Work Daily of week" entry (file+headline "~/org/fm_daily.org" "Work daily for followme")
+	 "* TODO %?\n %i\n"
 	 :empty-lines 1)))
+
 (global-set-key (kbd "C-c c") 'org-capture)
 
 (provide 'init-org)
