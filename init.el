@@ -8,8 +8,8 @@
   (find-file "~/.emacs.d/init.el"))
 
 (require 'init-packages)
-(require 'init-ui)
 (require 'init-better-defaults)
+;; (require 'init-evil)
 (require 'init-org)
 (require 'init-omnisharp)
 (require 'init-helm)
@@ -17,6 +17,8 @@
 (require 'init-cnfonts)
 (require 'init-yasnippet)
 (require 'init-python)
+(require 'init-go)
+(require 'init-ui)
 (require 'init-keybindings)
 (setq custom-file (expand-file-name "lisp/custom.el" user-emacs-directory))
 (load-file custom-file)

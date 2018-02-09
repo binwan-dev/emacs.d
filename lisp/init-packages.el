@@ -27,6 +27,17 @@
 			    helm-ag
 			    elpy
 			    py-autopep8
+			    counsel
+			    go-mode
+			    company-go
+			    evil
+			    evil-leader
+			    window-numbering
+			    evil-surround
+			    evil-nerd-commenter
+			    which-key
+			    sql-indent
+			    dotnet
 			    ) "Default packages")
 (setq package-selected-packages frankwan/packages)
 

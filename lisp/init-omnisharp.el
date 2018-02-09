@@ -20,11 +20,40 @@
   (define-key omnisharp-mode-map (kbd "C-c C-b") 'pop-tag-mark)
   (define-key omnisharp-mode-map (kbd "C-c C-c") 'omnisharp-helm-find-usages)
   (define-key omnisharp-mode-map (kbd "C-c s s") 'omnisharp-start-omnisharp-server)
-  (define-key omnisharp-mode-map (kbd "C-c C-v") 'flycheck-mode)
+  (define-key omnisharp-mode-map (kbd "C-.") 'omnisharp-run-code-action-refactoring)
+  (define-key omnisharp-mode-map (kbd "<RET>") 'csharp-newline-and-indent)
+  (define-key omnisharp-mode-map (kbd "C-d n") 'dotnet-new)
+  (define-key omnisharp-mode-map (kbd "C-d r") 'dotnet-run)
+  (define-key omnisharp-mode-map (kbd "C-d b") 'dotnet-build)
+  (define-key omnisharp-mode-map (kbd "C-d a p") 'dotnet-add-package)
+  (define-key omnisharp-mode-map (kbd "C-d g c") 'dotnet-goto-csproj)
   (omnisharp-mode))
 
 ;;(after-load 'company
 ;;  '(add-to-list 'company-backends #'company-omnisharp))
 
+(defun csharp-newline-and-indent ()
+  "Open a newline and indent.
+If point is between a pair of braces, opens newlines to put braces
+on their own line."
+  (interactive)
+  (save-excursion
+    (save-match-data
+      (when (and
+             (looking-at " *}")
+             (save-match-data
+               (when (looking-back "{ *")
+                 (goto-char (match-beginning 0))
+                 (unless (looking-back "^[[:space:]]*")
+                   (newline-and-indent))
+                 t)))
+        (unless (and (boundp electric-pair-open-newline-between-pairs)
+                     electric-pair-open-newline-between-pairs
+                     electric-pair-mode)
+          (goto-char (match-beginning 0))
+          (newline-and-indent)))))
+  (newline-and-indent)) 
+
 (add-hook 'csharp-mode-hook 'my-csharp-mode-setup t)
+
 (provide 'init-omnisharp)

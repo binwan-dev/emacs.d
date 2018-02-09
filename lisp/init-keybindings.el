@@ -36,4 +36,13 @@
       (when (looking-at "^    ")
         (replace-match "")))))
 
+;; flycheck
+(global-set-key (kbd "C-c C-v") #'flycheck-mode)
+(global-set-key (kbd "C-c v n") #'flycheck-next-error)
+(global-set-key (kbd "C-c v p") #'flycheck-previous-error)
+
+;; backward kill word
+;; (global-set-key (kbd "C-w") #'backward-kill-word)
+
+
 (provide 'init-keybindings)
