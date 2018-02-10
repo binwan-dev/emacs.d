@@ -21,7 +21,7 @@
   (define-key omnisharp-mode-map (kbd "C-c C-c") 'omnisharp-helm-find-usages)
   (define-key omnisharp-mode-map (kbd "C-c s s") 'omnisharp-start-omnisharp-server)
   (define-key omnisharp-mode-map (kbd "C-.") 'omnisharp-run-code-action-refactoring)
-  (define-key omnisharp-mode-map (kbd "<RET>") 'csharp-newline-and-indent)
+  ;; (define-key omnisharp-mode-map (kbd "<RET>") 'csharp-newline-and-indent)
   (define-key omnisharp-mode-map (kbd "C-d n") 'dotnet-new)
   (define-key omnisharp-mode-map (kbd "C-d r") 'dotnet-run)
   (define-key omnisharp-mode-map (kbd "C-d b") 'dotnet-build)
