@@ -38,6 +38,7 @@
 			    which-key
 			    sql-indent
 			    dotnet
+			    iedit
 			    ) "Default packages")
 (setq package-selected-packages frankwan/packages)
 
@@ -74,5 +75,7 @@
 (global-set-key (kbd "C-=") 'er/expand-region)
 
 (require 'org-pomodoro)
+
+(require 'iedit)
 
 (provide 'init-packages)

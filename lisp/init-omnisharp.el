@@ -1,6 +1,10 @@
 (require 'omnisharp)
 
-(setq omnisharp-server-executable-path "C:\\emacs_x64\\packages\\omnisharp-roslyn\\OmniSharp.exe")
+(if (eq system-type 'windows-nt)
+    (setq omnisharp-server-executable-path "C:\\emacs_x64\\p ackages\\omnisharp-roslyn\\OmniSharp.exe"))
+(if (eq system-type 'darwin)
+    (setq omnisharp-server-executable-path "/usr/local/share/omnisharp-osx/run"))
+
 
 (setq omnisharp-company-match-sort-by-flx-score t)
 (setq omnisharp-company-match-type 'company-match-flex)
@@ -14,6 +18,7 @@
   (setq evil-shift-width 4)
   (setq company-minimum-prefix-length 3)
   (setq company-echo-delay 0)
+  (setq fci-rule-column 100)
   (add-to-list 'company-backends #'company-omnisharp)
   (define-key omnisharp-mode-map (kbd "C-c C-j") 'omnisharp-go-to-definition)
   (define-key omnisharp-mode-map (kbd "<f12>") 'omnisharp-go-to-definition)
@@ -27,7 +32,10 @@
   (define-key omnisharp-mode-map (kbd "C-d b") 'dotnet-build)
   (define-key omnisharp-mode-map (kbd "C-d a p") 'dotnet-add-package)
   (define-key omnisharp-mode-map (kbd "C-d g c") 'dotnet-goto-csproj)
-  (omnisharp-mode))
+  (define-key omnisharp-mode-map (kbd "C-c i") #'omnisharp-find-implementations)
+  (omnisharp-mode)
+  (flycheck-mode)
+  (fci-mode))
 
 ;;(after-load 'company
 ;;  '(add-to-list 'company-backends #'company-omnisharp))

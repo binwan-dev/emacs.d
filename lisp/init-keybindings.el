@@ -23,18 +23,7 @@
 (global-set-key (kbd "C-x C-f") #'helm-find-files)
 
 ;; binding shift+tab to removing code space
-(global-set-key (kbd "<S-tab>") 'un-indent-by-removing-4-spaces)
-(defun un-indent-by-removing-4-spaces ()
-  "remove 4 spaces from beginning of of line"
-  (interactive)
-  (save-excursion
-    (save-match-data
-      (beginning-of-line)
-      ;; get rid of tabs at beginning of line
-      (when (looking-at "^\\s-+")
-        (untabify (match-beginning 0) (match-end 0)))
-      (when (looking-at "^    ")
-        (replace-match "")))))
+;;(global-set-key (kbd "<S-tab>") 'un-indent-by-removing-4-spaces)
 
 ;; flycheck
 (global-set-key (kbd "C-c C-v") #'flycheck-mode)
@@ -44,5 +33,8 @@
 ;; backward kill word
 ;; (global-set-key (kbd "C-w") #'backward-kill-word)
 
+(global-set-key (kbd "M-p") #'scroll-down-line)
+(global-set-key (kbd "M-n") #'scroll-up-line)
+(global-set-key (kbd "C-c b r") #'revert-buffer)
 
 (provide 'init-keybindings)

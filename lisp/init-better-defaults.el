@@ -87,6 +87,20 @@
 
 (global-set-key (kbd "C-M-\\") 'indent-region-or-buffer)
 
+(defun un-indent-by-removing-4-spaces ()
+  "remove 4 spaces from beginning of of line"
+  (interactive)
+  (save-excursion
+    (save-match-data
+      (beginning-of-line)
+      ;; get rid of tabs at beginning of line
+      (when (looking-at "^\\s-+")
+        (untabify (match-beginning 0) (match-end 0)))
+      (when (looking-at "^    ")
+        (replace-match "")))))
+
+(global-set-key (kbd "<S-tab>") 'un-indent-by-removing-4-spaces)
+
 ;; hippie expand, make company mode more stong
 (setq hippie-expand-try-functions-list '(
 					 try-expand-dabbrev
@@ -101,7 +115,7 @@
 					 try-complete-lisp-symbol
 					 ))
 
-(global-set-key (kbd "C-.") 'hippie-expand)
+(global-set-key (kbd "C-c .") 'hippie-expand)
 
 ;; remap company selection result keys
 (with-eval-after-load 'company
@@ -167,6 +181,12 @@
 
 (global-set-key [remap comment-or-uncomment-region] 'my-comment-or-uncomment-region)
 (global-set-key (kbd "C-c C-/") #'comment-or-uncomment-region)
+
+;; set words much warnning with rows.
+(setq fci-rule-column 80) 
+(setq fci-rule-color "gray") 
+(setq fci-rule-width 1)
+(fci-mode 1) 
 
 (provide 'init-better-defaults)
 

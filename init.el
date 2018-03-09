@@ -1,4 +1,4 @@
- (package-initialize)
+(package-initialize)
 
 (add-to-list 'load-path "~/.emacs.d/lisp/")
 
@@ -11,11 +11,11 @@
 (require 'init-better-defaults)
 ;; (require 'init-evil)
 (require 'init-org)
+(require 'init-yasnippet)
 (require 'init-omnisharp)
 (require 'init-helm)
 (require 'init-web)
 (require 'init-cnfonts)
-(require 'init-yasnippet)
 (require 'init-python)
 (require 'init-go)
 (require 'init-ui)
@@ -23,3 +23,4 @@
 (setq custom-file (expand-file-name "lisp/custom.el" user-emacs-directory))
 (load-file custom-file)
 (put 'upcase-region 'disabled nil)
+(put 'scroll-left 'disabled nil)
