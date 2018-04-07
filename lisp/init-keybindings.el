@@ -1,6 +1,6 @@
 
 ;; (global-set-key "\C-x\ \C-r" 'recentf-open-files)
-(global-set-key (kbd "<f2>") 'recentf-open-files)
+(global-set-key (kbd "C-x C-r") 'recentf-open-files)
 
 ;; binding key 'f1' to open init-file
 (global-set-key (kbd "<f1>") 'open-my-init-file)

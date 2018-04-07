@@ -20,7 +20,7 @@
   (setq company-echo-delay 0)
   (setq fci-rule-column 100)
   (add-to-list 'company-backends #'company-omnisharp)
-  (define-key omnisharp-mode-map (kbd "C-c C-j") 'omnisharp-go-to-definition)
+  (define-key omnisharp-mode-map (kbd "C-c j") 'omnisharp-go-to-definition)
   (define-key omnisharp-mode-map (kbd "<f12>") 'omnisharp-go-to-definition)
   (define-key omnisharp-mode-map (kbd "C-c C-b") 'pop-tag-mark)
   (define-key omnisharp-mode-map (kbd "C-c C-c") 'omnisharp-helm-find-usages)
@@ -34,8 +34,7 @@
   (define-key omnisharp-mode-map (kbd "C-d g c") 'dotnet-goto-csproj)
   (define-key omnisharp-mode-map (kbd "C-c i") #'omnisharp-find-implementations)
   (omnisharp-mode)
-  (flycheck-mode)
-  (fci-mode))
+  (flycheck-mode))
 
 ;;(after-load 'company
 ;;  '(add-to-list 'company-backends #'company-omnisharp))

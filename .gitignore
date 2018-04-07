@@ -31,3 +31,5 @@ request/
 edts/
 .cache/
 abbrev_defs
+elpa-25.3/
+network-security.data

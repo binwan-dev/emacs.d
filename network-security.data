@@ -1,3 +1,0 @@
-(
- (:id "sha1:379522f41fcdf5d279b33c30780e7512c9348430" :fingerprint "sha1:d4:ee:9d:2a:67:12:b3:61:4c:27:2d:15:8b:04:fc:c8:ca:08:a0:b6" :host "github.com:443" :conditions (:insecure :unknown-ca :invalid))
-)

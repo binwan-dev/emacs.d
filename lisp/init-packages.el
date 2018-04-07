@@ -1,10 +1,10 @@
-
 ;; Setting package source
 (when (>= emacs-major-version 24)
   (require 'package)
   (package-initialize)
   (setq package-archives '(("gnu"   . "http://elpa.emacs-china.org/gnu/")
-			   ("melpa" . "http://elpa.emacs-china.org/melpa/"))))
+			   ("melpa" . "http://elpa.emacs-china.org/melpa/")
+			   ("qinghua" . "http://mirrors.tuna.tsinghua.edu.cn/elpa/melpa/"))))
 
 (require 'cl)
 ;; my package list
@@ -39,6 +39,8 @@
 			    sql-indent
 			    dotnet
 			    iedit
+			    color-theme-sanityinc-tomorrow
+			    color-theme-sanityinc-solarized
 			    ) "Default packages")
 (setq package-selected-packages frankwan/packages)
 
@@ -54,6 +56,7 @@
     (when (not (package-installed-p pkg))
       (package-install pkg))))
 
+
 ;; use huagry-delete
 (require 'hungry-delete)
 (global-hungry-delete-mode)
@@ -63,11 +66,11 @@
 (sp-local-pair 'emacs-lisp-mode "'" nil :actions nil)
 
 ;; use monokai-theme
-(load-theme 'monokai t)
+;;(load-theme 'monokai t)
 
 ;; popwin
 (require 'popwin)
-(popwin-mode 1)
+;;(popwin-mode 1)
 
 (require 'helm-config)
 

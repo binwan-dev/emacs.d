@@ -17,6 +17,10 @@
     (company-omnisharp company-bbdb company-nxml company-css company-eclim company-semantic company-cmake company-capf company-files
 		       (company-dabbrev-code company-gtags company-etags company-keywords)
 		       company-oddmuse company-dabbrev)))
+ '(custom-enabled-themes (quote (sanityinc-tomorrow-bright)))
+ '(custom-safe-themes
+   (quote
+    ("1b8d67b43ff1723960eb5e0cba512a2c7a2ad544ddb2533a90101fd1852b426e" default)))
  '(evil-leader/leader "SPC")
  '(global-company-mode t)
  '(helm-completing-read-handlers-alist
@@ -45,7 +49,7 @@
  '(omnisharp-imenu-support t)
  '(package-selected-packages
    (quote
-    (fill-column-indicator iedit dotnet sql-indent which-key evil-nerd-commenter powerline-evil evil-surround powerline window-numbering evil company monokai-theme hungry-delete smartparens js2-mode nodejs-repl popwin omnisharp helm web-mode expand-region popup cnfonts org-pomodoro yasnippet helm-ag elpy py-autopep8 counsel go-mode company-go)))
+    (flycheck color-theme-solarized color-theme-sanityinc-tomorrow fill-column-indicator iedit dotnet sql-indent which-key evil-nerd-commenter powerline-evil evil-surround powerline window-numbering evil company monokai-theme hungry-delete smartparens js2-mode nodejs-repl popwin omnisharp helm web-mode expand-region popup cnfonts org-pomodoro yasnippet helm-ag elpy py-autopep8 counsel go-mode company-go)))
  '(popwin:popup-window-position (quote right))
  '(popwin:popup-window-width 80)
  '(which-key-side-window-location (quote right)))
