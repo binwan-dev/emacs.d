@@ -37,6 +37,7 @@
 ;;(require 'init-utils)
 (require 'init-packages)
 (require 'init-elpa)
+(require 'init-term)
 ;;(require 'init-simple-package)
 (require 'init-themes)
 (require 'init-better-defaults)
