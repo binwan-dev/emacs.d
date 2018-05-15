@@ -37,4 +37,7 @@
 (global-set-key (kbd "M-n") #'scroll-up-line)
 (global-set-key (kbd "C-c b r") #'revert-buffer)
 
+;; undo-tree-mode
+(global-set-key (kbd "C-c C-u") #'undo-tree-mode)
+
 (provide 'init-keybindings)

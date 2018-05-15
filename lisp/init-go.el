@@ -33,5 +33,16 @@
 ;;(load-file "$GOPATH/src/golang.org/x/tools/cmd/oracle/oracle.el")
 ;;(add-hook 'go-mode-hook 'go-oracle-mode)
 
+;; Go company
+(require-package 'auto-complete)
+(require-package 'go-autocomplete)
+;; (require-package 'auto-complete-config)
+(ac-config-default)
+
+(require-package 'company-go)
+(add-hook 'go-mode-hook (lambda ()
+                          (set (make-local-variable 'company-backends) '(company-go))
+                          (company-mode)))
+
 (provide 'init-go)
 ;;; init-go.el ends here
