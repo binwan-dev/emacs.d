@@ -1,48 +1,35 @@
-;;; init-go --- golang
-;;; Commentary:
-;; http://tleyden.github.io/blog/2014/05/22/configure-emacs-as-a-go-editor-from-scratch/
-;; https://robinxiong.gitbooks.io/golang/content/section1/emacs.html
-;; http://studygolang.com/topics/583
-
-;;; Code:
-(require 'go-mode)
-
-;; removes all unused imports
-(add-hook 'go-mode-hook '(lambda() (local-set-key (kbd "C-c C-r")'go-remove-unused-imports)))
-
-;; format the current buffer
-(add-hook 'go-mode-hook '(lambda () (local-set-key (kbd "C-c C-f") 'gofmt)))
-
-;; format the buffer when save
-(add-hook 'before-save-hook 'gofmt-before-save)
-
-;; show the go documentation for a given package
-;; Note: godoc depends on the godoc utility.
-;; It must be installed and on your $PATH.
-;; To install it run: go get code.google.com/p/go.tools/cmd/godoc.
-(add-hook 'go-mode-hook '(lambda() (local-set-key (kbd "C-c C-k") 'godoc)))
-
-;; Gocode autocomplete
-;;(add-hook 'go-mode-hook 'company-mode)
-(add-hook 'go-mode-hook '(lambda()
-               (set (make-local-variable 'company-backends)'(company-go))
-               (company-mode)))
-
-;; Go oracle
-;; Note: $GOPATH will defined in init-exec-path-from-shell
-;;(load-file "$GOPATH/src/golang.org/x/tools/cmd/oracle/oracle.el")
-;;(add-hook 'go-mode-hook 'go-oracle-mode)
-
-;; Go company
-(require-package 'auto-complete)
-(require-package 'go-autocomplete)
-;; (require-package 'auto-complete-config)
-(ac-config-default)
+(require-package 'go-mode)
 
 (require-package 'company-go)
-(add-hook 'go-mode-hook (lambda ()
-                          (set (make-local-variable 'company-backends) '(company-go))
-                          (company-mode)))
+(require-package 'go-projectile)
+(require-package 'gotest)
+(require-package 'golint)
+(require-package 'go-gopath)
+
+(defun go-mode-defaults ()
+  ;; Prefer goimports to gofmt if installed
+  (let ((goimports (executable-find "goimports")))
+    (when goimports
+      (setq gofmt-command goimports)))
+
+  (add-hook 'before-save-hook 'gofmt-before-save nil t)
+  (whitespace-toggle-options '(tabs))
+  (set (make-local-variable 'company-backends) '(company-go))
+
+  (local-set-key (kbd "C-c C-b") 'pop-tag-mark)
+  (local-set-key (kbd "C-c t") 'go-test-current-file)
+  (local-set-key (kbd "C-c j") 'godef-jump)
+  (setq tab-width 4))
+
+(add-hook 'go-mode-hook 'go-mode-defaults)
+
+
+;; (require-package 'protobuf-mode)
+;; (defconst protobuf-style
+;;   '((c-basic-offset . 2)
+;;     (indent-tabs-mode . nil)))
+
+;; (add-hook 'protobuf-mode-hook
+;;           (lambda () (c-add-style "my-style" protobuf-style t)))
 
 (provide 'init-go)
-;;; init-go.el ends here

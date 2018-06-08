@@ -33,6 +33,7 @@
   (define-key omnisharp-mode-map (kbd "C-d a p") 'dotnet-add-package)
   (define-key omnisharp-mode-map (kbd "C-d g c") 'dotnet-goto-csproj)
   (define-key omnisharp-mode-map (kbd "C-c i") #'omnisharp-find-implementations)
+  (define-key omnisharp-mode-map (kbd "C-c f") #'omnisharp-code-format-entire-file)
   (omnisharp-mode)
   (flycheck-mode))
 
@@ -62,5 +63,20 @@ on their own line."
   (newline-and-indent)) 
 
 (add-hook 'csharp-mode-hook 'my-csharp-mode-setup t)
+
+;; (defun format-region-or-buffer()
+;;   (interactive)
+;;   (save-excursion
+;;     (if(region-active-p)
+;; 	(progn
+;; 	  (omnisharp-code-format-entire-file (region-beginning) (region-end))
+;; 	  (message "Indented selected region."))
+;;       (progn
+;; 	(indent-buffer)
+;; 	(message "Indented buffer.")))))
+
+;; (global-set-key (kbd "C-M-\\") 'indent-region-or-buffer)
+
+
 
 (provide 'init-omnisharp)
