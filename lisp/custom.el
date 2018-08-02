@@ -17,10 +17,11 @@
     (company-omnisharp company-bbdb company-nxml company-css company-eclim company-semantic company-cmake company-capf company-files
 		       (company-dabbrev-code company-gtags company-etags company-keywords)
 		       company-oddmuse company-dabbrev)))
- '(custom-enabled-themes (quote (sanityinc-tomorrow-bright)))
+ '(compilation-message-face (quote default))
+ '(custom-enabled-themes (quote (monokai)))
  '(custom-safe-themes
    (quote
-    ("1b8d67b43ff1723960eb5e0cba512a2c7a2ad544ddb2533a90101fd1852b426e" default)))
+    ("ad9bbd248fa223436c71b87d80086c9e567b2e32e02bf0ccc90beb038cdbcea7" "1b8d67b43ff1723960eb5e0cba512a2c7a2ad544ddb2533a90101fd1852b426e" default)))
  '(evil-leader/leader "SPC")
  '(global-company-mode t)
  '(helm-completing-read-handlers-alist
@@ -45,6 +46,18 @@
      (execute-extended-command)
      (find-file-read-only . ido)
      (find-alternate-file))))
+ '(highlight-changes-colors (quote ("#FD5FF0" "#AE81FF")))
+ '(highlight-tail-colors
+   (quote
+    (("#3C3D37" . 0)
+     ("#679A01" . 20)
+     ("#4BBEAE" . 30)
+     ("#1DB4D0" . 50)
+     ("#9A8F21" . 60)
+     ("#A75B00" . 70)
+     ("#F309DF" . 85)
+     ("#3C3D37" . 100))))
+ '(magit-diff-use-overlays nil)
  '(omnisharp-auto-complete-popup-help-delay nil)
  '(omnisharp-imenu-support t)
  '(package-selected-packages
@@ -52,4 +65,9 @@
     (company-anaconda protobuf-mode go-gopath golint gotest go-projectile company-jedi exec-path-from-shell go-autocomplete auto-complete-config auto-complete mc-extras multiple-cursors multi-term flycheck color-theme-solarized color-theme-sanityinc-tomorrow fill-column-indicator iedit dotnet sql-indent which-key evil-nerd-commenter powerline-evil evil-surround powerline window-numbering evil company monokai-theme hungry-delete smartparens js2-mode nodejs-repl popwin omnisharp helm web-mode expand-region popup cnfonts org-pomodoro yasnippet helm-ag elpy py-autopep8 counsel go-mode company-go)))
  '(popwin:popup-window-position (quote right))
  '(popwin:popup-window-width 80)
+ '(pos-tip-background-color "#FFFACE")
+ '(pos-tip-foreground-color "#272822")
+ '(weechat-color-list
+   (quote
+    (unspecified "#272822" "#3C3D37" "#F70057" "#F92672" "#86C30D" "#A6E22E" "#BEB244" "#E6DB74" "#40CAE4" "#66D9EF" "#FB35EA" "#FD5FF0" "#74DBCD" "#A1EFE4" "#F8F8F2" "#F8F8F0")))
  '(which-key-side-window-location (quote right)))

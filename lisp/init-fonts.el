@@ -64,8 +64,8 @@ This is helpful for writeroom-mode, in particular."
 (defun default-font-size()
   "default font size"
   (interactive)
-  (setq cjk-font-size 16)
-  (setq ansi-font-size 16)
+  (setq cjk-font-size 32)
+  (setq ansi-font-size 32)
   (message "cjk-size:%d pt, ansi-size:%d pt" cjk-font-size ansi-font-size)
   (font-reload)
   (sit-for .5))

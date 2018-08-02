@@ -34,12 +34,11 @@
   (interactive)
   (find-file "~/.emacs.d/init.el"))
 
-;;(require 'init-utils)
+(require 'init-utils)
 (require 'init-packages)
 (require 'init-elpa)
 (require 'init-exec-path-shell)
 (require 'init-term)
-;;(require 'init-simple-package)
 (require 'init-themes)
 (require 'init-powerline)
 (require 'init-window)
@@ -58,6 +57,7 @@
 (require 'init-go)
 (require 'init-ui)
 (require 'init-keybindings)
+(require 'init-fci)
 (require 'init-multi-cursors)
 
 (setq custom-file (expand-file-name "lisp/custom.el" user-emacs-directory))
