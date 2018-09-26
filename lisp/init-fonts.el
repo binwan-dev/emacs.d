@@ -29,8 +29,8 @@ This is helpful for writeroom-mode, in particular."
   (create-fontset-from-fontset-spec
    (concat
     "-*-fixed-medium-r-normal-*-*-*-*-*-*-*-fontset-myfontset," 
-    (format "ascii:-outline-Consolas-normal-normal-normal-mono-%d-*-*-*-c-*-iso8859-1," ansi-font-size)
-    (format "unicode:-outline-Consolas-normal-normal-normal-mono-%d-*-*-*-c-*-iso8859-1," cjk-font-size)
+    (format "ascii:-outline-Source Code Pro-normal-normal-normal-mono-%d-*-*-*-c-*-iso8859-1," ansi-font-size)
+    (format "unicode:-outline-Source Code Pro-normal-normal-normal-mono-%d-*-*-*-c-*-iso8859-1," cjk-font-size)
     (format "chinese-gb2312:-microsoft-Microsoft YaHei-normal-normal-normal-*-%d-*-*-*-*-0-iso8859-1," cjk-font-size)
     ;; (format "unicode:-outline-文泉驿等宽微米黑-normal-normal-normal-sans-*-*-*-*-p-*-gb2312.1980-0," cjk-font-size)
     ;; (format "chinese-gb2312:-outline-文泉驿等宽微米黑-normal-normal-normal-sans-*-*-*-*-p-*-gb2312.1980-0," cjk-font-size)
@@ -64,8 +64,8 @@ This is helpful for writeroom-mode, in particular."
 (defun default-font-size()
   "default font size"
   (interactive)
-  (setq cjk-font-size 16)
-  (setq ansi-font-size 16)
+  (setq cjk-font-size 14)
+  (setq ansi-font-size 14)
   (message "cjk-size:%d pt, ansi-size:%d pt" cjk-font-size ansi-font-size)
   (font-reload)
   (sit-for .5))

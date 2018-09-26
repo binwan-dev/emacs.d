@@ -43,4 +43,15 @@
 
 (add-hook 'org-mode-hook 'my-org-mode-setup t)
 
+(global-set-key (kbd "C-c C-a r") 'org-agenda-to-appt)
+
+;;agenda-appt
+(require 'appt)
+(appt-activate t);启用约会提醒
+(setq appt-display-format 'window);提醒出现的方式
+(setq appt-message-warning-time '5);在到期前5分钟提醒
+(setq appt-display-duration '30);提醒持续时间（秒）
+(setq appt-audible t)  ;声音提醒 -->没有响声!!？？？？？
+(setq appt-display-mode-line t);在状态栏显示时间（分钟）
+
 (provide 'init-org)

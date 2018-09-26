@@ -19,7 +19,7 @@ Fix for the above hasn't been released as of Emacs 25.2."
   "Switch to the corresponding sqli buffer."
   (interactive)
   (if (and sql-buffer (buffer-live-p sql-buffer))
-      (progn
+(progn
         (pop-to-buffer sql-buffer)
         (goto-char (point-max)))
     (sql-set-sqli-buffer)

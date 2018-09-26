@@ -50,6 +50,7 @@
 (require 'init-yasnippet)
 (require 'init-omnisharp)
 (require 'init-helm)
+(require 'init-helm-tag)
 (require 'init-web)
 ;;(require 'init-cnfonts)
 (require 'init-fonts)
@@ -59,6 +60,9 @@
 (require 'init-ui)
 (require 'init-keybindings)
 (require 'init-multi-cursors)
+(require 'init-mssql)
+(require 'init-undo-tree)
+(require 'init-dashboard)
 
 (setq custom-file (expand-file-name "lisp/custom.el" user-emacs-directory))
 (load-file custom-file)
