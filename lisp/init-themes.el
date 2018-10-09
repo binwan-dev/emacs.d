@@ -30,10 +30,9 @@
   (setq custom-enabled-themes '(sanityinc-tomorrow-bright))
   (reapply-themes))
 
-
-(when (maybe-require-package 'dimmer)
+(require-package 'dimmer)
+(when (require 'dimmer)
   (setq-default dimmer-fraction 0.1)
   (add-hook 'after-init-hook 'dimmer-mode))
-
 
 (provide 'init-themes)

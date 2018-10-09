@@ -182,11 +182,6 @@
 (global-set-key [remap comment-or-uncomment-region] 'my-comment-or-uncomment-region)
 (global-set-key (kbd "C-c C-/") #'comment-or-uncomment-region)
 
-;; set words much warnning with rows.
-(setq fci-rule-column 80) 
-(setq fci-rule-color "gray") 
-(setq fci-rule-width 1)
-(fci-mode 1) 
 
 (provide 'init-better-defaults)
 

@@ -21,7 +21,7 @@
  '(custom-enabled-themes (quote (monokai)))
  '(custom-safe-themes
    (quote
-    ("7ceb8967b229c1ba102378d3e2c5fef20ec96a41f615b454e0dc0bfa1d326ea6" "06f0b439b62164c6f8f84fdda32b62fb50b6d00e8b01c2208e55543a6337433a" "4aee8551b53a43a883cb0b7f3255d6859d766b6c5e14bcb01bed572fcbef4328" "d3a406c5905923546d8a3ad0164a266deaf451856eca5f21b36594ffcb08413a" "1b8d67b43ff1723960eb5e0cba512a2c7a2ad544ddb2533a90101fd1852b426e" default)))
+    ("bb08c73af94ee74453c90422485b29e5643b73b05e8de029a6909af6a3fb3f58" "8db4b03b9ae654d4a57804286eb3e332725c84d7cdab38463cb6b97d5762ad26" "7ceb8967b229c1ba102378d3e2c5fef20ec96a41f615b454e0dc0bfa1d326ea6" "06f0b439b62164c6f8f84fdda32b62fb50b6d00e8b01c2208e55543a6337433a" "4aee8551b53a43a883cb0b7f3255d6859d766b6c5e14bcb01bed572fcbef4328" "d3a406c5905923546d8a3ad0164a266deaf451856eca5f21b36594ffcb08413a" "1b8d67b43ff1723960eb5e0cba512a2c7a2ad544ddb2533a90101fd1852b426e" default)))
  '(evil-leader/leader "SPC")
  '(global-company-mode t)
  '(helm-completing-read-handlers-alist
@@ -62,7 +62,7 @@
  '(omnisharp-imenu-support t)
  '(package-selected-packages
    (quote
-    (ir-black-theme dashboard helm-gtags company-anaconda protobuf-mode go-gopath golint gotest go-projectile company-jedi exec-path-from-shell go-autocomplete auto-complete-config auto-complete mc-extras multiple-cursors multi-term flycheck color-theme-solarized color-theme-sanityinc-tomorrow fill-column-indicator iedit dotnet sql-indent which-key evil-nerd-commenter powerline-evil evil-surround powerline window-numbering evil company monokai-theme hungry-delete smartparens js2-mode nodejs-repl popwin omnisharp helm web-mode expand-region popup cnfonts org-pomodoro yasnippet helm-ag elpy py-autopep8 counsel go-mode company-go)))
+    (magit ir-black-theme dashboard helm-gtags company-anaconda protobuf-mode go-gopath golint gotest go-projectile company-jedi exec-path-from-shell go-autocomplete auto-complete-config auto-complete mc-extras multiple-cursors multi-term flycheck color-theme-solarized color-theme-sanityinc-tomorrow fill-column-indicator iedit dotnet sql-indent which-key evil-nerd-commenter powerline-evil evil-surround powerline window-numbering evil company monokai-theme hungry-delete smartparens js2-mode nodejs-repl popwin omnisharp helm web-mode expand-region popup cnfonts org-pomodoro yasnippet helm-ag elpy py-autopep8 counsel go-mode company-go)))
  '(popwin:popup-window-position (quote right))
  '(popwin:popup-window-width 80)
  '(pos-tip-background-color "#FFFACE")

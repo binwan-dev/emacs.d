@@ -1,7 +1,7 @@
 (require 'omnisharp)
 
 (if (eq system-type 'windows-nt)
-    (setq omnisharp-server-executable-path "C:\\emacs_x64\\p ackages\\omnisharp-roslyn\\OmniSharp.exe"))
+    (setq omnisharp-server-executable-path "C:\\emacs_x64\\packages\\omnisharp-roslyn\\OmniSharp.exe"))
 (if (eq system-type 'darwin)
     (setq omnisharp-server-executable-path "/usr/local/share/omnisharp-osx/run"))
 
