@@ -4,7 +4,8 @@
     (setq omnisharp-server-executable-path "C:\\emacs_x64\\packages\\omnisharp-roslyn\\OmniSharp.exe"))
 (if (eq system-type 'darwin)
     (setq omnisharp-server-executable-path "/usr/local/share/omnisharp-osx/run"))
-
+(if (eq system-type 'gnu/linux)
+    (setq omnisharp-server-executable-path "/usr/local/share/omnisharp-linux/run"))
 
 (setq omnisharp-company-match-sort-by-flx-score t)
 (setq omnisharp-company-match-type 'company-match-flex)
@@ -25,6 +26,7 @@
   (define-key omnisharp-mode-map (kbd "C-c C-b") 'pop-tag-mark)
   (define-key omnisharp-mode-map (kbd "C-c C-c") 'omnisharp-helm-find-usages)
   (define-key omnisharp-mode-map (kbd "C-c s s") 'omnisharp-start-omnisharp-server)
+  (define-key omnisharp-mode-map (kbd "C-c s r") 'omnisharp-reload-solution)
   (define-key omnisharp-mode-map (kbd "C-.") 'omnisharp-run-code-action-refactoring)
   ;; (define-key omnisharp-mode-map (kbd "<RET>") 'csharp-newline-and-indent)
   (define-key omnisharp-mode-map (kbd "C-d n") 'dotnet-new)
@@ -37,8 +39,8 @@
   (omnisharp-mode)
   (flycheck-mode))
 
-;;(after-load 'company
-;;  '(add-to-list 'company-backends #'company-omnisharp))
+(after-load 'company
+ '(add-to-list 'company-backends #'company-omnisharp))
 
 (defun csharp-newline-and-indent ()
   "Open a newline and indent.
@@ -64,18 +66,18 @@ on their own line."
 
 (add-hook 'csharp-mode-hook 'my-csharp-mode-setup t)
 
-;; (defun format-region-or-buffer()
-;;   (interactive)
-;;   (save-excursion
-;;     (if(region-active-p)
-;; 	(progn
-;; 	  (omnisharp-code-format-entire-file (region-beginning) (region-end))
-;; 	  (message "Indented selected region."))
-;;       (progn
-;; 	(indent-buffer)
-;; 	(message "Indented buffer.")))))
+(defun format-region-or-buffer()
+  (interactive)
+  (save-excursion
+    (if(region-active-p)
+	(progn
+	  (omnisharp-code-format-entire-file (region-beginning) (region-end))
+	  (message "Indented selected region."))
+      (progn
+	(indent-buffer)
+	(message "Indented buffer.")))))
 
-;; (global-set-key (kbd "C-M-\\") 'indent-region-or-buffer)
+(global-set-key (kbd "C-M-\\") 'indent-region-or-buffer)
 
 
 

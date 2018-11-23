@@ -34,3 +34,5 @@ edts/
 abbrev_defs
 elpa-25.3/
 network-security.data
+session*
+elpa-25.2

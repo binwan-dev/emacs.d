@@ -40,19 +40,4 @@
 ;; undo-tree-mode
 (global-set-key (kbd "C-c C-u") #'undo-tree-mode)
 
-;; open wiki.org
-(defun open-my-wiki-file()
-  (interactive)
-  (find-file "~/Documents/project/org/wiki.org"))
-(defun open-my-doc-file()
-  (interactive)
-  (find-file "~/Documents/project/org/doc.org"))
-(defun open-my-work-file()
-  (interactive)
-  (find-file "~/Documents/project/org/work.org"))
-
-(global-set-key (kbd "C-c w w") 'open-my-wiki-file)
-(global-set-key (kbd "C-c w d") 'open-my-doc-file)
-(global-set-key (kbd "C-c w j") 'open-my-work-file)
-
 (provide 'init-keybindings)

@@ -1,4 +1,3 @@
-
 ;; use org
 (require 'org)
 
@@ -6,15 +5,15 @@
 (setq org-src-fontify-natively t)
 
 ;; set agenda config
-(setq org-agenda-files '("~/org/"))
+(setq org-agenda-files '("~/Documents/org/"))
 (global-set-key (kbd "C-c a") 'org-agenda)
 
 ;; org capture
 (setq org-capture-templates
-      '(("t" "Todo" entry (file+headline "~/org/gtd.org" "Work Plan")
-	 "* TODO {#B} %?\n %i\n"
+      '(("w" "Todo for TCMInplay" entry (file+headline "~/Documents/org/tcminplay.org" "Work Plan")
+	 "* TODO [#B] %?\n %i\n"
 	 :empty-lines 1)
-	("d" "Work Daily of week" entry (file+headline "~/org/fm_daily.org" "Work daily for followme")
+	("s" "Work for self" entry (file+headline "~/Documents/org/self.org" "Self")
 	 "* TODO %?\n %i\n"
 	 :empty-lines 1)))
 
@@ -39,7 +38,8 @@
     (org-edit-src-code)))
 
 (defun my-org-mode-setup ()
-  (define-key org-mode-map (kbd "C-c s e") 'org-insert-src-block))
+  (define-key org-mode-map (kbd "C-c s e") 'org-insert-src-block)
+  (setq org-log-done 'time))
 
 (add-hook 'org-mode-hook 'my-org-mode-setup t)
 
@@ -53,5 +53,20 @@
 (setq appt-display-duration '30);提醒持续时间（秒）
 (setq appt-audible t)  ;声音提醒 -->没有响声!!？？？？？
 (setq appt-display-mode-line t);在状态栏显示时间（分钟）
+
+;; open wiki.org
+(defun open-my-wiki-file()
+  (interactive)
+  (find-file "~/Documents/org/wiki.org"))
+(defun open-my-doc-file()
+  (interactive)
+  (find-file "~/Documents/org/doc.org"))
+(defun open-my-password-file()
+  (interactive)
+  (find-file "~/Documents/org/passwd.org"))
+
+(global-set-key (kbd "C-c w w") 'open-my-wiki-file)
+(global-set-key (kbd "C-c w d") 'open-my-doc-file)
+(global-set-key (kbd "C-c w p") 'open-my-password-file)
 
 (provide 'init-org)
