@@ -64,7 +64,7 @@
  '(omnisharp-imenu-support t)
  '(package-selected-packages
    (quote
-    (add-node-modules-path json-mode awesome-tab magit ir-black-theme dashboard helm-gtags company-anaconda protobuf-mode go-gopath golint gotest go-projectile company-jedi exec-path-from-shell go-autocomplete auto-complete-config auto-complete mc-extras multiple-cursors multi-term flycheck color-theme-solarized color-theme-sanityinc-tomorrow fill-column-indicator iedit dotnet sql-indent which-key evil-nerd-commenter powerline-evil evil-surround powerline window-numbering evil company monokai-theme hungry-delete smartparens js2-mode nodejs-repl popwin omnisharp helm web-mode expand-region popup cnfonts org-pomodoro yasnippet helm-ag elpy py-autopep8 counsel go-mode company-go)))
+    (org-super-agenda add-node-modules-path json-mode awesome-tab magit ir-black-theme dashboard helm-gtags company-anaconda protobuf-mode go-gopath golint gotest go-projectile company-jedi exec-path-from-shell go-autocomplete auto-complete-config auto-complete mc-extras multiple-cursors multi-term flycheck color-theme-solarized color-theme-sanityinc-tomorrow fill-column-indicator iedit dotnet sql-indent which-key evil-nerd-commenter powerline-evil evil-surround powerline window-numbering evil company monokai-theme hungry-delete smartparens js2-mode nodejs-repl popwin omnisharp helm web-mode expand-region popup cnfonts org-pomodoro yasnippet helm-ag elpy py-autopep8 counsel go-mode company-go)))
  '(popwin:popup-window-position (quote right))
  '(popwin:popup-window-width 80)
  '(pos-tip-background-color "#FFFACE")
@@ -73,4 +73,4 @@
    (unspecified "#272822" "#3C3D37" "#F70057" "#F92672" "#86C30D" "#A6E22E" "#BEB244" "#E6DB74" "#40CAE4" "#66D9EF" "#FB35EA" "#FD5FF0" "#74DBCD" "#A1EFE4" "#F8F8F2" "#F8F8F0"))
  '(which-key-side-window-location (quote right)))
 
-(set-default-font "Source Code Pro Medium 14")
+(set-default-font "Source Code Pro Medium 16")

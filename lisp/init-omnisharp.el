@@ -19,7 +19,6 @@
   (setq evil-shift-width 4)
   (setq company-minimum-prefix-length 3)
   (setq company-echo-delay 0)
-  (setq fci-rule-column 100)
   (add-to-list 'company-backends #'company-omnisharp)
   (define-key omnisharp-mode-map (kbd "C-c j") 'omnisharp-go-to-definition)
   (define-key omnisharp-mode-map (kbd "<f12>") 'omnisharp-go-to-definition)
@@ -37,7 +36,8 @@
   (define-key omnisharp-mode-map (kbd "C-c i") #'omnisharp-find-implementations)
   (define-key omnisharp-mode-map (kbd "C-c f") #'omnisharp-code-format-entire-file)
   (omnisharp-mode)
-  (flycheck-mode))
+  (flycheck-mode)
+  (fci-mode))
 
 (after-load 'company
  '(add-to-list 'company-backends #'company-omnisharp))

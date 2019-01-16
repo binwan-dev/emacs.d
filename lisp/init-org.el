@@ -69,4 +69,21 @@
 (global-set-key (kbd "C-c w d") 'open-my-doc-file)
 (global-set-key (kbd "C-c w p") 'open-my-password-file)
 
+;;super-agenda
+(require-package 'org-super-agenda)
+(org-super-agenda-mode t)
+
+(let ((org-agenda-span 'day)
+      (org-super-agenda-groups
+       '((:name "Time grid items in all-uppercase with RosyBrown1 foreground"
+                :time-grid t
+                :transformer (--> it
+                                  (upcase it)
+                                  (propertize it 'face '(:foreground "RosyBrown1"))))
+         (:name "Priority >= C items underlined, on black background"
+                :face (:background "black" :underline t)
+                :not (:priority>= "C")
+                :order 100))))
+  (org-agenda nil "a"))
+
 (provide 'init-org)
