@@ -44,12 +44,13 @@
 (require 'init-window)
 (require 'init-better-defaults)
 (require 'init-dired)
+(require 'init-mmm)
 ;; (require 'init-evil)
 (require 'init-yasnippet)
 (require 'init-omnisharp)
 (require 'init-helm)
 (require 'init-helm-tag)
-(require 'init-web)
+(require 'init-javascript)
 ;;(require 'init-cnfonts)
 ;;(require 'init-fonts)
 (require 'init-python)
@@ -70,3 +71,15 @@
 (load-file custom-file)
 (put 'upcase-region 'disabled nil)
 (put 'scroll-left 'disabled nil)
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(org-agenda-files nil))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
