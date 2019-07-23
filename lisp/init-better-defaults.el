@@ -182,6 +182,8 @@
 (global-set-key [remap comment-or-uncomment-region] 'my-comment-or-uncomment-region)
 (global-set-key (kbd "C-c C-/") #'comment-or-uncomment-region)
 
+(global-set-key (kbd "C-M-o") 'View-scroll-half-page-backward)
+(global-set-key (kbd "C-M-n") #'View-scroll-half-page-forward)
 
 (provide 'init-better-defaults)
 

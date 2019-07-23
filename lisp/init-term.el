@@ -3,7 +3,10 @@
 ;; 一些基本配置
 (setq multi-term-program "/bin/zsh")   ;; 设置shell
 (setq multi-term-buffer-name "mterm")  ;; 设置buffer名字ls
-;;(add-to-list 'term-bind-key-alist '("C-j"))
+;;(add-to-list 'term-bind-key-alist '("C-S-f"))
+;;(add-to-list 'term-bind-key-alist '("C-S-e"))
+;;(add-to-list 'term-bind-key-alist '("C-S-b"))
+;;(add-to-list 'term-bind-key-alist '("C-S-a"))
 ;;(add-to-list 'term-bind-key-alist '("C-o"))
 ;;(add-to-list 'term-bind-key-alist '("C-e"))
 ;;(add-to-list 'term-bind-key-alist '("M-f"))
@@ -120,7 +123,8 @@
             (add-to-list 'term-bind-key-alist '("C-d" . ab/delete-char))
             (add-to-list 'term-bind-key-alist '("C-b" . ab/backward-char))
             (add-to-list 'term-bind-key-alist '("C-f" . ab/forward-char))
-            (add-to-list 'term-bind-key-alist '("M-l" . ab/extend-selection)) ;; error
+            (add-to-list 'term-bind-key-alist '("M-l" . ab/extend-selection))
+	    (add-to-list 'term-bind-key-alist '("C-q" . term-send-esc));; error
             (setq show-trailing-whitespace nil)))
 
 ;; 初始化启动的时候打开一个terminal
