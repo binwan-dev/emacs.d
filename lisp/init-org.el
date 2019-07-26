@@ -1,16 +1,13 @@
 ;; use org
 (require 'org)
 
-;; enable code light
-(setq org-src-fontify-natively t)
-
 ;; set agenda config
 (setq org-agenda-files '("~/Documents/org/"))
 (global-set-key (kbd "C-c a") 'org-agenda)
 
 ;; org capture
 (setq org-capture-templates
-      '(("w" "Todo for TCMInplay" entry (file+headline "~/Documents/org/tcminplay.org" "Work Plan")
+      '(("w" "Todo for fnlinker" entry (file+headline "~/Documents/org/fnlinker.org" "Work Plan")
 	 "* TODO [#B] %?\n %i\n"
 	 :empty-lines 1)
 	("s" "Work for self" entry (file+headline "~/Documents/org/self.org" "Self")
@@ -68,22 +65,5 @@
 (global-set-key (kbd "C-c w w") 'open-my-wiki-file)
 (global-set-key (kbd "C-c w d") 'open-my-doc-file)
 (global-set-key (kbd "C-c w p") 'open-my-password-file)
-
-;;super-agenda
-(require-package 'org-super-agenda)
-(org-super-agenda-mode t)
-
-(let ((org-agenda-span 'day)
-      (org-super-agenda-groups
-       '((:name "Time grid items in all-uppercase with RosyBrown1 foreground"
-                :time-grid t
-                :transformer (--> it
-                                  (upcase it)
-                                  (propertize it 'face '(:foreground "RosyBrown1"))))
-         (:name "Priority >= C items underlined, on black background"
-                :face (:background "black" :underline t)
-                :not (:priority>= "C")
-                :order 100))))
-  (org-agenda nil "a"))
 
 (provide 'init-org)
