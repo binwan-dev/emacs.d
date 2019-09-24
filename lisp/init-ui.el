@@ -20,6 +20,4 @@
 ;; disable current row light
 (global-hl-line-mode -1)
 
-(set-default-font "Consolas")
-
 (provide 'init-ui)
