@@ -185,5 +185,7 @@
 (global-set-key (kbd "C-M-o") 'View-scroll-half-page-backward)
 (global-set-key (kbd "C-M-n") #'View-scroll-half-page-forward)
 
+(which-key-mode 1)
+
 (provide 'init-better-defaults)
 
