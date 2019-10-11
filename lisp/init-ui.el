@@ -20,8 +20,4 @@
 ;; disable current row light
 (global-hl-line-mode 1)
 
-;; Chinese and English characters.
-(require-package 'pangu-spacing)
-(pangu-spacing-mode 1)
-
 (provide 'init-ui)
