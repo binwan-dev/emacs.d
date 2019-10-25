@@ -41,6 +41,7 @@
 (require 'init-term)
 (require 'init-themes)
 (require 'init-ui)
+(require 'init-rainbow)
 (require 'init-powerline)
 (require 'init-window)
 (require 'init-better-defaults)
