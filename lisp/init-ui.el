@@ -18,6 +18,6 @@
 (setq initial-frame-alist (quote ((fullscreen . maximized))))
 
 ;; disable current row light
-(global-hl-line-mode 1)
+(global-hl-line-mode -1)
 
 (provide 'init-ui)

@@ -50,7 +50,6 @@
 (require 'init-omnisharp)
 (require 'init-helm)
 (require 'init-helm-tag)
-(require 'init-javascript)
 (require 'init-python)
 (require 'init-go)
 (require 'init-keybindings)
@@ -64,6 +63,7 @@
 (require 'init-org)
 (require 'init-project)
 (require 'init-diminish)
+(require 'init-vue)
 
 (setq custom-file (expand-file-name "lisp/custom.el" user-emacs-directory))
 (load-file custom-file)
