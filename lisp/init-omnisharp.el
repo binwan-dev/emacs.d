@@ -6,7 +6,7 @@
 (if (eq system-type 'darwin)
     (setq omnisharp-server-executable-path "/usr/local/share/omnisharp-osx/run"))
 (if (eq system-type 'gnu/linux)
-    (setq omnisharp-server-executable-path "/usr/local/share/omnisharp-linux/run"))
+    (setq omnisharp-server-executable-path "/opt/omnisharp-linux/run"))
 
 (setq omnisharp-company-match-sort-by-flx-score t)
 (setq omnisharp-company-match-type 'company-match-flex)
@@ -38,6 +38,7 @@
   (define-key omnisharp-mode-map (kbd "C-d g c") 'dotnet-goto-csproj)
   (define-key omnisharp-mode-map (kbd "C-c i") #'omnisharp-find-implementations)
   (define-key omnisharp-mode-map (kbd "C-c f") #'omnisharp-code-format-entire-file)
+  (define-key omnisharp-mode-map (kbd "C-c e") #'flycheck-next-error)
   (omnisharp-mode)
   (flycheck-mode)
   (highlight-indent-guides-mode)

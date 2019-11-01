@@ -1,7 +1,7 @@
 (require-package 'diminish)
 (eval-after-load "helm" '(diminish 'helm-mode "Ⓗ"))
 (eval-after-load "company" '(diminish 'company-mode "ⓒ"))
-(eval-after-load "flycheck" '(diminish 'flycheck-mode "ⓕ"))
+;; (eval-after-load "flycheck" '(diminish 'flycheck-mode "ⓕ"))
 (eval-after-load "projectile" '(diminish 'projectile-mode "Ⓟ"))
 (eval-after-load "smartparens" '(diminish 'smartparens-mode "ⓟ"))
 (eval-after-load "undo-tree" '(diminish 'undo-tree-mode "Ⓤ"))

@@ -38,7 +38,7 @@
 (require 'init-packages)
 (require 'init-elpa)
 (require 'init-exec-path-shell)
-(require 'init-term)
+;;(require 'init-term)
 (require 'init-themes)
 (require 'init-ui)
 (require 'init-rainbow)
