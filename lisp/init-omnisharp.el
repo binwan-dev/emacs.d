@@ -23,7 +23,7 @@
   (setq company-minimum-prefix-length 3)
   (setq company-echo-delay 0)
   (setq highlight-indent-guides-method 'character)
-  (add-to-list 'company-backends #'company-omnisharp)
+  (add-to-list 'company-backends '(company-yasnippet company-omnisharp))
   (define-key omnisharp-mode-map (kbd "C-c C-j") 'omnisharp-go-to-definition)
   (define-key omnisharp-mode-map (kbd "<f12>") 'omnisharp-go-to-definition)
   (define-key omnisharp-mode-map (kbd "C-c C-b") 'pop-tag-mark)

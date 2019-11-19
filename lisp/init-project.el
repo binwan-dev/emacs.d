@@ -1,7 +1,7 @@
 (require-package 'projectile)
 (require-package 'helm-projectile)
 (projectile-mode 1)
-(setq projectile-project-search-path '("~/Documents/fnlinker/"))
+(setq projectile-project-search-path '("~/Documents/fnlinker/" "~/Documents/felix/"))
 (define-key projectile-mode-map (kbd "s-p") 'projectile-command-map)
 (define-key projectile-mode-map (kbd "C-c p") 'projectile-command-map)
 (define-key projectile-mode-map (kbd "C-c C-p") 'projectile-switch-project)

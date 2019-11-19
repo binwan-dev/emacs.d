@@ -2,7 +2,12 @@
 # contributor: Jason Imison <jasonimison@gmail.com>
 # name: Class with name from file                             
 # --
-public class ${1:`(file-name-nondirectory (file-name-sans-extension (buffer-file-name)))`}
+using System;
+
+namespace $2
 {
-    $0
+    public class ${1:`(file-name-nondirectory (file-name-sans-extension (buffer-file-name)))`}
+    {	
+    	$0
+    }   
 }
