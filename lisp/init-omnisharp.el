@@ -4,7 +4,7 @@
 (if (eq system-type 'windows-nt)
     (setq omnisharp-server-executable-path "C:\\emacs_x64\\packages\\omnisharp-roslyn\\OmniSharp.exe"))
 (if (eq system-type 'darwin)
-    (setq omnisharp-server-executable-path "/usr/local/share/omnisharp-osx/run"))
+    (setq omnisharp-server-executable-path "/usr/local/opt/omnisharp-osx/run"))
 (if (eq system-type 'gnu/linux)
     (setq omnisharp-server-executable-path "/opt/omnisharp-linux/run"))
 
@@ -22,8 +22,7 @@
   (setq evil-shift-width 4)
   (setq company-minimum-prefix-length 3)
   (setq company-echo-delay 0)
-  (setq highlight-indent-guides-method 'character)
-  (add-to-list 'company-backends '(company-yasnippet company-omnisharp))
+  (add-to-list 'company-backends '(company-omnisharp :with :separate company-yasnippet))
   (define-key omnisharp-mode-map (kbd "C-c C-j") 'omnisharp-go-to-definition)
   (define-key omnisharp-mode-map (kbd "<f12>") 'omnisharp-go-to-definition)
   (define-key omnisharp-mode-map (kbd "C-c C-b") 'pop-tag-mark)

@@ -39,8 +39,7 @@
 			    sql-indent
 			    dotnet
 			    iedit
-			    color-theme-sanityinc-tomorrow
-			    color-theme-sanityinc-solarized
+			    use-package
 			    ) "Default packages")
 (setq package-selected-packages frankwan/packages)
 
@@ -77,5 +76,7 @@
 (require 'org-pomodoro)
 
 (require 'iedit)
+
+(require 'use-package)
 
 (provide 'init-packages)
