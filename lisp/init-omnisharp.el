@@ -1,5 +1,7 @@
 (require 'omnisharp)
 (require-package 'highlight-indent-guides)
+(require-package 'deferred)
+(require 'deferred)
 
 (if (eq system-type 'windows-nt)
     (setq omnisharp-server-executable-path "C:\\emacs_x64\\packages\\omnisharp-roslyn\\OmniSharp.exe"))
@@ -28,7 +30,7 @@
   (define-key omnisharp-mode-map (kbd "C-c C-b") 'pop-tag-mark)
   (define-key omnisharp-mode-map (kbd "C-c C-c") 'omnisharp-helm-find-usages)
   (define-key omnisharp-mode-map (kbd "C-c s s") 'omnisharp-start-omnisharp-server)
-  (define-key omnisharp-mode-map (kbd "C-c s r") 'omnisharp-reload-solution)
+  (define-key omnisharp-mode-map (kbd "C-c s r") 'my-kill-omnisharp-server-fun)
   (define-key omnisharp-mode-map (kbd "C-.") 'omnisharp-run-code-action-refactoring)
   (define-key omnisharp-mode-map (kbd "C-d n") 'dotnet-new)
   (define-key omnisharp-mode-map (kbd "C-d r") 'dotnet-run)
@@ -41,8 +43,14 @@
   (omnisharp-mode)
   (flycheck-mode)
   (highlight-indent-guides-mode)
-  (fci-mode)
   (company-mode))
+
+(defun my-kill-omnisharp-server-fun ()
+  (interactive)
+  (deferred:process-shell '"kill -9 `ps aux|grep omnisharp-linux|grep -v grep |awk '{print $2}'`")
+  (sleep-for 0.2)
+  (omnisharp-start-omnisharp-server)
+  )
 
 (after-load 'company
   '(add-to-list 'company-backends #'company-omnisharp))
