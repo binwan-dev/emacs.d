@@ -41,3 +41,4 @@ elpa*
 transient/
 .lsp-session-v1
 pyim/
+.emacs.desktop
