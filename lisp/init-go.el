@@ -34,6 +34,7 @@
   (local-set-key (kbd "C-c t") 'go-test-current-file)
   (local-set-key (kbd "C-c C-j") 'lsp-find-definition)
   (local-set-key (kbd "C-c s s") 'lsp-restart-workspace)
+  (local-set-key (kbd "C-c s r") 'my-kill-go-server-fun)
   (local-set-key (kbd "C-c C-c") 'lsp-find-references)
   (setq tab-width 4))
 
@@ -56,6 +57,12 @@
   (add-hook 'before-save-hook #'lsp-format-buffer t t)
   (add-hook 'before-save-hook #'lsp-organize-imports t t))
 (add-hook 'go-mode-hook #'lsp-go-install-save-hooks)
+
+(defun my-kill-go-server-fun ()
+  (interactive)
+  (deferred:process-shell '"kill -9 `ps aux|grep gopls|grep -v grep |awk '{print $2}'`")
+  (sleep-for 0.2)
+  (lsp-restart-workspace))
 
 ;; Optional - provides fancier overlays.
 (use-package lsp-ui
