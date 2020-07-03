@@ -38,3 +38,7 @@ session*
 elpa-25.2
 elpa-26.2
 elpa*
+transient/
+.lsp-session-v1
+pyim/
+.emacs.desktop
