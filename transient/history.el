@@ -1,4 +1,10 @@
-((magit-commit nil)
+((magit-branch nil)
+ (magit-commit nil)
  (magit-dispatch nil)
+ (magit-fetch
+  ("--prune"))
+ (magit-merge nil)
+ (magit-pull nil)
  (magit-push nil)
- (magit-reset nil))
+ (magit-reset nil)
+ (magit-tag nil))
