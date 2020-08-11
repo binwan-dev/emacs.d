@@ -40,6 +40,7 @@
 (require 'init-exec-path-shell)
 ;;(require 'init-term)
 (require 'init-themes)
+(require 'init-neotree)
 (require 'init-ui)
 (require 'init-rainbow)
 (require 'init-powerline)

@@ -1,6 +1,7 @@
 
-(require-package 'dracula-theme)
-(load-theme 'dracula t)
+;; (require-package 'dracula-theme)
+(require-package 'spacemacs-theme)
+(load-theme 'spacemacs-dark t)
 
 (provide 'init-themes)
 
