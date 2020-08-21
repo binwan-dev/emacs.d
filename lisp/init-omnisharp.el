@@ -42,7 +42,6 @@
   (define-key omnisharp-mode-map (kbd "C-c e") #'flycheck-next-error)
   (omnisharp-mode)
   (flycheck-mode)
-  (highlight-indent-guides-mode)
   (company-mode))
 
 (defun my-kill-omnisharp-server-fun ()

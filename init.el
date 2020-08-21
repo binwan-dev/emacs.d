@@ -27,21 +27,28 @@
 
 
 ;;(setq package-enable-at-startup nil)
-(package-initialize)
+(when (version< emacs-version "27")
+  (package-initialize))
 
 ;; define init-file func
 (defun open-my-init-file ()
   (interactive)
   (find-file "~/.emacs.d/init.el"))
 
+(when (>= emacs-major-version 24)
+  (require 'package)
+  (setq package-archives '(("gnu"   . "http://elpa.emacs-china.org/gnu/")
+			   ("melpa" . "http://elpa.emacs-china.org/melpa/")
+			   ("qinghua" . "http://mirrors.tuna.tsinghua.edu.cn/elpa/melpa/"))))
+
 (require 'init-utils)
-(require 'init-packages)
 (require 'init-elpa)
+(require 'init-packages)
 (require 'init-exec-path-shell)
 ;;(require 'init-term)
 (require 'init-themes)
-(require 'init-neotree)
 (require 'init-ui)
+(require 'init-high-indent)
 (require 'init-rainbow)
 (require 'init-powerline)
 (require 'init-window)
