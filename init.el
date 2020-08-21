@@ -52,7 +52,7 @@
 (require 'init-rainbow)
 (require 'init-powerline)
 (require 'init-window)
-(require 'init-better-defaults)
+(require 'init-base)
 (require 'init-dired)
 (require 'init-mmm)
 (require 'init-yasnippet)

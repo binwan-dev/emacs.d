@@ -187,5 +187,12 @@
 
 (which-key-mode 1)
 
-(provide 'init-better-defaults)
+;; use huagry-delete
+(require-package 'hungry-delete)
+(global-hungry-delete-mode)
 
+;; company
+(require-package 'company)
+(global-company-mode)
+
+(provide 'init-base)

@@ -5,11 +5,6 @@
 			   ("melpa" . "http://elpa.emacs-china.org/melpa/")
 			   ("qinghua" . "http://mirrors.tuna.tsinghua.edu.cn/elpa/melpa/"))))
 
-(require 'cl)
-
-;; use huagry-delete
-;;(require-package 'hungry-delete)
-;;(global-hungry-delete-mode)
 
 ;;(add-hook 'emacs-lisp-mode-hook 'smartparens-mode)
 ;;(smartparens-global-mode t)
