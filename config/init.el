@@ -39,6 +39,8 @@
 	 (require 'init-utils)
 	 (require 'init-high-indent)
 	 (require 'init-rainbow)
+	 (require 'init-company)
+	 (require 'init-flycheck)
 	 (require 'init-powerline)
 	 (require 'init-window)
 	 (require 'init-dired)
@@ -58,6 +60,7 @@
 	 (require 'init-project)
 	 (require 'init-diminish)
 	 (require 'init-vue)
+	 (require 'init-shell)
 	 ))))
 
 (provide 'init)

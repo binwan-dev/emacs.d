@@ -62,20 +62,9 @@
 
 ;;(global-set-key (kbd "C-c p f") 'counsel-git)
 
-
 ;; ;; binding shift+tab to removing code space
 ;; ;;(global-set-key (kbd "<S-tab>") 'un-indent-by-removing-4-spaces)
 
-;; ;; flycheck
-;; (global-set-key (kbd "C-c C-v") #'flycheck-mode)
-;; (global-set-key (kbd "C-c v n") #'flycheck-next-error)
-;; (global-set-key (kbd "C-c v p") #'flycheck-previous-error)
-
-;; ;; backward kill word
-;; ;; (global-set-key (kbd "C-w") #'backward-kill-word)
-
-;; (global-set-key (kbd "M-p") #'scroll-down-line)
-;; (global-set-key (kbd "M-n") #'scroll-up-line)
 ;; (global-set-key (kbd "C-c b r") #'revert-buffer)
 
 
@@ -225,9 +214,5 @@
 ;; use huagry-delete
 (require-package 'hungry-delete)
 (global-hungry-delete-mode)
-
-;; company
-(require-package 'company)
-(global-company-mode)
 
 (provide 'init-generic)
