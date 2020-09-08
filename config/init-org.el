@@ -7,10 +7,7 @@
 
 ;; org capture
 (setq org-capture-templates
-      '(("w" "Todo for fnlinker" entry (file+headline "~/Documents/org/fnlinker.org" "Work Plan")
-	 "* TODO [#B] %?\n %i\n"
-	 :empty-lines 1)
-	("s" "Work for self" entry (file+headline "~/Documents/org/self.org" "Self")
+      '(("s" "Work Agenda" entry (file+headline "~/Documents/org/agenda.org" "Agenda")
 	 "* TODO %?\n %i\n"
 	 :empty-lines 1)))
 

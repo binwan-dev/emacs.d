@@ -1,5 +1,9 @@
 (require 'package)
 
+(setq package-archives '(("gnu"   . "http://elpa.emacs-china.org/gnu/")
+			   ("melpa" . "http://elpa.emacs-china.org/melpa/")
+			   ("qinghua" . "http://mirrors.tuna.tsinghua.edu.cn/elpa/melpa/")))
+
 ;;; Install into separate package dirs for each Emacs version, to prevent bytecode incompatibility
 (let ((versioned-package-dir
        (expand-file-name (format "elpa-%s.%s" emacs-major-version emacs-minor-version)

@@ -9,6 +9,10 @@
 (global-set-key (kbd "C-s") 'helm-occur)
 (global-set-key (kbd "M-s f") 'helm-imenu-anywhere)
 (global-set-key (kbd "M-s g") 'helm-imenu-in-all-buffers)
+(global-set-key (kbd "M-x") #'helm-M-x)
+(global-set-key (kbd "C-x r b") #'helm-filtered-bookmarks)
+(global-set-key (kbd "C-x C-f") 'helm-find-files)
+
 
 (define-key helm-map (kbd "<tab>") 'helm-execute-persistent-action) ; rebind tab to run persistent action
 (define-key helm-map (kbd "C-i") 'helm-execute-persistent-action) ; make TAB work in terminal
