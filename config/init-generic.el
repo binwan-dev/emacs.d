@@ -45,9 +45,9 @@
 
 (global-set-key (kbd "C-x C-r") 'recentf-open-files)
 
-;;(defun felix-open-my-init-file ()
-;; (interactive)
-;; (find-file "~/.emacs.d/config/init.el"))
+(defun felix-open-my-init-file ()
+ (interactive)
+ (find-file "~/.emacs.d/config/init.el"))
 ;;(global-set-key (kbd "<f1>") 'felix-open-my-init-file)　　         ;打开配置文件　　　
 
 (global-set-key (kbd "C-h C-f") 'find-function)                   ;调用查找函数    

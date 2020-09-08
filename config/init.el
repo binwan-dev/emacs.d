@@ -26,30 +26,29 @@
 
     (require 'init-generic)
     (require 'init-themes)
-    (require 'init-dashboard)
-    (require 'init-helm)
-    (require 'init-helm-tag)
     (when (featurep 'cocoa)
       (require 'init-exec-path-shell))
     (require 'init-lazy-load)
+
+    (require 'init-dashboard)
 
     ;; 可以延后加载的
     (run-with-idle-timer
      1 nil
      #'(lambda ()
 	 (require 'init-utils)
-	 ;;(require 'init-high-indent)
-	 ;;(require 'init-rainbow)
+	 (require 'init-high-indent)
+	 (require 'init-rainbow)
 	 (require 'init-powerline)
 	 (require 'init-window)
-	 (require 'init-base)
 	 (require 'init-dired)
 	 (require 'init-mmm)
+	 (require 'init-helm)
+	 (require 'init-helm-tag)
 	 (require 'init-yasnippet)
 	 (require 'init-omnisharp)
 	 (require 'init-python)
 	 (require 'init-go)
-	 (require 'init-fci)
 	 (require 'init-multi-cursors)
 	 (require 'init-mssql)
 	 (require 'init-undo-tree)
