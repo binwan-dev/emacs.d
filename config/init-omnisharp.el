@@ -1,7 +1,7 @@
-(require 'omnisharp)
+(require-package 'omnisharp)
 (require-package 'highlight-indent-guides)
 (require-package 'deferred)
-(require 'deferred)
+(require-package 'deferred)
 
 (if (eq system-type 'windows-nt)
     (setq omnisharp-server-executable-path "C:\\emacs_x64\\packages\\omnisharp-roslyn\\OmniSharp.exe"))

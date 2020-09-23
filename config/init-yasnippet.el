@@ -1,5 +1,4 @@
-(require 'yasnippet)
-(yas-reload-all)
+(require-package 'yasnippet)
 (add-hook 'prog-mode-hook #'yas-minor-mode)
 
 (setq yas-snippet-dirs

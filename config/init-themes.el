@@ -1,5 +1,5 @@
-(require-package 'spacemacs-theme)
-(require-package 'dracula-theme)
+;; (require-package 'spacemacs-theme)
+;; (require-package 'dracula-theme)
 (require-package 'doom-themes)
 ;; (load-theme 'spacemacs-dark t)
 
