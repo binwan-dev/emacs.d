@@ -1,4 +1,7 @@
 (require-package 'powerline)
-(powerline-default-theme)
+
+(use-package powerline
+  :init
+  (powerline-default-theme))
 
 (provide 'init-powerline)

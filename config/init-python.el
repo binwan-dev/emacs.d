@@ -1,6 +1,17 @@
 (require-package 'lsp-python-ms)
-(setq lsp-python-ms-auto-install-server t)
-(add-hook 'python-mode-hook #'lsp) ; or lsp-deferred
+(require-package 'conda)
+
+(use-package lsp-python-ms
+  :init
+  (conda-env-initialize-interactive-shells)
+  (conda-env-initialize-eshell)
+  (setq conda-env-home-directory (expand-file-name "/Users/bin/anaconda3/"))
+  (custom-set-variables '(conda-anaconda-home "/Users/bin/anaconda3/"))
+  (setq py-autopep8-enable-on-save t)
+  :config (conda-env-autoactivate-mode t)
+  :hook (python-mode . lsp)
+  )
+
 ;; ;; (require-package 'company-jedi)
 ;; ;; (defun my/python-mode-hook ()
 ;; ;;   (add-to-list 'company-backends 'company-jedi))

@@ -1,4 +1,6 @@
 (require-package 'window-numbering)
-(window-numbering-mode 1)
+
+(use-package window-numbering
+  :ensure t)
 
 (provide 'init-window)

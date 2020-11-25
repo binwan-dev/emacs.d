@@ -1,4 +1,4 @@
-(let ((emacs-font-size 24)
+(let ((emacs-font-size 15)
       emacs-font-name)
   (cond
    ((featurep 'cocoa)

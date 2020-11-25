@@ -145,13 +145,6 @@
 
 (global-set-key (kbd "C-c .") 'hippie-expand)
 
-;; remap company selection result keys
-(with-eval-after-load 'company
-  (define-key company-active-map (kbd "M-n") nil)
-  (define-key company-active-map (kbd "M-p") nil)
-  (define-key company-active-map (kbd "C-n") #'company-select-next)
-  (define-key company-active-map (kbd "C-p") #'company-select-previous))
-
 ;; dired
 (setq dired-recursive-copies 'always)
 (setq dired-recursive-deletes 'always)
@@ -159,9 +152,6 @@
 (put 'dired-find-alternate-file 'disabled nil)
 (with-eval-after-load 'dired
   (define-key dired-mode-map (kbd "RET") 'dired-find-alternate-file))
-
-(require 'dired-x)
-(setq dired-dwim-target t)
 
 ;; showparen
 (define-advice show-paren-function (:around (fn) fix-show-paren-function)
@@ -215,6 +205,6 @@
 
 ;; use huagry-delete
 (require-package 'hungry-delete)
-(global-hungry-delete-mode)
+(global-hungry-delete-mode t)
 
 (provide 'init-generic)

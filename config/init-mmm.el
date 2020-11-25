@@ -1,14 +1,9 @@
-;;; init-mmm.el --- Multiple Major Modes support -*- lexical-binding: t -*-
-;;; Commentary:
-;;; Code:
-
-;;----------------------------------------------------------------------------
-;; Multiple major modes
-;;----------------------------------------------------------------------------
-(require-package 'mmm-mode)
-(require 'mmm-auto)
-(setq mmm-global-mode 'buffers-with-submode-classes)
-(setq mmm-submode-decoration-level 2)
-
+;; I don't know why i use it?????
+(use-package mmm-mode
+  :ensure t
+  :init
+  (setq mmm-global-mode 'buffers-with-submode-classes)
+  (setq mmm-submode-decoration-level 2)
+  :config (require 'mmm-auto))
 
 (provide 'init-mmm)

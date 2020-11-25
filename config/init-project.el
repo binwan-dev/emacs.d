@@ -1,16 +1,20 @@
 (require-package 'projectile)
 (require-package 'helm-projectile)
-(projectile-mode 1)
-(setq projectile-project-search-path '("~/Documents/fnlinker/" "~/Documents/felix/"))
-(define-key projectile-mode-map (kbd "s-p") 'projectile-command-map)
-(define-key projectile-mode-map (kbd "C-c p") 'projectile-command-map)
-(define-key projectile-mode-map (kbd "C-c C-p") 'projectile-switch-project)
-(define-key projectile-mode-map (kbd "C-c p r") 'projectile-discover-projects-in-search-path)
 
-(setq projectile-mode-line
+(use-package projectile
+  :ensure t
+  :init
+  (projectile-mode 1)
+  :config
+  (helm-projectile-on)
+  (setq projectile-project-search-path '("~/Documents/fnlinker/" "~/Documents/felix/"))
+  (setq projectile-mode-line
       '(:eval (format " Projectile[%s]"
                       (projectile-project-name))))
-
-(helm-projectile-on)
+  :bind (:map projectile-mode-map
+	      ("s-p" . projectile-command-map)
+	      ("C-c p" . projectile-command-map)
+	      ("C-c C-p" . projectile-switch-project)
+	      ("C-c p r" . projectile-discover-projects-in-search-path)))
 
 (provide 'init-project)

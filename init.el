@@ -11,8 +11,9 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(conda-anaconda-home "/Users/bin/anaconda3/")
  '(package-selected-packages
-   '(lsp-python-ms company-jedi company rainbow-delimiters rainbow-mode highlight-indent-guides dashboard which-key use-package spacemacs-theme hungry-delete fullframe dracula-theme doom-themes)))
+   '(helm-config conda tide company-web web-mode diminish helm-projectile magit undo-tree mc-extras multiple-cursors lsp-ui go-projectile deferred omnisharp yasnippet helm-gtags helm mmm-mode window-numbering powerline flycheck lsp-python-ms company-jedi company rainbow-delimiters rainbow-mode highlight-indent-guides dashboard which-key use-package spacemacs-theme hungry-delete fullframe dracula-theme doom-themes)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
