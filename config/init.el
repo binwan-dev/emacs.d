@@ -47,7 +47,6 @@
     (require 'init-helm)
 ;;    (require 'init-yasnippet)
   ;;  (require 'init-omnisharp)
-    (require 'init-python)
 ;;    (require 'init-go)
     (require 'init-multi-cursors)
    ;; (require 'init-mssql)
@@ -59,6 +58,7 @@
   ;;  (require 'init-diminish)
  ;;   (require 'init-vue)
     ;; (require 'init-shell)
+    (require 'init-python)
     ))
 
 (provide 'init)

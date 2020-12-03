@@ -1,12 +1,12 @@
-(require-package 'lsp-python-ms)
-(require-package 'conda)
+(use-package conda
+  :init
+  (setq conda-env-home-directory (expand-file-name "/home/binwan/.conda/"))
+  (setq conda-anaconda-home (expand-file-name "/opt/anaconda/"))
+  (conda-env-initialize-interactive-shells)
+  (conda-env-initialize-eshell))
 
 (use-package lsp-python-ms
   :init
-  (conda-env-initialize-interactive-shells)
-  (conda-env-initialize-eshell)
-  (setq conda-env-home-directory (expand-file-name "/Users/bin/anaconda3/"))
-  (custom-set-variables '(conda-anaconda-home "/Users/bin/anaconda3/"))
   (setq py-autopep8-enable-on-save t)
   :config (conda-env-autoactivate-mode t)
   :hook (python-mode . lsp)
