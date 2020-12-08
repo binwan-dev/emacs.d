@@ -8,8 +8,15 @@
   (setq conda-env-home-directory (expand-file-name "/Users/bin/anaconda3/"))
   (custom-set-variables '(conda-anaconda-home "/Users/bin/anaconda3/"))
   (setq py-autopep8-enable-on-save t)
-  :config (conda-env-autoactivate-mode t)
+  :config
+  (defun binwan-select-conda-env()
+    (interactive)
+    (conda-env-activate)
+    (lsp-restart-workspace))
+  (conda-env-autoactivate-mode t)
   :hook (python-mode . lsp)
+  :bind (:map lsp-mode-map
+	      ("C-c C-r" . 'binwan-select-conda-env))
   )
 
 ;; ;; (require-package 'company-jedi)

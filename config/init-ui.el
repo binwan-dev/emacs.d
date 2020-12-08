@@ -1,16 +1,17 @@
 ;;; Code:
-
 (tool-bar-mode -1)                      ;禁用工具栏
 (menu-bar-mode -1)                      ;禁用菜单栏
 (scroll-bar-mode -1)                    ;禁用滚动条
-;;(global-hl-line-mode -1)                ;禁用当前行高亮
 (delete-selection-mode 1)               ;启用删除选择模式
 (global-linum-mode 1)                   ;打开行号
 (desktop-save-mode -1)                  ;记录文件供下次打开
-
-
-(setq inhibit-splash-screen 1)
 (setq-default cursor-type 'bar)         ;设置光标为 |
+(fset 'yes-or-no-p 'y-or-n-p)           ;以 y/n代表 yes/no
+(blink-cursor-mode -1)                  ;指针不闪动
+(transient-mark-mode 1)                 ;标记高亮
+(global-subword-mode 1)                 ;Word移动支持 FooBar 的格式
+(prefer-coding-system 'utf-8-unix)
+(define-coding-system-alias 'UTF-8 'utf-8)
 
 (if (featurep 'cocoa)
     (progn
@@ -27,16 +28,10 @@
       (setq ns-use-fullscreen-animation nil)
 
       ;; 默认先最大化。
-      (set-frame-parameter (selected-frame) 'fullscreen 'maximized)
-
-      ;; (run-at-time "2sec" nil
-      ;;              (lambda ()
-      ;;                (toggle-frame-fullscreen)
-      ;;                ))
-      )
+      (set-frame-parameter (selected-frame) 'fullscreen 'maximized))
 
   ;; 非Mac平台直接全屏
-  (setq initial-frame-alist (quote ((fullscreen . maximized))))
-  )
+  (setq initial-frame-alist (quote ((fullscreen . maximized)))))
 
-(provide 'init-startup)
+
+(provide 'init-ui)
