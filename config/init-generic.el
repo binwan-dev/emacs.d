@@ -182,6 +182,16 @@
 
 ;; use huagry-delete
 (require-package 'hungry-delete)
-(global-hungry-delete-mode t)
+(use-package hungry-delete
+  :config
+  (global-hungry-delete-mode t)
+  ;; 解决终端模式 Backspace变为Ctrl+h
+  (when (not (display-graphic-p))
+    (global-set-key "\C-h" 'backward-kill-word))
+  )
+
+;; 终端模式 mark
+(when (not (display-graphic-p))
+  (global-set-key (kbd "C-c SPC") 'set-mark-command))
 
 (provide 'init-generic)
