@@ -23,8 +23,8 @@
     ;; (run-with-idle-timer
     ;;  1 t
     ;;  #'(lambda ()
-    (when (featurep 'cocoa)
-      (require 'init-exec-path-shell))
+    ;; (when (featurep 'cocoa)
+    (require 'init-exec-path-shell)
     (require 'init-utils)
     (require 'init-lazy-load)
     (require 'init-high-indent)
