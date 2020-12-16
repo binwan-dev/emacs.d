@@ -5,8 +5,8 @@
   :init
   (conda-env-initialize-interactive-shells)
   (conda-env-initialize-eshell)
-  (setq conda-env-home-directory (expand-file-name "~/anaconda3/"))
-  (custom-set-variables '(conda-anaconda-home "~/anaconda3/"))
+  (setq conda-env-home-directory (expand-file-name (concat binwan-home "/anaconda3/")))
+  (custom-set-variables '(conda-anaconda-home (concat binwan-home "/anaconda3/")))
   (setq py-autopep8-enable-on-save t)
   :config
   (defun binwan-select-conda-env()

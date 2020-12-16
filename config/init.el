@@ -11,6 +11,8 @@
       ;; 清空避免加载远程文件的时候分析文件。
       (file-name-handler-alist nil))
 
+  (setq binwan-home (getenv "HOME"))
+
   (with-temp-message ""
     (require 'init-elpa)
     (require 'init-require-package)
