@@ -1,3 +1,5 @@
+(require-package 'window-numbering)
+
 ;;; Code:
 (tool-bar-mode -1)                      ;禁用工具栏
 (menu-bar-mode -1)                      ;禁用菜单栏
@@ -12,6 +14,19 @@
 (global-subword-mode 1)                 ;Word移动支持 FooBar 的格式
 (prefer-coding-system 'utf-8-unix)
 (define-coding-system-alias 'UTF-8 'utf-8)
+
+; 设置透明函数
+(defun binwan-toggle-frame-transparency ()
+  (interactive)
+  (if (equal (frame-parameter nil 'alpha) 85)
+      (set-frame-parameter nil 'alpha 100)
+    (set-frame-parameter nil 'alpha 85)))
+
+; 开启窗口序号管理
+(use-package window-numbering
+  :ensure t
+  :init
+  (window-numbering-mode))
 
 (if (featurep 'cocoa)
     (progn

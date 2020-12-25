@@ -1,5 +1,6 @@
 ;;; Code:
 (require-package 'use-package)
+(require-package 'which-key)
 (use-package which-key
   :init (which-key-mode 1))
 
