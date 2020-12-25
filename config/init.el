@@ -16,15 +16,15 @@
   (with-temp-message ""
     (require 'init-elpa)
     (require 'init-require-package)
-    (require 'init-ui)
     (require 'init-generic)
+    (require 'init-ui)
     (require 'init-themes)
     (require 'init-dashboard)
     
     ;; 可以延后加载的
-    (run-with-idle-timer
-     1 t
-     #'(lambda ()
+    ;; (run-with-idle-timer
+    ;;  1 t
+    ;;  #'(lambda ()
 	 (require 'init-exec-path-shell)
 	 (require 'init-utils)
 	 (require 'init-lazy-load)
@@ -49,6 +49,6 @@
   ;;  (require 'init-diminish)
  ;;   (require 'init-vue)
 	 (require 'init-shell)
-	 (require 'init-for-i3)))))
+	 (require 'init-for-i3)))
 
 (provide 'init)

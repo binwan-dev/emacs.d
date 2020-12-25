@@ -13,7 +13,7 @@
  ;; If there is more than one, they won't work right.
  '(conda-anaconda-home (concat binwan-home "/anaconda3/"))
  '(package-selected-packages
-   '(magit which-key whick-key helm-projectile projectile mc-extras conda lsp-python-ms helm-gtags helm mmm-mode window-numbering powerline flycheck company rainbow-delimiters rainbow-mode highlight-indent-guides exec-path-from-shell dashboard doom-themes hungry-delete use-package)))
+   '(helm-projectile projectile window-numbering which-key use-package rainbow-mode rainbow-delimiters powerline omnisharp mmm-mode mc-extras magit lsp-python-ms hungry-delete highlight-indent-guides helm-gtags exec-path-from-shell doom-themes deferred dashboard conda company)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
