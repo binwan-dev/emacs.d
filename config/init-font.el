@@ -1,4 +1,4 @@
-(let ((emacs-font-size 14)
+(let ((emacs-font-size 16)
       emacs-font-name)
   (setq emacs-font-name "Fira Code")
   (when (display-grayscale-p)

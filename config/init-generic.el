@@ -1,8 +1,12 @@
 ;;; Code:
+(require-package 'quelpa) ;; quelpa is on-the-fly and directly from source
 (require-package 'use-package)
 (require-package 'which-key)
 (use-package which-key
   :init (which-key-mode 1))
+
+(use-package 'olivetti
+  :ensure t)
 
 (setq use-dialog-box nil)               ;never pop dialog
 (setq inhibit-startup-screen t)         ;inhibit start screen
