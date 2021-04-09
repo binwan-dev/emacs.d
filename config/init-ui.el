@@ -18,9 +18,9 @@
 ; 设置透明函数
 (defun binwan-toggle-frame-transparency ()
   (interactive)
-  (if (equal (frame-parameter nil 'alpha) 88)
+  (if (equal (frame-parameter nil 'alpha) 100)
       (set-frame-parameter nil 'alpha 100)
-    (set-frame-parameter nil 'alpha 88)))
+    (set-frame-parameter nil 'alpha 100)))
 
 ; 开启窗口序号管理
 (use-package window-numbering

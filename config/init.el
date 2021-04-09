@@ -45,6 +45,4 @@
     (require 'init-shell)
     (require 'init-for-i3)))
 
-(require 'zen-mode)
-
 (provide 'init)

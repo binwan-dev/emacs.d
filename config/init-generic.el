@@ -5,8 +5,11 @@
 (use-package which-key
   :init (which-key-mode 1))
 
-(use-package 'olivetti
-  :ensure t)
+(use-package olivetti
+  :ensure t
+  :config
+  (setq olivetti-minimum-body-width 85)
+  :hook (prog-mode . olivetti-mode))
 
 (setq use-dialog-box nil)               ;never pop dialog
 (setq inhibit-startup-screen t)         ;inhibit start screen
