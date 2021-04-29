@@ -3,7 +3,7 @@
 ;;               :files ("*")))
 
 (use-package eaf
-  ;; :load-path "~/.emacs.d/site-lisp/emacs-application-framework" ; Set to "/usr/share/emacs/site-lisp/eaf" if installed from AUR
+  :load-path "~/.emacs.d/third/emacs-application-framework" ; Set to "/usr/share/emacs/site-lisp/eaf" if installed from AUR
   :init
   (use-package epc :defer t :ensure t)
   (use-package ctable :defer t :ensure t)

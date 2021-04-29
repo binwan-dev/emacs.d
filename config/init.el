@@ -33,7 +33,7 @@
     (require 'init-conda)
     ;;    (require 'init-yasnippet)
     (require 'init-lspmode)
-    ;;    (require 'init-go)
+    (require 'init-go)
     (require 'init-multi-cursors)
     ;; (require 'init-mssql)
     ;;  (require 'init-undo-tree)

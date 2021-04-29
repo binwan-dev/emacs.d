@@ -1,5 +1,5 @@
-(require-package 'lsp-ui)
 (require-package 'py-autopep8)
+(require-package 'lsp-ui)
 
 (use-package lsp-ui
   :hook (lsp-mode . lsp-ui-mode))
@@ -7,15 +7,18 @@
 (use-package lsp-mode
   ;; :init
   ;; (setq lsp-file-watch-threshold 102400)
-  :bind (("C-c j" . lsp-find-definition)))
-
-;; (use-package lsp-python-ms
-;;   :ensure t
-;;   :init (setq lsp-python-ms-auto-install-server t)
-;;   :hook
-;;   (python-mode . (lambda ()
-;;                           (require 'lsp-python-ms)
-;;                           (lsp))))  ; or lsp-deferred
+  :config
+  (setq tab-width 4)
+  (setq indent-tabs-mode 4)
+  (setq company-idle-delay 0)
+  (setq company-minimum-prefix-length 1)
+  ;; (add-hook 'before-save-hook #'lsp-format-buffer t t)
+  (add-hook 'before-save-hook #'lsp-organize-imports t t)
+  :bind (("C-c C-j" . lsp-find-definition)
+	 ("C-c C-b" . pop-tag-mark)
+	 ("C-c s s" . lsp-restart-workspace)
+	 ("C-c C-c" . lsp-find-references)
+	 ("C-." . lsp-execute-code-action)))
 
 (use-package py-autopep8
   :hook (python-mode . py-autopep8-enable-on-save))
