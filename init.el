@@ -11,6 +11,7 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(org-agenda-files nil)
  '(package-selected-packages
    '(go-projectile go-mode gopls spinner ccls csharp-mode py-autopep8 olivetti darkroom zen-mode epc ctable eaf quelpa lsp-csharp window-numbering which-key use-package rainbow-mode rainbow-delimiters powerline omnisharp mmm-mode mc-extras magit lsp-ui lsp-python-ms lsp-pyright hungry-delete highlight-indent-guides helm-projectile helm-gtags fullframe exec-path-from-shell doom-themes doom-modeline deferred dashboard conda company)))
 (custom-set-faces

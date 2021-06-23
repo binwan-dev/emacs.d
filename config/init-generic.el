@@ -8,7 +8,7 @@
 (use-package olivetti
   :ensure t
   :config
-  (setq olivetti-minimum-body-width 85)
+  (setq olivetti-minimum-body-width 120)
   :hook (prog-mode . olivetti-mode))
 
 (setq use-dialog-box nil)               ;never pop dialog

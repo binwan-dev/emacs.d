@@ -27,18 +27,14 @@
 (use-package lsp-pyright
   :ensure t
   :config
-  (setq lsp-pyright-venv-path "/home/binwan/anaconda3/envs")
+  (setq lsp-pyright-venv-path "/Users/bin/opt/anaconda3/envs")
   (setq lsp-pyright-auto-import-completions t)
   (setq lsp-pyright-auto-search-paths t)
+  :bind
+  (("C-c j" . lsp-find-definition))
   :hook (python-mode . (lambda ()
                           (require 'lsp-pyright)
                           (lsp))))
-
-(use-package csharp-mode
-  :ensure t
-  :config
-  (setq lsp-csharp-server-path "/opt/omnisharp-linux/run")
-  :hook (csharp-mode . lsp))
 
 (use-package ccls
   :ensure t
