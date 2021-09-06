@@ -1,3 +1,5 @@
+(require-package 'conda)
+
 (use-package conda
   :init
   (setq conda-env-home-directory (expand-file-name "/home/binwan/.conda/"))
