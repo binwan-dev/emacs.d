@@ -1,14 +1,19 @@
 ;;; Code:
-(require-package 'which-key)
+(require-package 'quelpa) ;; quelpa is on-the-fly and directly from source
 (require-package 'use-package)
+(require-package 'which-key)
 
-(fset 'yes-or-no-p 'y-or-n-p)           ;以 y/n代表 yes/no
-(blink-cursor-mode -1)                  ;指针不闪动
-(transient-mark-mode 1)                 ;标记高亮
-(global-subword-mode 1)                 ;Word移动支持 FooBar 的格式
-(prefer-coding-system 'utf-8-unix)
-(define-coding-system-alias 'UTF-8 'utf-8)
-(which-key-mode 1)
+(require 'use-package-ensure)
+(setq use-package-always-ensure t)
+
+(use-package which-key
+  :init (which-key-mode 1))
+
+(use-package olivetti
+  :ensure t
+  :config
+  (setq olivetti-minimum-body-width 120)
+  :hook (prog-mode . olivetti-mode))
 
 (setq use-dialog-box nil)               ;never pop dialog
 (setq inhibit-startup-screen t)         ;inhibit start screen
@@ -23,14 +28,6 @@
 (setq confirm-kill-processes nil)       ;退出自动杀掉进程
 (setq async-bytecomp-allowed-packages nil) ;避免magit报错
 (setq global-auto-revert-mode 1)        ;自动刷新文件
-(setq profiler-report-cpu-line-format ;让 profiler-report 第一列宽一点
-      '((100 left)
-        (24 right ((19 right)
-                   (5 right)))))
-(setq profiler-report-memory-line-format
-      '((100 left)
-        (19 right ((14 right profiler-format-number)
-                   (5 right)))))
 
 ;; diabled auto backup file model
 (setq make-backup-files nil)
@@ -41,34 +38,18 @@
 (setq auto-save-file-name-transforms `((".*","~/.autosave/" t)))
 
 ;; enable recent file mode
-(require 'recentf)
-(recentf-mode 1)
-(setq recentf-max-menu-items 25)
-
-(global-set-key (kbd "C-x C-r") 'recentf-open-files)
-
-(defun felix-open-my-init-file ()
- (interactive)
- (find-file "~/.emacs.d/config/init.el"))
-;;(global-set-key (kbd "<f1>") 'felix-open-my-init-file)　　         ;打开配置文件　　　
+(use-package recentf
+  :init (recentf-mode 1)
+  :config (setq recentf-max-menu-items 25)
+  :bind  (("C-x C-r" . #'recentf-open-files)))
 
 (global-set-key (kbd "C-h C-f") 'find-function)                   ;调用查找函数    
 (global-set-key (kbd "C-h C-v") 'find-variable)                   ;调用查找变量　
 (global-set-key (kbd "C-h C-k") 'find-function-on-key)            ;调用查找快捷键绑定的函数
 (global-set-key (kbd "C-c C-u") #'undo-tree-mode)                 ;绑定撤销模式快捷键
-
 (global-set-key (kbd "M-p") #'scroll-down-line)                   ;绑定滚动条下拉
 (global-set-key (kbd "M-n") #'scroll-up-line)                     ;绑定滚动条上拉 
 (global-set-key (kbd "C-c b r") #'revert-buffer)                  ;绑定刷新buffer
-;;(global-set-key (kbd "C-c C-r") 'ivy-resume)
-
-;;(global-set-key (kbd "C-c p f") 'counsel-git)
-
-;; ;; binding shift+tab to removing code space
-;; ;;(global-set-key (kbd "<S-tab>") 'un-indent-by-removing-4-spaces)
-
-;; (global-set-key (kbd "C-c b r") #'revert-buffer)
-
 
 ;; Add lisp () hook
 (add-hook 'emacs-lisp-mode-hook 'show-paren-mode)
@@ -145,6 +126,14 @@
 
 (global-set-key (kbd "C-c .") 'hippie-expand)
 
+(defun binwan-open-my-init-file ()
+  "open my config"
+  (interactive)
+  (find-file "~/.emacs.d/config/init.el"))
+
+(global-set-key (kbd "<f1>") 'binwan-open-my-init-file)
+
+
 ;; dired
 (setq dired-recursive-copies 'always)
 (setq dired-recursive-deletes 'always)
@@ -205,6 +194,16 @@
 
 ;; use huagry-delete
 (require-package 'hungry-delete)
-(global-hungry-delete-mode t)
+(use-package hungry-delete
+  :config
+  (global-hungry-delete-mode t)
+  ;; 解决终端模式 Backspace变为Ctrl+h
+  (when (not (display-graphic-p))
+    (global-set-key "\C-h" 'backward-kill-word))
+  )
+
+;; 终端模式 mark
+(when (not (display-graphic-p))
+  (global-set-key (kbd "C-c SPC") 'set-mark-command))
 
 (provide 'init-generic)

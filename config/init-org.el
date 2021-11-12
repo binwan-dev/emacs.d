@@ -32,7 +32,7 @@
     (org-edit-src-code)))
 
 (defun my-org-mode-setup ()
-  (define-key org-mode-map (kbd "C-c s e") 'org-insert-src-block)
+  kk(define-key org-mode-map (kbd "C-c s e") 'org-insert-src-block)
   (setq org-log-done 'time))
 
 (add-hook 'org-mode-hook 'my-org-mode-setup t)

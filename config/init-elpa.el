@@ -1,7 +1,6 @@
 (require 'package)
 
-(setq package-archives '(("gnu"   . "http://elpa.emacs-china.org/gnu/")
-			   ("melpa" . "http://elpa.emacs-china.org/melpa/")
+(setq package-archives '(("gnu" . "http://mirrors.tuna.tsinghua.edu.cn/elpa/gnu/")
 			   ("qinghua" . "http://mirrors.tuna.tsinghua.edu.cn/elpa/melpa/")))
 
 ;;; Install into separate package dirs for each Emacs version, to prevent bytecode incompatibility
@@ -13,18 +12,18 @@
 
 ;;; Standard package repositories
 
-(let* ((no-ssl (and (memq system-type '(windows-nt ms-dos))
-                    (not (gnutls-available-p))))
-       (proto (if no-ssl "http" "https")))
-  ;;(add-to-list 'package-archives (cons "melpa" (concat proto "://melpa.org/packages/")) t)
-  ;; Official MELPA Mirror, in case necessary.
-  (add-to-list 'package-archives (cons "melpa-mirror" (concat proto "://elpa.emacs-china.org/melpa/")) t)
-  (if (< emacs-major-version 24)
-      ;; For important compatibility libraries like cl-lib
-      (add-to-list 'package-archives '("gnu" . (concat proto "://elpa.emacs-china.org/gnu/")))
-    (unless no-ssl
-      ;; Force SSL for GNU ELPA
-      (setcdr (assoc "gnu" package-archives) "http://elpa.emacs-china.org/gnu/"))))
+;; (let* ((no-ssl (and (memq system-type '(windows-nt ms-dos))
+;;                     (not (gnutls-available-p))))
+;;        (proto (if no-ssl "http" "https")))
+;;   ;;(add-to-list 'package-archives (cons "melpa" (concat proto "://melpa.org/packages/")) t)
+;;   ;; Official MELPA Mirror, in case necessary.
+;;   (add-to-list 'package-archives (cons "melpa-mirror" (concat proto "://elpa.emacs-china.org/melpa/")) t)
+;;   (if (< emacs-major-version 24)
+;;       ;; For important compatibility libraries like cl-lib
+;;       (add-to-list 'package-archives '("gnu" . (concat proto "://elpa.emacs-china.org/gnu/")))
+;;     (unless no-ssl
+;;       ;; Force SSL for GNU ELPA
+;;       (setcdr (assoc "gnu" package-archives) "http://elpa.emacs-china.org/gnu/"))))
 
 ;; We include the org repository for completeness, but don't normally
 ;; use it.
@@ -66,25 +65,7 @@ locate PACKAGE."
 (setq package-enable-at-startup nil)
 (package-initialize)
 
-
-(require-package 'fullframe)
-(fullframe list-packages quit-window)
-
-(defun sanityinc/set-tabulated-list-column-width (col-name width)
-  "Set any column with name COL-NAME to the given WIDTH."
-  (when (> width (length col-name))
-    (cl-loop for column across tabulated-list-format
-             when (string= col-name (car column))
-             do (setf (elt column 1) width))))
-
-(defun sanityinc/maybe-widen-package-menu-columns ()
-  "Widen some columns of the package menu table to avoid truncation."
-  (when (boundp 'tabulated-list-format)
-    (sanityinc/set-tabulated-list-column-width "Version" 13)
-    (let ((longest-archive-name (apply 'max (mapcar 'length (mapcar 'car package-archives)))))
-      (sanityinc/set-tabulated-list-column-width "Archive" longest-archive-name))))
-
-(add-hook 'package-menu-mode-hook 'sanityinc/maybe-widen-package-menu-columns)
+(setq gnutls-algorithm-priority "NORMAL:-VERS-TLS1.3")
 
 
 (provide 'init-elpa)
