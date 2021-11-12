@@ -35,8 +35,12 @@
   (define-key omnisharp-mode-map (kbd "C-d a p") 'dotnet-add-package)
   (define-key omnisharp-mode-map (kbd "C-d g c") 'dotnet-goto-csproj)
   (define-key omnisharp-mode-map (kbd "C-c i") #'omnisharp-find-implementations)
-  (define-key omnisharp-mode-map (kbd "C-c f") #'omnisharp-code-format-entire-file)
+  (define-key omnisharp-mode-map (kbd "C-c C-f") #'omnisharp-code-format-entire-file)
+  (define-key omnisharp-mode-map (kbd "C-c f") #'omnisharp-code-format-region)  
   (define-key omnisharp-mode-map (kbd "C-x C-s") #'binwan-save-format-csharp)
+  (define-key omnisharp-mode-map (kbd "C-c -") #'hs-show-block)
+  (define-key omnisharp-mode-map (kbd "C-c +") #'hs-hide-block)  
+  (hs-minor-mode)
   (flycheck-mode)
   (company-mode))
 
@@ -52,7 +56,7 @@
 
 (defun binwan-save-format-csharp()
   (interactive)
-  (omnisharp-code-format-entire-file)
+  ;; (omnisharp-code-format-entire-file)
   (save-buffer))
 
 (after-load 'company

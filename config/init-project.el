@@ -1,5 +1,4 @@
-(require-package 'projectile)
-(require-package 'helm-projectile)
+(use-package helm-projectile)
 
 (use-package projectile
   :ensure t
@@ -7,7 +6,7 @@
   (projectile-mode 1)
   :config
   (helm-projectile-on)
-  (setq projectile-project-search-path '("~/Documents/fnlinker/" "~/Documents/felix/"))
+  (setq projectile-project-search-path '("~/Documents/fnlinker/" "~/Documents/wanbin-dev/"))
   (setq projectile-mode-line
       '(:eval (format " Projectile[%s]"
                       (projectile-project-name))))

@@ -1,5 +1,3 @@
-(require-package 'py-autopep8)
-(require-package 'lsp-ui)
 
 (use-package lsp-ui
   :hook (lsp-mode . lsp-ui-mode))
@@ -25,7 +23,6 @@
 
 
 (use-package lsp-pyright
-  :ensure t
   :config
   (setq lsp-pyright-venv-path "/Users/bin/opt/anaconda3/envs")
   (setq lsp-pyright-auto-import-completions t)
@@ -37,9 +34,11 @@
                           (lsp))))
 
 (use-package ccls
-  :ensure t
   :config
   (setq ccls-executable "/usr/bin/ccls")
   :hook (ccls . lsp))
+
+(use-package csharp-mode
+  :hook (csharp-mode . lsp))
 
 (provide 'init-lspmode)

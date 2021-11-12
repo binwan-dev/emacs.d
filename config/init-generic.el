@@ -2,6 +2,10 @@
 (require-package 'quelpa) ;; quelpa is on-the-fly and directly from source
 (require-package 'use-package)
 (require-package 'which-key)
+
+(require 'use-package-ensure)
+(setq use-package-always-ensure t)
+
 (use-package which-key
   :init (which-key-mode 1))
 

@@ -33,7 +33,7 @@
     (require 'init-conda)
     ;;    (require 'init-yasnippet)
     (require 'init-lspmode)
-    (require 'init-omnisharp)
+    ;; (require 'init-omnisharp)
     (require 'init-go)
     (require 'init-multi-cursors)
     ;; (require 'init-mssql)
@@ -43,7 +43,6 @@
     (require 'init-org)
     (require 'init-project)
  ;;   (require 'init-vue)
-    (require 'init-shell)
-    (require 'init-for-i3)))
+    (require 'init-shell)))
 
 (provide 'init)
