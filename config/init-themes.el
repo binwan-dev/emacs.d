@@ -1,6 +1,5 @@
-(require-package 'doom-themes)
-(require-package 'doom-modeline)
-(require-package 'all-the-icons)
+;;; Code
+(use-package all-the-icons)
 
 (use-package doom-themes
   :config

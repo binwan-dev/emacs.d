@@ -1,16 +1,14 @@
 ;;; Code:
-(require-package 'quelpa) ;; quelpa is on-the-fly and directly from source
 (require-package 'use-package)
-(require-package 'which-key)
-
 (require 'use-package-ensure)
 (setq use-package-always-ensure t)
+
+(use-package quelpa)
 
 (use-package which-key
   :init (which-key-mode 1))
 
 (use-package olivetti
-  :ensure t
   :config
   (setq olivetti-minimum-body-width 120)
   :hook (prog-mode . olivetti-mode))
@@ -193,7 +191,6 @@
 (global-set-key (kbd "C-M-n") #'View-scroll-half-page-forward)
 
 ;; use huagry-delete
-(require-package 'hungry-delete)
 (use-package hungry-delete
   :config
   (global-hungry-delete-mode t)

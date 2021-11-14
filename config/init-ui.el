@@ -1,5 +1,3 @@
-(require-package 'window-numbering)
-
 ;;; Code:
 (tool-bar-mode -1)                      ;禁用工具栏
 (menu-bar-mode -1)                      ;禁用菜单栏
@@ -24,7 +22,6 @@
 
 ; 开启窗口序号管理
 (use-package window-numbering
-  :ensure t
   :init
   (window-numbering-mode))
 
