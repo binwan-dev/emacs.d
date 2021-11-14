@@ -15,7 +15,6 @@
 
   (with-temp-message ""
     (require 'init-elpa)
-    (require 'init-require-package)
     (require 'init-generic)
     (require 'init-ui)
     (require 'init-themes)
