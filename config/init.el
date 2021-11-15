@@ -23,7 +23,7 @@
     (require 'init-exec-path-shell)
     (require 'init-utils)
     (require 'init-lazy-load)
-    (require 'init-high-indent)
+    ;; (require 'init-high-indent)
     (require 'init-rainbow)
     (require 'init-company)
     (require 'init-flycheck)

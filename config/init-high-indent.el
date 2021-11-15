@@ -1,4 +1,3 @@
-(require-package 'highlight-indent-guides)
 (use-package highlight-indent-guides
   :config
   (setq highlight-indent-guides-method 'bitmap)

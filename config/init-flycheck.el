@@ -1,4 +1,3 @@
-(require-package 'flycheck)
 
 (use-package flycheck
   :bind (("C-c e" . #'flycheck-next-error)

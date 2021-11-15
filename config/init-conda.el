@@ -1,4 +1,3 @@
-(require-package 'conda)
 (use-package conda
   :init
   (setq conda-env-home-directory (expand-file-name "~/anaconda3/"))

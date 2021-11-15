@@ -1,5 +1,4 @@
-(require-package 'go-projectile)
-(require-package 'go-mode)
+(use-package go-projectile)
 
 (use-package go-mode
   :ensure t

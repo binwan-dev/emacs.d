@@ -1,3 +1,3 @@
-(require-package 'magit)
+(use-package magit)
 
 (provide 'init-magit)
