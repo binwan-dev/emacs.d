@@ -12,6 +12,7 @@
       (file-name-handler-alist nil))
 
   (setq binwan-home (getenv "HOME"))
+  (setq byte-compile-warnings '(cl-functions))
 
   (with-temp-message ""
     (require 'init-elpa)
@@ -19,7 +20,6 @@
     (require 'init-ui)
     (require 'init-themes)
     ;; (require 'init-eaf)
-    (require 'init-dashboard)
     (require 'init-exec-path-shell)
     (require 'init-utils)
     (require 'init-lazy-load)
@@ -42,6 +42,7 @@
     (require 'init-org)
     (require 'init-project)
  ;;   (require 'init-vue)
-    (require 'init-shell)))
+    (require 'init-shell)
+    (require 'init-dashboard)))
 
 (provide 'init)
