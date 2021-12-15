@@ -6,7 +6,7 @@
   (projectile-mode 1)
   :config
   (helm-projectile-on)
-  (setq projectile-project-search-path '("~/Documents/fnlinker/" "~/Documents/wanbin-dev/"))
+  (setq projectile-project-search-path '("~/Documents/fnlinker/" "~/Documents/binwan-dev/"))
   (setq projectile-mode-line
       '(:eval (format " Projectile[%s]"
                       (projectile-project-name))))
