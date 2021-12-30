@@ -1,9 +1,6 @@
 ;; 加速配置
 (require 'init-accelerate)
 
-;; 设置字体
-(require 'init-font)
-
 (let (
       ;; 加载的时候临时增大`gc-cons-threshold'以加速启动速度。
       (gc-cons-threshold most-positive-fixnum)
@@ -16,6 +13,7 @@
 
   (with-temp-message ""
     (require 'init-elpa)
+    (require 'init-font)
     (require 'init-generic)
     (require 'init-ui)
     (require 'init-themes)
@@ -45,5 +43,7 @@
     (require 'init-shell)
     (require 'init-dashboard)))
 ;;(require 'init-exwm)
+
+(setq warning-minimum-level :emergency)
 
 (provide 'init)
