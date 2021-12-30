@@ -43,6 +43,7 @@
     (require 'init-project)
  ;;   (require 'init-vue)
     (require 'init-shell)
-    (require 'init-dashboard)))
+    (require 'init-dashboard)
+    (require 'init-exwm)))
 
 (provide 'init)

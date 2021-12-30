@@ -8,7 +8,7 @@
     (setq nox-doc-tooltip-font (format "%s-%s" emacs-font-name emacs-font-size))
     )
   (with-eval-after-load 'doom-modeline
-    (set-face-attribute 'mode-line nil :font "Menlo-14")
-    (set-face-attribute 'mode-line-inactive nil :font "Menlo-14")))
+    (set-face-attribute 'mode-line nil :font "SourceCodePro-14")
+    (set-face-attribute 'mode-line-inactive nil :font "SourceCodePro-14")))
 
 (provide 'init-font)
