@@ -3,6 +3,7 @@
   (let ((default-directory (file-name-as-directory dir)))
     (add-to-list 'load-path dir)
     (normal-top-level-add-subdirs-to-load-path)))
+(add-subdirs-to-load-path "~/.emacs.d/local-package/")
 (add-subdirs-to-load-path "~/.emacs.d/config/")
 
 (require 'init)
@@ -12,7 +13,7 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
-   '(exwm-systemtray exwm-config writeroom-mode writeroom yasnippet window-numbering which-key web-mode vue-mode use-package typescript-mode smartparens rainbow-mode rainbow-delimiters quelpa py-autopep8 omnisharp olivetti ob-restclient mc-extras magit lsp-ui lsp-pyright hungry-delete highlight-indent-guides helm-projectile helm-gtags go-projectile exwm exec-path-from-shell doom-themes doom-modeline deferred dashboard conda company-web ccls)))
+   '(dashboard helm-projectile magit mc-extras yasnippet go-projectile csharp-mode ccls lsp-pyright py-autopep8 lsp-ui window-numbering which-key use-package rainbow-mode rainbow-delimiters quelpa olivetti mmm-mode markdown-mode lv hungry-delete helm-gtags flycheck exec-path-from-shell doom-themes doom-modeline conda company)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
