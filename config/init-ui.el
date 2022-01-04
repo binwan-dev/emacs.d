@@ -20,6 +20,8 @@
       (set-frame-parameter nil 'alpha 89)
     (set-frame-parameter nil 'alpha 100)))
 
+(set-frame-parameter nil 'alpha 89)
+
 ; 开启窗口序号管理
 (use-package window-numbering
   :init

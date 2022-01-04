@@ -17,7 +17,7 @@
     (require 'init-generic)
     (require 'init-ui)
     (require 'init-themes)
-    (require 'init-meow)
+    ;; (require 'init-meow)
     ;; (require 'init-eaf)
     (require 'init-exec-path-shell)
     (require 'init-utils)
@@ -42,6 +42,7 @@
     (require 'init-project)
  ;;   (require 'init-vue)
     (require 'init-shell)
+    (require 'init-protobuf)
     (require 'init-dashboard)))
 ;;(require 'init-exwm)
 
