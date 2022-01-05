@@ -57,6 +57,14 @@
   :hook (csharp-mode . lsp))
 
 (use-package vue-mode
+  :config
+  (setq-default
+   web-mode-markup-indent-offset 2
+   web-mode-code-indent-offset 2
+   web-mode-css-indent-offset 2)
+  (setq js2-basic-offset 2)
+  (setq css-indent-offset 2)
+  (setq js-indent-level 2)
   :hook (vue-mode . (lambda ()
 		      (olivetti-mode)
 		      (lsp))))
