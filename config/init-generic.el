@@ -34,6 +34,7 @@
 (setq auto-save-timeout 120)
 (setq backup-directory-alist `((".*" . "~/.autosave/")))
 (setq auto-save-file-name-transforms `((".*","~/.autosave/" t)))
+(setq create-lockfiles nil)
 
 ;; enable recent file mode
 (use-package recentf

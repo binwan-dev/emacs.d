@@ -56,5 +56,10 @@
   :ensure t
   :hook (csharp-mode . lsp))
 
+(use-package vue-mode
+  :hook (vue-mode . (lambda ()
+		      (olivetti-mode)
+		      (lsp))))
+
 
 (provide 'init-lspmode)
