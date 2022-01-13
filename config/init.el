@@ -17,7 +17,7 @@
     (require 'init-font)
     (require 'init-ui)
     (require 'init-themes)
-    ;; (require 'init-meow)
+    (require 'init-meow)
     ;; (require 'init-eaf)
     (require 'init-exec-path-shell)
     (require 'init-utils)

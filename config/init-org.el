@@ -2,12 +2,12 @@
 (require 'org)
 
 ;; set agenda config
-(setq org-agenda-files '("~/icloud/Documents/belog"))
+(setq org-agenda-files '("~/Documents/org/todo/"))
 (global-set-key (kbd "C-c a") 'org-agenda)
 
 ;; org capture
 (setq org-capture-templates
-      '(("s" "Work Agenda" entry (file+headline "~/icloud/Documents/belog/inbox.org" "Agenda")
+      '(("i" "Inbox Agenda" entry (file+headline "~/Documents/org/todo/inbox.org" "Inbox")
 	 "* TODO %?\n %i\n"
 	 :empty-lines 1)))
 
