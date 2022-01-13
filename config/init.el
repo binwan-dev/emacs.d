@@ -13,8 +13,8 @@
 
   (with-temp-message ""
     (require 'init-elpa)
-    (require 'init-font)
     (require 'init-generic)
+    (require 'init-font)
     (require 'init-ui)
     (require 'init-themes)
     ;; (require 'init-meow)
