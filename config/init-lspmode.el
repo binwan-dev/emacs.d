@@ -1,3 +1,8 @@
+(use-package tree-sitter :ensure t)
+(use-package tree-sitter-langs :ensure t)
+(use-package tree-sitter-indent :ensure t)
+(add-to-list 'auto-mode-alist '("\\.cs\\'" . csharp-tree-sitter-mode))
+
 (use-package lsp-ui
   :ensure t
   :commands lsp-ui-mode
@@ -28,6 +33,7 @@
 	 ("C-c C-c" . lsp-find-references)
 	 ("C-." . lsp-execute-code-action))
   :hook (prog-mode . lsp-deferred))
+
 
 ;; (use-package py-autopep8
 ;;   :hook (python-mode . py-autopep8-enable-on-save))
