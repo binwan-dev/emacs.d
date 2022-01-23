@@ -12,6 +12,7 @@
 (global-subword-mode 1)                 ;Word移动支持 FooBar 的格式
 (prefer-coding-system 'utf-8-unix)
 (define-coding-system-alias 'UTF-8 'utf-8)
+(pixel-scroll-precision-mode 1)         ;     
 
 ; 设置透明函数
 (defun binwan-toggle-frame-transparency ()
