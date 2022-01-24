@@ -7,10 +7,10 @@
 
 ;;     (setq nox-doc-tooltip-font (format "%s-%s" emacs-font-name emacs-font-size))
 ;;     )
-(set-face-attribute 'default nil :font "Cascadia Code-14")
+(set-face-attribute 'default nil :font "Cascadia Code-15")
 (with-eval-after-load 'doom-modeline
-  (set-face-attribute 'mode-line nil :font "Cascadia Code 12")
-  (set-face-attribute 'mode-line-inactive nil :font "Cascadia Code 12"))
+  (set-face-attribute 'mode-line nil :font "Cascadia Code 13")
+  (set-face-attribute 'mode-line-inactive nil :font "Cascadia Code 13"))
 
 (setq-default line-spacing 0.2)
 
