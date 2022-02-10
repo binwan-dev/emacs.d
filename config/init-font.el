@@ -7,7 +7,19 @@
 
 ;;     (setq nox-doc-tooltip-font (format "%s-%s" emacs-font-name emacs-font-size))
 ;;     )
-(set-face-attribute 'default nil :font "Cascadia Code-15")
+
+(setq fonts
+      (cond ((eq system-type 'darwin)     '("Cascadia Code"    "STHeiti"))
+            ((eq system-type 'gnu/linux)  '("Cascadia Code"     "WenQuanYi Zen Hei"))
+            ((eq system-type 'windows-nt) '("Cascadia Code"  "Microsoft Yahei"))))
+(set-face-attribute 'default nil :font
+                    (format "%s:pixelsize=%d" (car fonts) 15))
+(dolist (charset '(kana han symbol cjk-misc bopomofo))
+  (set-fontset-font (frame-parameter nil 'font) charset
+                    (font-spec :family (car (cdr fonts)))))
+;; Fix chinese font width and rescale
+(setq face-font-rescale-alist '(("Microsoft Yahei" . 1.2) ("WenQuanYi Micro Hei Mono" . 1.2) ("STHeiti". 1.2)))
+
 (with-eval-after-load 'doom-modeline
   (set-face-attribute 'mode-line nil :font "Cascadia Code 13")
   (set-face-attribute 'mode-line-inactive nil :font "Cascadia Code 13"))
