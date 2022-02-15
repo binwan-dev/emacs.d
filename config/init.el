@@ -49,7 +49,7 @@
 
 (setq warning-minimum-level :emergency)
 
-(add-subdirs-to-load-path "~/Documents/binwan-dev/edbm/edbm-mode")
-(require 'edbm-ui)
+;;(add-subdirs-to-load-path "~/Documents/binwan-dev/edbm/edbm-mode")
+;;(require 'edbm-ui)
 
 (provide 'init)

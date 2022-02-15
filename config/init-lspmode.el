@@ -38,8 +38,8 @@
 (use-package csharp-mode
   :ensure t
   :config
-  (setq tree-sitter-indent-offset 4)
-  (tree-sitter-mode)
+  ;(setq tree-sitter-indent-offset 4)
+  ;(tree-sitter-mode)
   ;; (add-to-list 'auto-mode-alist '("\\.cs\\'" . tree-sitter-mode))
   )
   ;; (setq lsp-csharp-omnisharp-roslyn-server-dir "/opt/omnisharp-osx/"))
