@@ -26,13 +26,8 @@
     (set-face-attribute 'mode-line nil :font "Cascadia Code 13")
     (set-face-attribute 'mode-line-inactive nil :font "Cascadia Code 13")))
 
-(defun set-tty-font()
-  )
-
-(if (display-graphic-p)
-    (progn
-      (set-graphic-font))
-  (set-tty-font))
+(when (display-graphic-p)
+    (set-graphic-font))
 
 (setq-default line-spacing 0.2)
 

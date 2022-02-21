@@ -1,3 +1,4 @@
+
 ; lsp
 (use-package lsp-ui
   :ensure t
@@ -27,21 +28,21 @@
 	 ("C-c C-b" . pop-tag-mark)
 	 ("C-c s s" . lsp-restart-workspace)
 	 ("C-c C-c" . lsp-find-references)
-	 ("C-." . lsp-execute-code-action))
-  :hook (prog-mode . lsp-deferred))
+	 ("C-." . lsp-execute-code-action)))
+  ;; :hook (prog-mode . lsp-deferred))
 
 ; csharp
-(use-package tree-sitter)
-(use-package tree-sitter-langs)
-(use-package tree-sitter-indent)
+;; (use-package tree-sitter)
+;; (use-package tree-sitter-langs)
+;; (use-package tree-sitter-indent)
 
-(use-package csharp-mode
-  :ensure t
-  :config
-  ;(setq tree-sitter-indent-offset 4)
-  ;(tree-sitter-mode)
-  ;; (add-to-list 'auto-mode-alist '("\\.cs\\'" . tree-sitter-mode))
-  )
+;; (use-package csharp-mode
+;;   :ensure t
+;;   :config
+;;   ;(setq tree-sitter-indent-offset 4)
+;;   ;(tree-sitter-mode)
+;;   ;; (add-to-list 'auto-mode-alist '("\\.cs\\'" . tree-sitter-mode))
+;;   )
   ;; (setq lsp-csharp-omnisharp-roslyn-server-dir "/opt/omnisharp-osx/"))
 
 
