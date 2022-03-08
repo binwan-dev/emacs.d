@@ -27,5 +27,7 @@
 
   )
 
+(use-package helm-tramp
+  :ensure t)
 
 (provide 'init-helm)
