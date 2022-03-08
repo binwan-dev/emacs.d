@@ -20,6 +20,10 @@
   ;; Corrects (and improves) org-mode's native fontification.
   (doom-themes-org-config))
 
+(use-package nyan-mode
+  :config
+  (nyan-mode))
+
 (use-package doom-modeline
   :ensure t
   :init

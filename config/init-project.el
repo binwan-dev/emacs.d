@@ -16,4 +16,14 @@
 	      ("C-c C-p" . projectile-switch-project)
 	      ("C-c p r" . projectile-discover-projects-in-search-path)))
 
+(defun binwan-load-archpc-project()
+  (interactive)
+  (append projectile-project-search-path '("/ssh:fnlinker-archpc:/home/binwan/Documents/fnlinker/" "/ssh:fnlinker-archpc:/home/binwan/Documents/binwan-dev/"))
+  (projectile-discover-projects-in-search-path))
+
+(defun binwan-unload-archpc-project()
+  (interactive)
+  (remove projectile-project-search-path '("/ssh:fnlinker-archpc:/home/binwan/Documents/fnlinker/" "/ssh:fnlinker-archpc:/home/binwan/Documents/binwan-dev/"))
+  (projectile-discover-projects-in-search-path))
+
 (provide 'init-project)

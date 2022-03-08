@@ -21,7 +21,7 @@
             "calc" "asymptote" "dot" "gnuplot" "ledger" "lilypond" "mscgen"
             "octave" "oz" "plantuml" "R" "sass" "screen" "sql" "awk" "ditaa"
             "haskell" "latex" "lisp" "matlab" "ocaml" "org" "perl" "ruby"
-            "scheme" "sqlite")))
+            "scheme" "sqlite" "csharp")))
      (list (ido-completing-read "Source code type: " src-code-types))))
   (progn
     (newline-and-indent)
@@ -62,5 +62,9 @@
 (global-set-key (kbd "C-c w w") 'open-my-wiki-file)
 (global-set-key (kbd "C-c w d") 'open-my-doc-file)
 (global-set-key (kbd "C-c w p") 'open-my-password-file)
+
+;;add export markdown
+(use-package ox-gfm)
+(require 'ox-gfm)
 
 (provide 'init-org)
