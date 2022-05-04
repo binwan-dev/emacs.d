@@ -13,7 +13,7 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
-   '(helm-tramp c++-mode ob-csharp ox-gfm nyan-mode eaf-browser edbi cnfonts yasnippet window-numbering which-key use-package tree-sitter-langs tree-sitter-indent rust-mode rainbow-mode rainbow-delimiters quelpa protobuf-mode olivetti mmm-mode meow mc-extras magit lsp-ui hungry-delete helm-projectile helm-gtags go-projectile flycheck exec-path-from-shell doom-themes doom-modeline dashboard csharp-mode conda company)))
+   '(company-lsp helm-lsp helm-tramp c++-mode ob-csharp ox-gfm nyan-mode eaf-browser edbi cnfonts yasnippet window-numbering which-key use-package tree-sitter-langs tree-sitter-indent rust-mode rainbow-mode rainbow-delimiters quelpa protobuf-mode olivetti mmm-mode meow mc-extras magit lsp-ui hungry-delete helm-projectile helm-gtags go-projectile flycheck exec-path-from-shell doom-themes doom-modeline dashboard csharp-mode conda company)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

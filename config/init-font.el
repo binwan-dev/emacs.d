@@ -14,7 +14,7 @@
               ((eq system-type 'gnu/linux)  '("Cascadia Code"     "WenQuanYi Zen Hei"))
               ((eq system-type 'windows-nt) '("Cascadia Code"  "Microsoft Yahei"))))
   (set-face-attribute 'default nil :font
-                      (format "%s:pixelsize=%d" (car fonts) 15))
+                      (format "%s:pixelsize=%d" (car fonts) 16))
   (dolist (charset '(kana han symbol cjk-misc bopomofo))
     (set-fontset-font (frame-parameter nil 'font) charset
                       (font-spec :family (car (cdr fonts)))))
@@ -29,7 +29,7 @@
 (when (display-graphic-p)
     (set-graphic-font))
 
-(setq-default line-spacing 0.2)
+(setq-default line-spacing 0.3)
 
 (use-package ligature
   :load-path "path-to-ligature-repo"

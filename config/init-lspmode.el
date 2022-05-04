@@ -1,40 +1,61 @@
-
-; lsp
-(use-package lsp-ui
-  :ensure t
-  :commands lsp-ui-mode
-  :init
-  (add-hook 'lsp-mode-hook 'lsp-ui-mode)
-  :config
-  (setq lsp-ui-peek-enable t)
-  (setq lsp-ui-doc-enable nil)
-  (setq lsp-ui-imenu-enable t)
-  (setq lsp-ui-flycheck-enable t)
-  (setq lsp-ui-sideline-enable nil)
-  (setq lsp-ui-sideline-ignore-duplicate t))
+(use-package csharp-mode :ensure)
 
 (use-package lsp-mode
-  ;; :init
-  ;; (setq lsp-file-watch-threshold 102400)
-  :config
-  (setq tab-width 4)
-  (setq indent-tabs-mode 4)
-  (setq company-idle-delay 0)
-  (setq company-minimum-prefix-length 1)
-  (setq )
-  ;; (add-hook 'before-save-hook #'lsp-format-buffer t t)
-  (add-hook 'before-save-hook #'lsp-organize-imports t t)
-  :bind (("C-c C-j" . lsp-find-definition)
-	 ("C-c C-b" . pop-tag-mark)
-	 ("C-c s s" . lsp-restart-workspace)
-	 ("C-c C-c" . lsp-find-references)
-	 ("C-." . lsp-execute-code-action))
-  :hook (prog-mode . lsp-deferred))
+  :init
+  :hook ((csharp-mode . lsp)
+	 (lsp-mode . lsp-enable-which-key-integration))
+  :commands lsp)
 
-; csharp
-(use-package tree-sitter)
-(use-package tree-sitter-langs)
-(use-package tree-sitter-indent)
+(use-package lsp-ui :commands lsp-ui-mode)
+(use-package helm-lsp :commands helm-lsp-workspace-symbol)
+;; (use-package dap-mode)
+
+
+
+
+;; ; lsp
+;; (use-package lsp-ui
+;;   :ensure t
+;;   :commands lsp-ui-mode
+;;   :init
+;;   (add-hook 'lsp-mode-hook 'lsp-ui-mode)
+;;   :config
+;;   ;; (setq lsp-ui-peek-enable t)
+;;   ;; (setq lsp-ui-doc-enable nil)
+;;   ;; (setq lsp-ui-imenu-enable t)
+;;   ;; (setq lsp-ui-flycheck-enable t)
+;;   ;; (setq lsp-ui-sideline-enable nil)
+;;   ;; (setq lsp-ui-sideline-ignore-duplicate t)
+;;   )
+
+;; (use-package lsp-mode
+;;   ;; :init
+;;   ;; (setq lsp-file-watch-threshold 102400)
+;;   :config
+;;   (setq tab-width 4)
+;;   (setq indent-tabs-mode 4)
+;;   (setq company-idle-delay 0)
+;;   (setq company-minimum-prefix-length 1)  
+;;   ;; (add-hook 'before-save-hook #'lsp-format-buffer t t)
+;;   (add-hook 'before-save-hook #'lsp-organize-imports t t)
+
+;;   (lsp-register-client
+;;     (make-lsp-client :new-connection (lsp-tramp-connection "rust-analyzer")
+;;                      :major-modes '(rust-mode)
+;;                      :remote? t
+;;                      :server-id 'rust-remote))
+  
+;;   :bind (("C-c C-j" . lsp-find-definition)
+;; 	 ("C-c C-b" . pop-tag-mark)
+;; 	 ("C-c s s" . lsp-restart-workspace)
+;; 	 ("C-c C-c" . lsp-find-references)
+;; 	 ("C-." . lsp-execute-code-action))
+;;   :hook (prog-mode . lsp-deferred))
+
+;; ; csharp
+;; (use-package tree-sitter)
+;; (use-package tree-sitter-langs)
+;; (use-package tree-sitter-indent)
 
 ;; (use-package csharp-mode
 ;;   :ensure t
@@ -42,8 +63,7 @@
 ;;   ;(setq tree-sitter-indent-offset 4)
 ;;   ;(tree-sitter-mode)
 ;;   ;; (add-to-list 'auto-mode-alist '("\\.cs\\'" . tree-sitter-mode))
-;;   :hook
-;;   (csharp-mode . lsp))
+;;   )
 
 
 ;; (use-package py-autopep8
