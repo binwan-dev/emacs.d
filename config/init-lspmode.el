@@ -1,10 +1,19 @@
-(use-package csharp-mode :ensure)
+(use-package csharp-mode :ensure t)
+(use-package vue-mode :ensure t)
 
 (use-package lsp-mode
   :init
   :hook ((csharp-mode . lsp)
+	 (vue-mode . lsp)
 	 (lsp-mode . lsp-enable-which-key-integration))
-  :commands lsp)
+  :commands lsp
+  :bind (
+	 ("C-c s s" . lsp-restart-workspace)
+	 ("C-." . lsp-execute-code-action)
+	 ("C-c C-j" . lsp-find-definition)
+	 ("C-c C-r" . lsp-find-references)
+	 ("C-c C-i" . lsp-find-implementation)
+	 ("C-c b" . pop-tag-mark)))
 
 (use-package lsp-ui :commands lsp-ui-mode)
 (use-package helm-lsp :commands helm-lsp-workspace-symbol)
