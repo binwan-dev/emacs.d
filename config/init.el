@@ -31,6 +31,7 @@
     (require 'init-conda)
     ;;    (require 'init-yasnippet)
     (require 'init-lspmode)
+    (require 'init-yaml)
     (require 'init-rust)
     ;; (require 'init-omnisharp)
     (require 'init-go)
