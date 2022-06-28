@@ -13,7 +13,7 @@
 	 ("C-c C-j" . lsp-find-definition)
 	 ("C-c C-r" . lsp-find-references)
 	 ("C-c C-i" . lsp-find-implementation)
-	 ("C-c b" . pop-tag-mark)))
+	 ("C-C t b" . pop-tag-mark)))
 
 (use-package lsp-ui :commands lsp-ui-mode)
 (use-package helm-lsp :commands helm-lsp-workspace-symbol)

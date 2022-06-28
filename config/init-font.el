@@ -10,7 +10,7 @@
 
 (defun set-graphic-font()
   (setq fonts
-	(cond ((eq system-type 'darwin)     '("Cascadia Code"    "STHeiti"))
+	(cond ((eq system-type 'darwin)     '("Fira Code"    "STHeiti"))
               ((eq system-type 'gnu/linux)  '("Cascadia Code"     "WenQuanYi Zen Hei"))
               ((eq system-type 'windows-nt) '("Cascadia Code"  "Microsoft Yahei"))))
   (set-face-attribute 'default nil :font
@@ -29,7 +29,7 @@
 (when (display-graphic-p)
     (set-graphic-font))
 
-(setq-default line-spacing 0.3)
+(setq-default line-spacing 0.4)
 
 (use-package ligature
   :load-path "path-to-ligature-repo"
