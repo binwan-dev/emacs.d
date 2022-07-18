@@ -6,6 +6,12 @@
   :hook ((csharp-mode . lsp)
 	 (vue-mode . lsp)
 	 (lsp-mode . lsp-enable-which-key-integration))
+  :config
+  (lsp-register-client
+    (make-lsp-client :new-connection (lsp-tramp-connection "cls")
+                     :major-modes '(csharp-mode)
+                     :remote? t
+                     :server-id 'csharp-ls-remote))
   :commands lsp
   :bind (
 	 ("C-c s s" . lsp-restart-workspace)

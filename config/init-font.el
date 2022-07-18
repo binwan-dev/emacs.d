@@ -10,7 +10,7 @@
 
 (defun set-graphic-font()
   (setq fonts
-	(cond ((eq system-type 'darwin)     '("Fira Code"    "STHeiti"))
+	(cond ((eq system-type 'darwin)     '("MonoLisa Nasy"    "STHeiti"))
               ((eq system-type 'gnu/linux)  '("Cascadia Code"     "WenQuanYi Zen Hei"))
               ((eq system-type 'windows-nt) '("Cascadia Code"  "Microsoft Yahei"))))
   (set-face-attribute 'default nil :font
