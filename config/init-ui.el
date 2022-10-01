@@ -12,21 +12,31 @@
 (global-subword-mode 1)                 ;Word移动支持 FooBar 的格式
 (prefer-coding-system 'utf-8-unix)
 (define-coding-system-alias 'UTF-8 'utf-8)
-;(pixel-scroll-precision-mode 1)         ;     
+(set-frame-parameter (selected-frame) 'ns-transparent-titlebar t) ;状态栏透明
+;; (pixel-scroll-precision-mode 1)         ;     
 
 ; 设置透明函数
 (defun binwan-toggle-frame-transparency ()
   (interactive)
   (if (equal (frame-parameter nil 'alpha) 100)
-      (set-frame-parameter nil 'alpha 98)
+      (set-frame-parameter nil 'alpha 50)
     (set-frame-parameter nil 'alpha 100)))
-
-(set-frame-parameter nil 'alpha 100)
 
 ; 开启窗口序号管理
 (use-package window-numbering
   :init
   (window-numbering-mode))
+
+; 缩进线
+(use-package highlight-indent-guides
+  :ensure t
+  :init
+  (setq highlight-indent-guides-method 'character)
+  ;; (setq highlight-indent-guides-auto-odd-face-perc 20)
+  ;; (setq highlight-indent-guides-auto-even-face-perc 40)
+  ;; (setq highlight-indent-guides-auto-character-face-perc 50)
+  :hook
+  ((prog-mode . highlight-indent-guides-mode)))
 
 (if (featurep 'cocoa)
     (progn

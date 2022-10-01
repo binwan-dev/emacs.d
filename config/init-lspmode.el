@@ -1,12 +1,31 @@
+(setq js-indent-level 2)
+
 (use-package csharp-mode :ensure t)
 (use-package vue-mode :ensure t)
-
+(use-package py-autopep8
+  :hook
+  (python-mode . py-autopep8-mode))
+(use-package lsp-pyright
+  :config
+  (setq lsp-pyright-venv-path "/Users/binwan/opt/anaconda3/envs")
+  (setq lsp-pyright-auto-import-completions t)
+  (setq lsp-pyright-auto-search-paths t)
+  :bind
+  (("C-c j" . lsp-find-definition))
+  :hook (python-mode . (lambda ()
+                          (require 'lsp-pyright)
+                          (lsp))))
 (use-package lsp-mode
   :init
   :hook ((csharp-mode . lsp)
 	 (vue-mode . lsp)
 	 (lsp-mode . lsp-enable-which-key-integration))
   :config
+  ;; for typescript/javascript
+  ;; (setq lsp-typescript-auto-closing-tags t)
+  ;; (setq lsp-typescript-format-enable t)
+  ;; (setq lsp-javascript-auto-closing-tags t)
+  
   (lsp-register-client
     (make-lsp-client :new-connection (lsp-tramp-connection "cls")
                      :major-modes '(csharp-mode)
@@ -84,17 +103,6 @@
 ;; (use-package py-autopep8
 ;;   :hook (python-mode . py-autopep8-enable-on-save))
 
-
-;; (use-package lsp-pyright
-;;   :config
-;;   (setq lsp-pyright-venv-path "/Users/bin/opt/anaconda3/envs")
-;;   (setq lsp-pyright-auto-import-completions t)
-;;   (setq lsp-pyright-auto-search-paths t)
-;;   :bind
-;;   (("C-c j" . lsp-find-definition))
-;;   :hook (python-mode . (lambda ()
-;;                           (require 'lsp-pyright)
-;;                           (lsp))))
 
 ;; (use-package ccls
 ;;   :config
