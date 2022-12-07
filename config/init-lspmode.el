@@ -21,6 +21,7 @@
 	 (vue-mode . lsp)
 	 (lsp-mode . lsp-enable-which-key-integration))
   :config
+  (lsp-ui-mode -1)
   ;; for typescript/javascript
   ;; (setq lsp-typescript-auto-closing-tags t)
   ;; (setq lsp-typescript-format-enable t)
@@ -40,7 +41,7 @@
 	 ("C-c C-i" . lsp-find-implementation)
 	 ("C-C t b" . pop-tag-mark)))
 
-(use-package lsp-ui :commands lsp-ui-mode)
+;; (use-package lsp-ui :commands lsp-ui-mode)
 (use-package helm-lsp :commands helm-lsp-workspace-symbol)
 ;; (use-package dap-mode)
 
