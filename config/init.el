@@ -1,9 +1,6 @@
 ;; 加速配置
 (require 'init-accelerate)
 
-;; 设置字体
-(require 'init-font)
-
 (let (
       ;; 加载的时候临时增大`gc-cons-threshold'以加速启动速度。
       (gc-cons-threshold most-positive-fixnum)
@@ -17,11 +14,16 @@
   (with-temp-message ""
     (require 'init-elpa)
     (require 'init-generic)
+    (require 'init-font)
     (require 'init-ui)
+    (require 'init-ui-macport)
     (require 'init-themes)
+    (require 'init-treemacs)
+    ;; (require 'init-meow)
     ;; (require 'init-eaf)
     (require 'init-exec-path-shell)
     (require 'init-utils)
+    (require 'init-tramp)
     (require 'init-lazy-load)
     ;; (require 'init-high-indent)
     (require 'init-rainbow)
@@ -30,20 +32,30 @@
     (require 'init-mmm)
     (require 'init-helm)
     (require 'init-conda)
+    (require 'init-program)
     ;;    (require 'init-yasnippet)
     (require 'init-lspmode)
+    (require 'init-yaml)
+    (require 'init-rust)
     ;; (require 'init-omnisharp)
     (require 'init-go)
     (require 'init-multi-cursors)
     ;; (require 'init-mssql)
     ;;  (require 'init-undo-tree)
     (require 'init-magit)
+    (require 'init-blamer)
  ;;   (require 'init-tab)
     (require 'init-org)
     (require 'init-project)
  ;;   (require 'init-vue)
     (require 'init-shell)
+    (require 'init-protobuf)
     (require 'init-dashboard)))
 ;;(require 'init-exwm)
+
+(setq warning-minimum-level :emergency)
+
+;;(add-subdirs-to-load-path "~/Documents/binwan-dev/edbm/edbm-mode")
+;;(require 'edbm-ui)
 
 (provide 'init)

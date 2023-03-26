@@ -10,7 +10,9 @@
 	 ("M-s g" . 'helm-imenu-in-all-buffers)
 	 ("M-x" . #'helm-M-x)
 	 ("C-x r b" . #'helm-filtered-bookmarks)
-	 ("C-x C-f" . 'helm-find-files))
+	 ("C-x C-f" . 'helm-find-files)
+	 ("C-x b" . 'helm-buffers-list)
+	 ("C-x C-b" . 'helm-buffers-list))
   :bind (:map helm-map
 	 ("<tab>" . 'helm-execute-persistent-action) ; rebind tab to run persistent action
 	 ("C-i" . 'helm-execute-persistent-action) ; make TAB work in terminal
@@ -27,5 +29,7 @@
 
   )
 
+(use-package helm-tramp
+  :ensure t)
 
 (provide 'init-helm)

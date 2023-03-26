@@ -3,8 +3,8 @@
 (require-package 'deferred)
 (require-package 'deferred)
 
-(if (eq system-type 'darwin)
-    (setq omnisharp-server-executable-path "/usr/local/opt/omnisharp-osx/run"))
+;; (if (eq system-type 'darwin)
+;;     (setq omnisharp-server-executable-path "/usr/local/opt/omnisharp-osx/run"))
 (if (eq system-type 'gnu/linux)
     (setq omnisharp-server-executable-path "/opt/omnisharp-linux/run"))
 

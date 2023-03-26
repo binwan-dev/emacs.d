@@ -8,10 +8,10 @@
 (use-package which-key
   :init (which-key-mode 1))
 
-(use-package olivetti
-  :config
-  (setq olivetti-minimum-body-width 120)
-  :hook (prog-mode . olivetti-mode))
+;; (use-package olivetti
+;;   :config
+;;   (setq olivetti-minimum-body-width 130)
+;;   :hook (prog-mode . olivetti-mode))
 
 (setq use-dialog-box nil)               ;never pop dialog
 (setq inhibit-startup-screen t)         ;inhibit start screen
@@ -34,6 +34,7 @@
 (setq auto-save-timeout 120)
 (setq backup-directory-alist `((".*" . "~/.autosave/")))
 (setq auto-save-file-name-transforms `((".*","~/.autosave/" t)))
+(setq create-lockfiles nil)
 
 ;; enable recent file mode
 (use-package recentf

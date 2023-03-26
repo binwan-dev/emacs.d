@@ -13,7 +13,7 @@
   :bind (:map projectile-mode-map
 	      ("s-p" . projectile-command-map)
 	      ("C-c p" . projectile-command-map)
-	      ("C-c C-p" . projectile-switch-project)
-	      ("C-c p r" . projectile-discover-projects-in-search-path)))
+	      ("C-c C-p s" . projectile-switch-project)
+	      ("C-c C-p r" . projectile-discover-projects-in-search-path)))
 
 (provide 'init-project)

@@ -2,12 +2,12 @@
 (require 'org)
 
 ;; set agenda config
-(setq org-agenda-files '("~/icloud/Documents/belog"))
+(setq org-agenda-files '("~/icloud/Documents/belog/"))
 (global-set-key (kbd "C-c a") 'org-agenda)
 
 ;; org capture
 (setq org-capture-templates
-      '(("s" "Work Agenda" entry (file+headline "~/icloud/Documents/belog/inbox.org" "Agenda")
+      '(("i" "Inbox Agenda" entry (file+headline "~/icloud/Documents/belog/inbox.org" "Inbox")
 	 "* TODO %?\n %i\n"
 	 :empty-lines 1)))
 
@@ -21,7 +21,7 @@
             "calc" "asymptote" "dot" "gnuplot" "ledger" "lilypond" "mscgen"
             "octave" "oz" "plantuml" "R" "sass" "screen" "sql" "awk" "ditaa"
             "haskell" "latex" "lisp" "matlab" "ocaml" "org" "perl" "ruby"
-            "scheme" "sqlite")))
+            "scheme" "sqlite" "csharp")))
      (list (ido-completing-read "Source code type: " src-code-types))))
   (progn
     (newline-and-indent)
@@ -62,5 +62,9 @@
 (global-set-key (kbd "C-c w w") 'open-my-wiki-file)
 (global-set-key (kbd "C-c w d") 'open-my-doc-file)
 (global-set-key (kbd "C-c w p") 'open-my-password-file)
+
+;;add export markdown
+(use-package ox-gfm)
+(require 'ox-gfm)
 
 (provide 'init-org)
