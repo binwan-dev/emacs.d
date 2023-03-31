@@ -1,7 +1,9 @@
 (setq js-indent-level 2)
 
 (use-package csharp-mode :ensure t)
-(use-package vue-mode :ensure t)
+(use-package vue-mode :ensure t
+  :config
+  (setq web-mode-code-indent-offset 2))
 (use-package py-autopep8
   :hook
   (python-mode . py-autopep8-mode))
@@ -19,7 +21,8 @@
   :init
   :hook ((csharp-mode . lsp)
 	 (vue-mode . lsp)
-	 (lsp-mode . lsp-enable-which-key-integration))
+	 (lsp-mode . lsp-enable-which-key-integration)
+	 (json-mode . lsp))
   :config
   (lsp-ui-mode -1)
   ;; for typescript/javascript
@@ -45,7 +48,10 @@
 (use-package helm-lsp :commands helm-lsp-workspace-symbol)
 ;; (use-package dap-mode)
 
-
+(use-package web-mode
+  :config
+  (add-to-list 'auto-mode-alist '("\\.cshtml?\\'" . web-mode))
+  (add-to-list 'auto-mode-alist '("\\.razor?\\'" . web-mode)))
 
 
 ;; ; lsp

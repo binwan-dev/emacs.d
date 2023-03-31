@@ -43,7 +43,7 @@
     ;; (require 'init-mssql)
     ;;  (require 'init-undo-tree)
     (require 'init-magit)
-    (require 'init-blamer)
+    ;; (require 'init-blamer)
  ;;   (require 'init-tab)
     (require 'init-org)
     (require 'init-project)
