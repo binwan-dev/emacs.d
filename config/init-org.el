@@ -7,7 +7,10 @@
 
 ;; org capture
 (setq org-capture-templates
-      '(("i" "Inbox Agenda" entry (file+headline "~/icloud/Documents/belog/inbox.org" "Inbox")
+      '(("i" "Private Agenda" entry (file+headline "~/icloud/Documents/belog/private.org" "Private")
+	 "* TODO %?\n %i\n"
+	 :empty-lines 1)
+	("w" "Work Agenda" entry (file+headline "~/icloud/Documents/belog/Shushan.org" "Work")
 	 "* TODO %?\n %i\n"
 	 :empty-lines 1)))
 
