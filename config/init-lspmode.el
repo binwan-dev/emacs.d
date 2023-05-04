@@ -50,6 +50,7 @@
 
 (use-package web-mode
   :config
+  (setq web-mode-code-indent-offset 4)
   (add-to-list 'auto-mode-alist '("\\.cshtml?\\'" . web-mode))
   (add-to-list 'auto-mode-alist '("\\.razor?\\'" . web-mode)))
 
