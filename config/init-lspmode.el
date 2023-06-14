@@ -1,9 +1,9 @@
 (setq js-indent-level 2)
 
-(use-package csharp-mode :ensure t)
 (use-package vue-mode :ensure t
   :config
   (setq web-mode-code-indent-offset 2))
+(use-package csharp-mode :ensure t)
 (use-package py-autopep8
   :hook
   (python-mode . py-autopep8-mode))
@@ -17,24 +17,24 @@
   :hook (python-mode . (lambda ()
                           (require 'lsp-pyright)
                           (lsp))))
+(use-package rust-mode
+  :config
+  (setq rust-format-on-save t)
+  (setq lsp-rust-server 'rust-analyzer)
+  :bind (("C-c C-c" . rust-run)))
+
 (use-package lsp-mode
   :init
-  :hook ((csharp-mode . lsp)
-	 (vue-mode . lsp)
+  :hook ((vue-mode . lsp)
+	 (csharp-mode . lsp)
 	 (lsp-mode . lsp-enable-which-key-integration)
-	 (json-mode . lsp))
-  :config
-  (lsp-ui-mode -1)
+	 (json-mode . lsp)
+	 (rust-mode . lsp))
   ;; for typescript/javascript
   ;; (setq lsp-typescript-auto-closing-tags t)
   ;; (setq lsp-typescript-format-enable t)
   ;; (setq lsp-javascript-auto-closing-tags t)
   
-  (lsp-register-client
-    (make-lsp-client :new-connection (lsp-tramp-connection "cls")
-                     :major-modes '(csharp-mode)
-                     :remote? t
-                     :server-id 'csharp-ls-remote))
   :commands lsp
   :bind (
 	 ("C-c s s" . lsp-restart-workspace)
@@ -55,20 +55,22 @@
   (add-to-list 'auto-mode-alist '("\\.razor?\\'" . web-mode)))
 
 
+
 ;; ; lsp
-;; (use-package lsp-ui
-;;   :ensure t
-;;   :commands lsp-ui-mode
-;;   :init
-;;   (add-hook 'lsp-mode-hook 'lsp-ui-mode)
-;;   :config
-;;   ;; (setq lsp-ui-peek-enable t)
-;;   ;; (setq lsp-ui-doc-enable nil)
-;;   ;; (setq lsp-ui-imenu-enable t)
-;;   ;; (setq lsp-ui-flycheck-enable t)
-;;   ;; (setq lsp-ui-sideline-enable nil)
-;;   ;; (setq lsp-ui-sideline-ignore-duplicate t)
-;;   )
+(use-package lsp-ui
+  :ensure t
+  :commands lsp-ui-mode
+  :init
+  (add-hook 'lsp-mode-hook 'lsp-ui-mode)
+  :config
+  (setq lsp-ui-mode nil)
+  (setq lsp-ui-peek-enable t)
+  (setq lsp-ui-doc-enable nil)
+  (setq lsp-ui-imenu-enable t)
+  (setq lsp-ui-flycheck-enable t)
+  (setq lsp-ui-sideline-enable nil)
+  (setq lsp-ui-sideline-ignore-duplicate t)
+  )
 
 ;; (use-package lsp-mode
 ;;   ;; :init

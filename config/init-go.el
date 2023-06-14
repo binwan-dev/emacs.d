@@ -6,6 +6,9 @@
   (setq gofmt-command "goimports")
   (local-set-key (kbd "C-c t") 'go-test-current-file)
   (local-set-key (kbd "C-c s r") 'my-kill-go-server-fun)
+  (setq tab-width 4)
+  (setq indent-tabs-mode 1)
+  (add-hook 'go-mode-hook (lambda () (setq tab-width 4) (setq indent-tabs-mode 1)))
   (add-hook 'before-save-hook 'gofmt-before-save)
   :hook (go-mode . lsp))
 

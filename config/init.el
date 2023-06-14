@@ -50,6 +50,7 @@
  ;;   (require 'init-vue)
     (require 'init-shell)
     (require 'init-protobuf)
+    (require 'init-bongo)
     (require 'init-dashboard)))
 ;;(require 'init-exwm)
 
