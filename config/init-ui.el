@@ -27,6 +27,21 @@
   :init
   (window-numbering-mode))
 
+;; 居中显示
+(use-package writeroom-mode
+  :config
+  (setq writeroom-width 128
+        writeroom-bottom-divider-width 0
+        writeroom-fringes-outside-margins t
+        writeroom-fullscreen-effect nil
+        writeroom-major-modes '(text-mode prog-mode conf-mode special-mode Info-mode dired-mode)
+        writeroom-maximize-window nil
+        writeroom-mode-line t
+        writeroom-mode-line-toggle-position 'mode-line-format)
+  :hook
+  (emacs-startup . global-writeroom-mode))
+
+
 ; 缩进线
 (use-package highlight-indent-guides
   :ensure t
