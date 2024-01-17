@@ -1,9 +1,9 @@
 (use-package blamer
-  :bind (("s-i" . blamer-show-commit-info))
+  :bind (("C-i" . blamer-show-commit-info))
   :defer 20
   :custom
   (blamer-idle-time 0.3)
-  (blamer-min-offset 70)
+  (blamer-min-offset 20)
   :custom-face
   (blamer-face ((t :foreground "#7a88cf"
                     :background nil

@@ -29,6 +29,9 @@
 
   )
 
+(use-package helm-ag
+  :ensure t)
+
 (use-package helm-tramp
   :ensure t)
 

@@ -3,7 +3,6 @@
 (menu-bar-mode -1)                      ;禁用菜单栏
 (scroll-bar-mode -1)                    ;禁用滚动条
 (delete-selection-mode 1)               ;启用删除选择模式
-(global-linum-mode 1)                   ;打开行号
 (desktop-save-mode -1)                  ;记录文件供下次打开
 (setq-default cursor-type 'bar)         ;设置光标为 |
 (fset 'yes-or-no-p 'y-or-n-p)           ;以 y/n代表 yes/no
@@ -18,14 +17,29 @@
 ; 设置透明函数
 (defun binwan-toggle-frame-transparency ()
   (interactive)
-  (if (equal (frame-parameter nil 'alpha) 100)
-      (set-frame-parameter nil 'alpha 50)
-    (set-frame-parameter nil 'alpha 100)))
+  (if (equal (frame-parameter nil 'alpha-background) 100)
+      (set-frame-parameter nil 'alpha-background 85)
+    (set-frame-parameter nil 'alpha-background 100)))
 
 ; 开启窗口序号管理
 (use-package window-numbering
   :init
   (window-numbering-mode))
+
+;; 居中显示
+(use-package writeroom-mode
+  :config
+  (setq writeroom-width 128
+        writeroom-bottom-divider-width 0
+        writeroom-fringes-outside-margins t
+        writeroom-fullscreen-effect nil
+        writeroom-major-modes '(text-mode prog-mode conf-mode special-mode Info-mode dired-mode)
+        writeroom-maximize-window nil
+        writeroom-mode-line t
+        writeroom-mode-line-toggle-position 'mode-line-format)
+  :hook
+  (emacs-startup . global-writeroom-mode))
+
 
 ; 缩进线
 (use-package highlight-indent-guides
