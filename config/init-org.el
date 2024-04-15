@@ -1,20 +1,17 @@
 ;; use org
 (require 'org)
 
-;; set agenda config
-(setq org-agenda-files '("~/icloud/Documents/belog/"))
-(global-set-key (kbd "C-c a") 'org-agenda)
-
 ;; org capture
 (setq org-capture-templates
       '(("i" "Private Agenda" entry (file+headline "~/icloud/Documents/belog/private.org" "Private")
 	 "* TODO %?\n %i\n"
 	 :empty-lines 1)
-	("w" "Work Agenda" entry (file+headline "~/icloud/Documents/belog/Shushan.org" "Work")
+	("w" "Work Agenda" entry (file+headline "~/icloud/Documents/belog/Brothers.org" "Work")
 	 "* TODO %?\n %i\n"
 	 :empty-lines 1)))
 
 (global-set-key (kbd "C-c c") 'org-capture)
+(add-hook 'org-mode-hook (lambda () (setq truncate-lines nil)))
 
 (defun org-insert-src-block (src-code-type)
   "Insert a `SRC-CODE-TYPE' type source code block in org-mode."
@@ -40,7 +37,36 @@
 
 (add-hook 'org-mode-hook 'my-org-mode-setup t)
 
+;; set agenda config
+(setq org-agenda-files '("~/icloud/Documents/belog/"))
+(global-set-key (kbd "C-c a") 'org-agenda)
+
 (global-set-key (kbd "C-c C-a r") 'org-agenda-to-appt)
+
+(setq org-agenda-custom-commands
+      '(("g" . "GTD contexts")
+        ("go" "Office" tags-todo "office")
+        ("gc" "Computer" tags-todo "computer")
+        ("gp" "Phone" tags-todo "phone")
+        ("gh" "Home" tags-todo "home")
+        ("ge" "Errands" tags-todo "errands")
+        ("G" "GTD Block Agenda"
+         ((tags-todo "office")
+          (tags-todo "computer")
+          (tags-todo "phone")
+          (tags-todo "home")
+          (tags-todo "errands"))
+         nil                      ;; i.e., no local settings
+         ("~/next-actions.html")) ;; exports block to this file with C-c a e
+       ;; ..other commands here
+	      ("d" "Weekly Review"
+		       ((agenda "" (;; (org-agenda-overriding-header "Tasks Completed:")
+                        (org-agenda-skip-function '(org-agenda-skip-subtree-if 'nottodo 'done))
+                        (org-agenda-skip-scheduled-if-done nil)
+                        (org-agenda-skip-timestamp-if-done nil)                      
+                        (org-agenda-span 7)
+                        (org-agenda-use-time-grid nil)
+                        (setq org-agenda-show-all-dates nil)))))))
 
 ;;agenda-appt
 (require 'appt)

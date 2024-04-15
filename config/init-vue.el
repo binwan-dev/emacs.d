@@ -91,7 +91,7 @@
 (add-hook 'css-mode-hook (lambda()
 			   (add-to-list(make-local-variable 'company-backends)
 				       '(company-css company-files company-yasnippet company-capf))))
-(setq css-indent-offset 2)
+(setq css-indent-offset 4)
 (setq flycheck-stylelintrc "~/.stylelintrc")
 
 (add-auto-mode 'scss-mode "\\.scss\\'")

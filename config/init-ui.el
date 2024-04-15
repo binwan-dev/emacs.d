@@ -5,6 +5,7 @@
 (delete-selection-mode 1)               ;启用删除选择模式
 (desktop-save-mode -1)                  ;记录文件供下次打开
 (setq-default cursor-type 'bar)         ;设置光标为 |
+(global-display-line-numbers-mode t)
 (fset 'yes-or-no-p 'y-or-n-p)           ;以 y/n代表 yes/no
 (blink-cursor-mode -1)                  ;指针不闪动
 (transient-mark-mode 1)                 ;标记高亮

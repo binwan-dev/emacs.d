@@ -18,7 +18,7 @@
 	 ("C-i" . 'helm-execute-persistent-action) ; make TAB work in terminal
 	 ("C-z" . 'helm-select-action)) ; list actions using C-z
   :config
-  (require 'helm-config)
+ ;;  (require 'helm-config)
   (helm-gtags-mode t)
   (setq helm-split-window-in-side-p           t ; open helm buffer inside current window, not occupy whole other window
       helm-move-to-line-cycle-in-source     t ; move to end or beginning of source when reaching top or bottom of source.
