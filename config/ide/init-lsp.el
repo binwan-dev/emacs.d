@@ -22,6 +22,24 @@
   (setq rust-format-on-save t)
   (setq lsp-rust-server 'rust-analyzer)
   :bind (("C-c C-c" . rust-run)))
+(use-package go-projectile)
+(use-package go-mode
+  :ensure t
+  :config
+  (setq gofmt-command "goimports")
+  (local-set-key (kbd "C-c t") 'go-test-current-file)
+  (local-set-key (kbd "C-c l r") 'my-kill-go-server-fun)
+  (setq tab-width 4)
+  (setq indent-tabs-mode 1)
+  (add-hook 'go-mode-hook (lambda () (setq tab-width 4) (setq indent-tabs-mode 1)))
+  (add-hook 'before-save-hook 'gofmt-before-save)
+  :hook (go-mode . lsp))
+
+;; Optional - provides snippet support.
+(use-package yasnippet
+  :ensure t
+  :commands yas-minor-mode
+  :hook (go-mode . yas-minor-mode))
 
 (use-package lsp-mode
   :init
@@ -29,24 +47,27 @@
 	 (csharp-mode . lsp)
 	 (lsp-mode . lsp-enable-which-key-integration)
 	 (json-mode . lsp)
-	 (rust-mode . lsp))
+	 (rust-mode . lsp)
+     (c-mode . lsp)
+     (c++-mode . lsp))
   ;; for typescript/javascript
   ;; (setq lsp-typescript-auto-closing-tags t)
   ;; (setq lsp-typescript-format-enable t)
   ;; (setq lsp-javascript-auto-closing-tags t)
   :config
   (setq lsp-csharp-csharpls-use-dotnet-tool nil)
+  (setq lsp-volar-activate-file ".volarrc")
   
   :commands lsp
   :bind (
-	 ("C-c s s" . lsp-restart-workspace)
+	 ("C-c l s" . lsp-restart-workspace)
 	 ("C-." . lsp-execute-code-action)
 	 ("C-c C-j" . lsp-find-definition)
 	 ("C-c C-r" . lsp-find-references)
 	 ("C-c C-i" . lsp-find-implementation)
-	 ("C-C t b" . pop-tag-mark)))
+   	 ("C-c i" . lsp-goto-implementation)))
 
-;; (use-package lsp-ui :commands lsp-ui-mode)
+(use-package lsp-ui :commands lsp-ui-mode)
 (use-package helm-lsp :commands helm-lsp-workspace-symbol)
 ;; (use-package dap-mode)
 
@@ -54,9 +75,9 @@
   :config
   (setq web-mode-code-indent-offset 4)
   (add-to-list 'auto-mode-alist '("\\.cshtml?\\'" . web-mode))
-  (add-to-list 'auto-mode-alist '("\\.razor?\\'" . web-mode)))
-
-
+  (add-to-list 'auto-mode-alist '("\\.razor?\\'" . web-mode))
+  (setq web-mode-engines-alist
+	    '(("razor"    . "\\.razor\\'"))))
 
 ;; ; lsp
 (use-package lsp-ui

@@ -18,8 +18,8 @@
 (use-package company
   :ensure t
   :init
-  (setq company-minimum-prefix-length 1)
-  (setq company-echo-delay 0.1)
+  (setq company-minimum-prefix-length 3)
+  (setq company-echo-delay 0.3)
   :config (global-company-mode t)
   :bind (("C-c <tab>" . #'global-company-mode))
   :bind (:map company-active-map
@@ -29,8 +29,18 @@
 	      ("C-p" . #'company-select-previous)))
 
 (add-subdirs-to-load-path "~/.emacs.d/config/themes") ;; load ide directory
+
+;; protobuf file
+(use-package protobuf-mode
+  :config
+  (add-to-list 'auto-mode-alist '("\\.proto\\'" . protobuf-mode)))
+
 ;; use lsp
 (require 'init-lsp)
+
+;; use lsp-bridge
+;; (require 'init-lsp-bridge)
+
 ;; (use-package eglot
 ;;   :hook (prog-mode . eglot-ensure)
 ;;   :config

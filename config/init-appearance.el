@@ -3,7 +3,7 @@
 ;; center display
 (use-package writeroom-mode
   :config
-  (setq writeroom-width 128
+  (setq writeroom-width 160
         writeroom-bottom-divider-width 0
         writeroom-fringes-outside-margins t
         writeroom-fullscreen-effect nil
@@ -11,6 +11,7 @@
         writeroom-maximize-window nil
         writeroom-mode-line t
         writeroom-mode-line-toggle-position 'mode-line-format)
+  ;; (add-to-list 'auto-mode-alist '("\\.proto?\\'" . writeroom-mode))
   :hook
   (emacs-startup . global-writeroom-mode))
 ;;; 

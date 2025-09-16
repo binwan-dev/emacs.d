@@ -3,7 +3,7 @@
   :init
   (projectile-mode 1)
   :config
-  (setq projectile-project-search-path '("~/Documents/brothers/project" "~/Documents/binwan-dev/project"))
+  (setq projectile-project-search-path '("~/Documents/binwan-dev/project" "~/Documents/bsi" "~/Documents/omnisolu"))
   (setq projectile-mode-line
       '(:eval (format " Projectile[%s]"
                       (projectile-project-name))))

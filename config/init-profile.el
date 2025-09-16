@@ -10,7 +10,7 @@
               ((eq system-type 'gnu/linux)  '("Cascadia Code"     "WenQuanYi Zen Hei"))
               ((eq system-type 'windows-nt) '("Cascadia Code"  "Microsoft Yahei"))))
   (set-face-attribute 'default nil :font
-                      (format "%s:pixelsize=%d" (car fonts) 13))
+                      (format "%s:pixelsize=%d" (car fonts) 14))
   (dolist (charset '(kana han symbol cjk-misc bopomofo))
     (set-fontset-font (frame-parameter nil 'font) charset
                       (font-spec :family (car (cdr fonts)))))
@@ -108,6 +108,13 @@
 (global-set-key (kbd "<f1>") #'binwan-open-my-init-file) ;; open init file directory
 (global-set-key [remap comment-or-uncomment-region] 'my-comment-or-uncomment-region) ;; comment
 (global-set-key (kbd "C-c C-/") #'comment-or-uncomment-region) ;; comment
+(global-set-key (kbd "C-c b b") #'pop-tag-mark) ;; tag mark
+
+;; evil
+(use-package evil
+  :config
+  (setq evil-toggle-key "C-c C-c")
+  (setq evil-mode t))
 
 
 (provide 'init-profile)

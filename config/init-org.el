@@ -96,4 +96,12 @@
 (use-package ox-gfm)
 (require 'ox-gfm)
 
+;; disable org image global width
+(setq org-image-actual-width nil)
+
+;; ;; d2-model
+;; (use-package d2-mode
+;;   :config
+;;   (setq d2-output-format ".svg"))
+
 (provide 'init-org)

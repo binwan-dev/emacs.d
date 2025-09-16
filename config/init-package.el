@@ -1,10 +1,13 @@
 (require 'package)
 
-(setq package-archives '(("melpa" . "http://melpa.org/packages/")
- 			 ("gnu" . "http://mirrors.tuna.tsinghua.edu.cn/elpa/gnu/")
- 			   ("qinghua" . "http://mirrors.tuna.tsinghua.edu.cn/elpa/melpa/")))
-;;(setq package-archives '(("gnu"   . "http://mirror.wanbin.tech/elpa/gnu/")
-;;                         ("melpa" . "http://mirror.wanbin.tech/elpa/melpa/")))
+;; (setq package-archives '(("gnu"    . "https://mirrors.tuna.tsinghua.edu.cn/elpa/gnu/")
+;;                          ("nongnu" . "https://mirrors.tuna.tsinghua.edu.cn/elpa/nongnu/")
+;;                          ("melpa"  . "https://mirrors.tuna.tsinghua.edu.cn/elpa/melpa/")))
+;; (package-initialize) 
+;; (setq package-archives '(("melpa" . "http://melpa.org/packages/")
+;;                          ("elpa" . "https://elpa.gnu.org/packages/")))
+(setq package-archives '(("elpa"   . "https://melpa.wanbin.tech/elpa/")
+                        ("melpa" . "https://melpa.wanbin.tech/melpa/")))
 
 ;;; Install into separate package dirs for each Emacs version, to prevent bytecode incompatibility
 (let ((versioned-package-dir

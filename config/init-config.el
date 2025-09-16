@@ -4,8 +4,10 @@
 
 (require 'init-org)
 (require 'init-projectile)
+(require 'init-treemacs)
 (require 'init-helm)
 (require 'init-ide)
+(require 'init-ai)
 (require 'init-music)
 
 (provide 'init-config)
