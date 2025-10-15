@@ -3,6 +3,10 @@
 (delete-selection-mode 1)
 (setq-default line-spacing 0.4) ; font space
 
+;; option key to cmd
+;;(setq mac-command-modifier 'meta)
+;;(setq mac-option-modifier 'super)
+
 ;; font begin
 (defun set-graphic-font()
   (setq fonts

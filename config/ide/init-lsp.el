@@ -55,7 +55,7 @@
   ;; (setq lsp-typescript-format-enable t)
   ;; (setq lsp-javascript-auto-closing-tags t)
   :config
-  (setq lsp-csharp-csharpls-use-dotnet-tool nil)
+  (setq lsp-csharp-csharpls-use-dotnet-tool t)
   (setq lsp-volar-activate-file ".volarrc")
   
   :commands lsp

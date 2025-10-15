@@ -6,7 +6,7 @@
       '(("i" "Private Agenda" entry (file+headline "~/icloud/Documents/belog/private.org" "Private")
 	 "* TODO %?\n %i\n"
 	 :empty-lines 1)
-	("w" "Work Agenda" entry (file+headline "~/icloud/Documents/belog/Brothers.org" "Work")
+	("w" "Work Agenda" entry (file+headline "~/icloud/Documents/belog/work.org" "Work")
 	 "* TODO %?\n %i\n"
 	 :empty-lines 1)))
 
