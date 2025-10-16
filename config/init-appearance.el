@@ -43,7 +43,7 @@
           (message "Switched to light theme (doom-acario-light)"))))
     (setq system-dark-mode-last-state dark-mode-p))
   ;; Check every 60 seconds (you can adjust the interval as needed)
-  (run-at-time 60 nil #'set-system-dark-mode))
+  (run-at-time 60 nil #'set-auto-switch-theme))
 
 ;; Initial check and theme setup
 (if (eq system-type 'darwin)
