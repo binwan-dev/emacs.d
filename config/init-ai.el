@@ -1,7 +1,7 @@
 (use-package aider
   :config
-  (setq aider-args '("--model" "deepseek"))
-  (setenv "DEEPSEEK_API_KEY" "<DEEPSEEK_API_KEY>")
+  (setq aider-args '("--model" ""))
+  (setenv "OPENROUTER_API_KEY" "")
   ;; For latest claude sonnet model
   ;; (setq aider-args '("--model" "sonnet" "--no-auto-accept-architect")) ;; add --no-auto-commits if you don't want it
   ;; (setenv "ANTHROPIC_API_KEY" anthropic-api-key)

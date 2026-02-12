@@ -10,7 +10,7 @@
 ;; font begin
 (defun set-graphic-font()
   (setq fonts
-	(cond ((eq system-type 'darwin)     '("MonoLisa Nasy"    "STHeiti"))
+	(cond ((eq system-type 'darwin)     '("Maple Mono Normal NF CN"    "STHeiti"))
               ((eq system-type 'gnu/linux)  '("Cascadia Code"     "WenQuanYi Zen Hei"))
               ((eq system-type 'windows-nt) '("Cascadia Code"  "Microsoft Yahei"))))
   (set-face-attribute 'default nil :font
@@ -20,7 +20,7 @@
                       (font-spec :family (car (cdr fonts)))))
 
   ;Fix chinese font width and rescale
-  (setq face-font-rescale-alist '(("Microsoft Yahei" . 1.2) ("WenQuanYi Micro Hei Mono" . 1.2) ("STHeiti". 1.2)))
+  (setq face-font-rescale-alist '(("Microsoft Yahei" . 1) ("WenQuanYi Micro Hei Mono" . 1) ("STHeiti". 1)))
 
   (with-eval-after-load 'doom-modeline
     (set-face-attribute 'mode-line nil :font "Cascadia Code 12")
@@ -120,5 +120,9 @@
   (setq evil-toggle-key "C-c C-c")
   (setq evil-mode t))
 
+;; support of shell mode with emacs nw
+(when (not (display-graphic-p))
+  ;; 终端特有配置
+  (require 'init-profile-nw))  ; 启用鼠标支持
 
 (provide 'init-profile)

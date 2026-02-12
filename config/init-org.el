@@ -104,4 +104,13 @@
 ;;   :config
 ;;   (setq d2-output-format ".svg"))
 
+;; org-mermaid
+(use-package ob-mermaid
+  :config
+  (setq ob-mermaid-cli-path "mmdc")
+  (org-babel-do-load-languages
+    'org-babel-load-languages
+    '((mermaid . t)
+      (scheme . t))))
+
 (provide 'init-org)

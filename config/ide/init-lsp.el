@@ -41,6 +41,10 @@
   :commands yas-minor-mode
   :hook (go-mode . yas-minor-mode))
 
+;; lua mode
+(use-package lua-mode
+  :ensure t)
+
 (use-package lsp-mode
   :init
   :hook ((vue-mode . lsp)
@@ -57,6 +61,23 @@
   :config
   (setq lsp-csharp-csharpls-use-dotnet-tool t)
   (setq lsp-volar-activate-file ".volarrc")
+  (setq lsp-enable-file-watchers t)
+  (setq lsp-file-watch-threshold 10240)
+  (setq lsp-file-watch-ignored-directories
+        '("[/\\\\]node_modules\\'"
+          "[/\\\\]dist\\'"
+          "[/\\\\]build\\'"
+          "[/\\\\].git\\'"
+          "[/\\\\]vendor\\'"
+          "[/\\\\].hg\\'"
+          "[/\\\\].svn\\'"
+          "[/\\\\].idea\\'"
+          "[/\\\\].vscode\\'"
+          "[/\\\\]__pycache__\\'"
+          "[/\\\\]env\\'"
+          "[/\\\\]venv\\'"
+          "[/\\\\]bin\\']"
+          "[/\\\\]obj\\'"))
   
   :commands lsp
   :bind (
@@ -94,5 +115,21 @@
   (setq lsp-ui-sideline-enable nil)
   (setq lsp-ui-sideline-ignore-duplicate t)
   )
+
+;; debug
+(use-package dap-mode
+  :after lsp-mode
+  :config
+  (dap-auto-configure-mode)
+  ;; (require 'dap-go)
+  ;; (require 'dap-python)
+  ;; (require 'dap-node)
+  )
+(use-package dap-netcore
+  :ensure nil
+  :after dap-mode)
+(use-package dap-go
+  :ensure nil
+  :after dap-mode)
 
 (provide 'init-lsp)
