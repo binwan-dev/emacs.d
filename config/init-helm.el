@@ -26,13 +26,16 @@
       helm-scroll-amount                    8 ; scroll 8 lines other window using M-<next>/M-<prior>
       helm-ff-file-name-history-use-recentf t
       helm-echo-input-in-header-line t)
+  (global-set-key (kbd "C-z") #'helm-do-ag-project-root)
+)
 
-  )
+(use-package helm-tramp :ensure t)
 
-(use-package helm-ag
-  :ensure t)
-
-(use-package helm-tramp
-  :ensure t)
+(use-package helm-projectile
+  :ensure t
+  :config
+  (helm-projectile-on)
+  :bind
+  (("C-c C-s" . 'helm-projectile-grep)))
 
 (provide 'init-helm)

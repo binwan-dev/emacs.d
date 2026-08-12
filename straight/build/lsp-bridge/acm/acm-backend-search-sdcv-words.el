@@ -1,0 +1,1 @@
+/Users/binwan/.emacs.d/straight/repos/lsp-bridge/acm/acm-backend-search-sdcv-words.el

@@ -6,7 +6,7 @@
       '(("i" "Private Agenda" entry (file+headline "~/icloud/Documents/belog/private.org" "Private")
 	 "* TODO %?\n %i\n"
 	 :empty-lines 1)
-	("w" "Work Agenda" entry (file+headline "~/icloud/Documents/belog/Brothers.org" "Work")
+	("w" "Work Agenda" entry (file+headline "~/icloud/Documents/belog/work.org" "Work")
 	 "* TODO %?\n %i\n"
 	 :empty-lines 1)))
 
@@ -95,5 +95,22 @@
 ;;add export markdown
 (use-package ox-gfm)
 (require 'ox-gfm)
+
+;; disable org image global width
+(setq org-image-actual-width nil)
+
+;; ;; d2-model
+;; (use-package d2-mode
+;;   :config
+;;   (setq d2-output-format ".svg"))
+
+;; org-mermaid
+(use-package ob-mermaid
+  :config
+  (setq ob-mermaid-cli-path "mmdc")
+  (org-babel-do-load-languages
+    'org-babel-load-languages
+    '((mermaid . t)
+      (scheme . t))))
 
 (provide 'init-org)
