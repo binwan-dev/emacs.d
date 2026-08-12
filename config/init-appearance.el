@@ -23,6 +23,8 @@
 
 ;;; theme
 (add-subdirs-to-load-path "~/.emacs.d/config/themes")
+(require 'init-doom)
+
 ;; auto switch theme according to system dark mode (macOS)
 (defvar system-dark-mode-last-state nil
   "Stores the last detected system dark mode state.")
@@ -50,7 +52,6 @@
     (progn
       (message "Detected macOS: Enabling auto theme switching...")
       (set-auto-switch-theme))
-  (require 'init-doom)
   (message "Non-macOS: Loading default theme (init-doom)"))
 
 ; use dashboard

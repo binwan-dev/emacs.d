@@ -6,8 +6,8 @@
 ;; (package-initialize) 
 ;; (setq package-archives '(("melpa" . "http://melpa.org/packages/")
 ;;                          ("elpa" . "https://elpa.gnu.org/packages/")))
-(setq package-archives '(("elpa"   . "https://melpa.wanbin.tech/elpa/")
-                        ("melpa" . "https://melpa.wanbin.tech/melpa/")))
+(setq package-archives '(("melpa" . "https://melpa.org/packages/")
+                         ("elpa" . "https://elpa.gnu.org/packages/")))
 
 ;;; Install into separate package dirs for each Emacs version, to prevent bytecode incompatibility
 (let ((versioned-package-dir

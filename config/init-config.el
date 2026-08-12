@@ -9,5 +9,6 @@
 (require 'init-ide)
 (require 'init-ai)
 (require 'init-music)
+(require 'init-terminal)
 
 (provide 'init-config)

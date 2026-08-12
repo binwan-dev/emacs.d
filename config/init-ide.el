@@ -2,16 +2,14 @@
 (setq-default tab-width 4)
 (setq-default indent-tabs-mode nil)
 
-(use-package exec-path-from-shell
-  :config
-  (exec-path-from-shell-initialize)
-  (exec-path-from-shell-copy-env "PATH")
-  (exec-path-from-shell-copy-env "GO111MODULE")
-  (exec-path-from-shell-copy-env "GOPROXY")
-  (exec-path-from-shell-copy-env "GOPRIVATE"))
-
 ;; git
 (use-package magit)
+(use-package smerge-mode
+  :ensure t
+  :bind (:map smerge-mode-map
+         ("C-m" . smerge-keep-mine)
+         ("C-o" . smerge-keep-other))
+  :bind (("C-c C-g C-n" . smerge-vc-next-conflict)))
 
 (use-package blamer
   :ensure t
