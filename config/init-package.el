@@ -7,7 +7,7 @@
 ;; (setq package-archives '(("melpa" . "http://melpa.org/packages/")
 ;;                          ("elpa" . "https://elpa.gnu.org/packages/")))
 (setq package-archives '(("melpa" . "https://melpa.org/packages/")
-                         ("elpa" . "https://elpa.gnu.org/packages/")))
+                         ("elpa" . "https://mirrors.ustc.edu.cn/elpa/gnu/")))
 
 ;;; Install into separate package dirs for each Emacs version, to prevent bytecode incompatibility
 (let ((versioned-package-dir
