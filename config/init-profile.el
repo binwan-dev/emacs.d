@@ -20,7 +20,7 @@
 ;;(setq mac-option-modifier 'super)
 
 ;; font begin
-(set-frame-font "Maple Mono Normal NF CN-12" nil t)
+(set-frame-font "Maple Mono Normal NF CN-14" nil t)
 ;; (defun set-graphic-font()
 ;;   (setq fonts
 ;; 	(cond ((eq system-type 'darwin)     '("Maple Mono Normal NF CN"    "STHeiti"))
