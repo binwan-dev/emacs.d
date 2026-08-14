@@ -1,1 +1,0 @@
-/Users/binwan/.emacs.d/straight/repos/lsp-bridge/core/handler/jdt_uri_resolver.py
