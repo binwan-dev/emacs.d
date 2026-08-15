@@ -1,14 +1,13 @@
 ;;; copy env to emacs
-(cond ((display-graphic-p)
-       (setq exec-path
-             (or (eval-when-compile
-                   (when (require 'exec-path-from-shell nil t)
-                     (setq exec-path-from-shell-check-startup-files nil)
-                     (setq exec-path-from-shell-arguments '("-l" ))
-                     (nconc exec-path-from-shell-variables '("PATH" "GO111MODULE" "GOPATH" "GOROOT" "GOPROXY" "GOPRIVATE" "MOONSHOT_API_KEY" "SHELL" "SILICONFLOW_API_KEY"))
-                     (exec-path-from-shell-initialize)
-                     exec-path))
-                 exec-path))))
+(use-package exec-path-from-shell)
+(when (display-graphic-p)
+  (when (require 'exec-path-from-shell nil t)
+    ;; 要同步的环境变量列表（默认已包含 PATH、MANPATH）
+    (setq exec-path-from-shell-variables
+          '("PATH" "MANPATH" "GO111MODULE" "GOPATH" "GOROOT"
+            "GOPROXY" "GOPRIVATE" "MOONSHOT_API_KEY" "SHELL"
+            "SILICONFLOW_API_KEY"))
+    (exec-path-from-shell-initialize)))
 
 ;;; text
 (setq-default cursor-type 'bar)
