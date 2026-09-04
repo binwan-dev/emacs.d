@@ -51,19 +51,13 @@
 ;; use lsp
 (require 'init-lsp)
 
-;; use lsp-bridge
-;; (require 'init-lsp-bridge)
-
-;; (use-package eglot
-;;   :hook (prog-mode . eglot-ensure)
-;;   :config
-;;   (setq eglot-events-buffer-size 0)
-;;   :bind (
-;; 	 ("C-c s s" . eglot-reconnect)
-;; 	 ("C-." . eglot-code-actions)
-;; 	 ("C-c C-j" . xref-find-definitions)
-;; 	 ("C-c C-r" . xref-find-references)
-;; 	 ("C-c C-i" . eglot-find-implementation)
-;; 	 ("C-C t b" . pop-tag-mark)))
+;; markdown
+(use-package markdown-ts-appear
+  :vc (markdown-ts-appear
+       :url "https://github.com/Thysrael/markdown-ts-appear"
+       :rev :newest)
+  :hook (markdown-ts-mode . markdown-ts-appear-mode)
+  :config
+  (add-to-list 'auto-mode-alist '("\\.md\\'" . markdown-ts-appear-mode)))
 
 (provide 'init-ide)
