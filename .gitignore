@@ -51,3 +51,5 @@ projects
 .dap-breakpoints
 projectile-frecency.eld
 projects.eld
+.extension/
+tree-sitter/

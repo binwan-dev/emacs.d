@@ -58,6 +58,49 @@
        :rev :newest)
   :hook (markdown-ts-mode . markdown-ts-appear-mode)
   :config
-  (add-to-list 'auto-mode-alist '("\\.md\\'" . markdown-ts-appear-mode)))
+  (add-to-list 'auto-mode-alist '("\\.md\\'" . markdown-ts-mode)))
+
+;; dap
+(use-package dap-mode
+  :ensure t
+  :hook
+  (lsp-mode . dap-ui-mode)
+  (dap-stopped . (lambda (arg) (call-interactively #'dap-hydra)))
+  :config
+  ;; go 
+  (require 'dap-dlv-go)
+  
+  ;; 3. 启用 launch.json 支持
+  (require 'dap-launch)
+
+  ;; go template
+  (with-eval-after-load 'dap-go
+    ;; 1. 调试当前 main 包（标准启动）
+    (dap-register-debug-template
+     "Go Launch Application"
+     '(:type "go"
+             :request "launch"
+             :name "Go Launch Application"
+             :mode "auto"
+             :program "${workspaceFolder}"))
+
+    ;; 2. 调试带命令行参数的程序 (运行时会提示你输入参数)
+    (dap-register-debug-template
+     "Go Launch with Args"
+     '(:type "go"
+             :request "launch"
+             :name "Go Launch with Args"
+             :mode "auto"
+             :program "${workspaceFolder}"
+             :args [])) ; 在这里修改或添加你的参数
+
+    ;; 3. 调试特定的单元测试 (Test)
+    (dap-register-debug-template
+     "Go Debug Test"
+     '(:type "go"
+             :request "launch"
+             :name "Go Debug Test"
+             :mode "test"
+             :program "${fileDirname}"))))
 
 (provide 'init-ide)

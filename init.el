@@ -23,13 +23,14 @@
                    go-projectile helm-gtags helm-lsp helm-projectile
                    helm-tramp hungry-delete lsp-pyright lsp-ui
                    lua-mode markdown-ts-appear markdown-ts-mode
-                   multiple-cursors nyan-mode ob-mermaid ox-gfm
-                   protobuf-mode py-autopep8 rust-mode
+                   multiple-cursors nyan-mode ob-mermaid ox-gfm pg
+                   pgmacs protobuf-mode py-autopep8 rust-mode
                    treemacs-icons-dired treemacs-magit
                    treemacs-projectile vue-mode web-mode
                    window-numbering writeroom-mode yasnippet))
  '(package-vc-selected-packages
-   '((markdown-ts-appear :url
+   '((pgmacs :vc-backend Git :url "https://github.com/emarsden/pgmacs")
+     (markdown-ts-appear :url
                          "https://github.com/Thysrael/markdown-ts-appear")
      (tramp-rpc :url
                 "https://github.com/ArthurHeymans/emacs-tramp-rpc"
