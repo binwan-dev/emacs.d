@@ -1,3 +1,5 @@
+;; -*- lexical-binding: t; -*-
+
 (setq js-indent-level 2)
 
 (use-package vue-mode :ensure t

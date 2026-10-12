@@ -49,3 +49,9 @@ straight/
 aider-helm-read-string-history.el
 projects
 .dap-breakpoints
+projectile-frecency.eld
+projects.eld
+.extension/
+tree-sitter/
+config/init-custom.el
+clutch/

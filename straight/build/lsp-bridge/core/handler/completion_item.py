@@ -1,1 +1,0 @@
-/Users/binwan/.emacs.d/straight/repos/lsp-bridge/core/handler/completion_item.py

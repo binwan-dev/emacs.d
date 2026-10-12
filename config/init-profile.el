@@ -1,47 +1,23 @@
+;; -*- lexical-binding: t; -*-
+
 ;;; copy env to emacs
-(cond ((display-graphic-p)
-       (setq exec-path
-             (or (eval-when-compile
-                   (when (require 'exec-path-from-shell nil t)
-                     (setq exec-path-from-shell-check-startup-files nil)
-                     (setq exec-path-from-shell-arguments '("-l" ))
-                     (nconc exec-path-from-shell-variables '("PATH" "GO111MODULE" "GOPATH" "GOROOT" "GOPROXY" "GOPRIVATE" "MOONSHOT_API_KEY" "SHELL" "SILICONFLOW_API_KEY"))
-                     (exec-path-from-shell-initialize)
-                     exec-path))
-                 exec-path))))
+(use-package exec-path-from-shell)
+(when (display-graphic-p)
+  (when (require 'exec-path-from-shell nil t)
+    ;; 要同步的环境变量列表（默认已包含 PATH、MANPATH）
+    (setq exec-path-from-shell-variables
+          '("PATH" "MANPATH" "GO111MODULE" "GOPATH" "GOROOT"
+            "GOPROXY" "GOPRIVATE" "MOONSHOT_API_KEY" "SHELL"
+            "SILICONFLOW_API_KEY"))
+    (exec-path-from-shell-initialize)))
 
 ;;; text
 (setq-default cursor-type 'bar)
 (delete-selection-mode 1)
 (setq-default line-spacing 0.4) ; font space
 
-;; option key to cmd
-;;(setq mac-command-modifier 'meta)
-;;(setq mac-option-modifier 'super)
-
 ;; font begin
-(set-frame-font "Maple Mono Normal NF CN-12" nil t)
-;; (defun set-graphic-font()
-;;   (setq fonts
-;; 	(cond ((eq system-type 'darwin)     '("Maple Mono Normal NF CN"    "STHeiti"))
-;;               ((eq system-type 'gnu/linux)  '("Cascadia Code"     "WenQuanYi Zen Hei"))
-;;               ((eq system-type 'windows-nt) '("Cascadia Code"  "Microsoft Yahei"))))
-;;   (set-face-attribute 'default nil :font
-;;                       (format "%s:pixelsize=%d" (car fonts) 14))
-;;   (dolist (charset '(kana han symbol cjk-misc bopomofo))
-;;     (set-fontset-font (frame-parameter nil 'font) charset
-;;                       (font-spec :family (car (cdr fonts)))))
-
-;;   ;Fix chinese font width and rescale
-;;   (setq face-font-rescale-alist '(("Microsoft Yahei" . 1) ("WenQuanYi Micro Hei Mono" . 1) ("STHeiti". 1)))
-
-;;   (with-eval-after-load 'doom-modeline
-;;     (set-face-attribute 'mode-line nil :font "Cascadia Code 12")
-;;     (set-face-attribute 'mode-line-inactive nil :font "Cascadia Code 12")))
-
-;; (when (display-graphic-p)
-;;   (set-graphic-font))
-;; font end
+(set-frame-font "Maple Mono Normal NF CN-14" nil t)
 
 ;; backup file
 (setq make-backup-files nil)
@@ -137,5 +113,9 @@
 (when (not (display-graphic-p))
   ;; 终端特有配置
   (require 'init-profile-nw))  ; 启用鼠标支持
+
+;; macos self
+(when (eq system-type 'darwin)
+  (setq mac-command-modifier 'meta))
 
 (provide 'init-profile)
