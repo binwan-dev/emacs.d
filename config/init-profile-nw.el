@@ -1,3 +1,5 @@
+;; -*- lexical-binding: t; -*-
+
 (defun bin-shell-select-up () "Select text upward (previous line)."(interactive)
   (if (use-region-p)
       (previous-line 1)

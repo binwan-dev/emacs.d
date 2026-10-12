@@ -53,3 +53,5 @@ projectile-frecency.eld
 projects.eld
 .extension/
 tree-sitter/
+config/init-custom.el
+clutch/

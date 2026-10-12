@@ -1,3 +1,4 @@
+;; -*- lexical-binding: t; -*-
 ;;; appearance
 (add-hook 'window-setup-hook #'toggle-frame-maximized t) ; full screen
 ;; center display
@@ -69,5 +70,31 @@
 (use-package window-numbering
   :init
   (window-numbering-mode))
+
+;;; dired
+(use-package dirvish
+  :ensure t
+  :init
+  ;; 全局替代内置的 dired
+  (dirvish-override-dired-mode)
+  :custom
+  ;; 设置默认布局：包含文件列表、预览窗口等
+  (dirvish-default-layout '(0 0.4 0.6))
+  ;; 隐藏光标并高亮整行
+  (dirvish-hide-cursor t)
+  :config
+  ;; 自定义键位绑定（可选）
+  (setq dirvish-mode-line-format
+        '(:left (sort symlink) :right (omit yank index)))
+
+  ;; icon
+  (setq dirvish-attributes '(all-the-icons file-size subtree-state vc-state))
+  
+  ;; 常用快捷键
+  (define-key dirvish-mode-map (kbd "h") 'dirvish-up-directory)
+  (define-key dirvish-mode-map (kbd "l") 'dired-find-file)
+  (define-key dirvish-mode-map (kbd "s") 'dirvish-quicksort)
+  (define-key dirvish-mode-map (kbd "f") 'dirvish-file-info-menu)
+  (global-set-key (kbd "C-c f") 'dirvish-side))
 
 (provide 'init-appearance)

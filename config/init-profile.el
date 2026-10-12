@@ -1,3 +1,5 @@
+;; -*- lexical-binding: t; -*-
+
 ;;; copy env to emacs
 (use-package exec-path-from-shell)
 (when (display-graphic-p)
@@ -111,5 +113,9 @@
 (when (not (display-graphic-p))
   ;; 终端特有配置
   (require 'init-profile-nw))  ; 启用鼠标支持
+
+;; macos self
+(when (eq system-type 'darwin)
+  (setq mac-command-modifier 'meta))
 
 (provide 'init-profile)

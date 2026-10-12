@@ -1,3 +1,5 @@
+;; -*- lexical-binding: t; -*-
+
 ;; use org
 (require 'org)
 

@@ -1,9 +1,12 @@
+;; -*- lexical-binding: t; -*-
+
 ;; set default indent
 (setq-default tab-width 4)
 (setq-default indent-tabs-mode nil)
 
 ;; git
 (use-package magit)
+  
 (use-package smerge-mode
   :ensure t
   :bind (:map smerge-mode-map
@@ -53,12 +56,8 @@
 
 ;; markdown
 (use-package markdown-ts-appear
-  :vc (markdown-ts-appear
-       :url "https://github.com/Thysrael/markdown-ts-appear"
-       :rev :newest)
-  :hook (markdown-ts-mode . markdown-ts-appear-mode)
-  :config
-  (add-to-list 'auto-mode-alist '("\\.md\\'" . markdown-ts-mode)))
+  :ensure t
+  :hook (markdown-ts-mode . markdown-ts-appear-mode))
 
 ;; dap
 (use-package dap-mode
@@ -66,41 +65,26 @@
   :hook
   (lsp-mode . dap-ui-mode)
   (dap-stopped . (lambda (arg) (call-interactively #'dap-hydra)))
+  (dap-terminated . (binwan-dap-terminate-clean-file))
   :config
   ;; go 
   (require 'dap-dlv-go)
   
   ;; 3. 启用 launch.json 支持
-  (require 'dap-launch)
+  (require 'dap-launch))
 
-  ;; go template
-  (with-eval-after-load 'dap-go
-    ;; 1. 调试当前 main 包（标准启动）
-    (dap-register-debug-template
-     "Go Launch Application"
-     '(:type "go"
-             :request "launch"
-             :name "Go Launch Application"
-             :mode "auto"
-             :program "${workspaceFolder}"))
-
-    ;; 2. 调试带命令行参数的程序 (运行时会提示你输入参数)
-    (dap-register-debug-template
-     "Go Launch with Args"
-     '(:type "go"
-             :request "launch"
-             :name "Go Launch with Args"
-             :mode "auto"
-             :program "${workspaceFolder}"
-             :args [])) ; 在这里修改或添加你的参数
-
-    ;; 3. 调试特定的单元测试 (Test)
-    (dap-register-debug-template
-     "Go Debug Test"
-     '(:type "go"
-             :request "launch"
-             :name "Go Debug Test"
-             :mode "test"
-             :program "${fileDirname}"))))
+(defun binwan-dap-terminate-clean-file()
+  (lambda (session)
+    ;; 获取当前调试项目的根目录
+    (let* ((root (dap--session-workspace-folder session))
+           (bin-path (expand-file-name "__debug_bin" root))
+           (bin-exe-path (expand-file-name "__debug_bin.exe" root)))
+      ;; 如果存在临时编译文件，则将其强行删除
+      (when (file-exists-p bin-path)
+        (delete-file bin-path)
+        (message "[dap-go] 清理了遗留的调试二进制文件: __debug_bin"))
+      (when (file-exists-p bin-exe-path)
+        (delete-file bin-exe-path)
+        (message "[dap-go] 清理了遗留的调试二进制文件: __debug_bin.exe")))))
 
 (provide 'init-ide)

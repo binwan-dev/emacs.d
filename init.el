@@ -1,3 +1,5 @@
+;; -*- lexical-binding: t; -*-
+
 ;; for load sub directory config
 (defun add-subdirs-to-load-path (dir)
   "Recursive add directories to `load-path'."
@@ -18,16 +20,16 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
-   '(all-the-icons blamer bongo company dap-mode dashboard doom-modeline
-                   doom-themes evil exec-path-from-shell ghostel
-                   go-projectile helm-gtags helm-lsp helm-projectile
-                   helm-tramp hungry-delete lsp-pyright lsp-ui
-                   lua-mode markdown-ts-appear markdown-ts-mode
-                   multiple-cursors nyan-mode ob-mermaid ox-gfm pg
-                   pgmacs protobuf-mode py-autopep8 rust-mode
-                   treemacs-icons-dired treemacs-magit
-                   treemacs-projectile vue-mode web-mode
-                   window-numbering writeroom-mode yasnippet))
+   '(all-the-icons blamer bongo clutch company dap-mode dashboard
+                   doom-modeline doom-themes evil exec-path-from-shell
+                   ghostel go-projectile helm-gtags helm-lsp
+                   helm-projectile helm-tramp hungry-delete
+                   lsp-pyright lsp-ui lua-mode markdown-ts-appear
+                   markdown-ts-mode multiple-cursors nyan-mode
+                   ob-mermaid ox-gfm pg pgmacs pgsql protobuf-mode
+                   py-autopep8 rust-mode treemacs-icons-dired
+                   treemacs-magit treemacs-projectile vue-mode
+                   web-mode window-numbering writeroom-mode yasnippet))
  '(package-vc-selected-packages
    '((pgmacs :vc-backend Git :url "https://github.com/emarsden/pgmacs")
      (markdown-ts-appear :url

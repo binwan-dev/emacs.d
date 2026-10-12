@@ -1,3 +1,5 @@
+;; -*- lexical-binding: t; -*-
+
 (use-package helm-gtags)
 
 (use-package helm
